@@ -3,6 +3,7 @@
 
 #include "FWCore/ParameterSet/interface/ParameterDescriptionNode.h"
 #include "FWCore/ParameterSet/interface/ParameterDescription.h"
+#include "FWCore/ParameterSet/interface/ParameterSet.h"
 
 #include <vector>
 #include <string>
