@@ -38,6 +38,7 @@
 //
 // ----------------------------------------------------------------------
 
+#include <ostream>
 
 #ifndef ELSTRING_H
   #include "FWCore/MessageLogger/interface/ELstring.h"
