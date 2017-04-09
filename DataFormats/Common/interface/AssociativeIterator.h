@@ -42,7 +42,6 @@
 #include "DataFormats/Common/interface/EDProductGetter.h"
 
 namespace edm {
-    class Event;
     template <class T> class View;
     template <class T> class Handle;
     template <class T> class Association;
@@ -84,7 +83,7 @@ namespace edm {
                 typedef typename edm::RefToBase<element_type> BaseRefType; // could also use Ptr, but then I can't do Ptr->RefToBase
                 if (id_ != id) {
                     id_ = id;
-                    iEvent_.get(id_, view_);
+//                    iEvent_.get(id_, view_);
                 }
                 BaseRefType ref = view_->refAt(idx);
                 typedef typename helper::RefConverter<BaseRefType, RefType> conv; 

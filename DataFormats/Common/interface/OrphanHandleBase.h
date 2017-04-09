@@ -46,7 +46,7 @@ namespace edm {
     void swap(OrphanHandleBase& other) {
       using std::swap;
       swap(product_, other.product_);
-      std::swap(id_, other.id_);
+      // std::swap(id_, other.id_);
     }
     
     OrphanHandleBase& operator=(OrphanHandleBase const& rhs) {

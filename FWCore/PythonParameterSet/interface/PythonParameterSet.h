@@ -70,12 +70,12 @@ public:
   /// maybe we will need to template these someday
   void addPSet(bool tracked, std::string const& name,
                PythonParameterSet const& ppset) {
-    addParameter(tracked, name, ppset.theParameterSet);
+    //addParameter(tracked, name, ppset.theParameterSet);
   }
 
 
   PythonParameterSet getPSet(bool tracked, std::string const& name) const {
-    return PythonParameterSet(getParameter<edm::ParameterSet>(tracked, name));
+    //return PythonParameterSet(getParameter<edm::ParameterSet>(tracked, name));
   }
 
 
