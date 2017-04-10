@@ -28,6 +28,7 @@ If failedToGet() returns false but isValid() is also false then no attempt
 
 #include "DataFormats/Common/interface/HandleBase.h"
 #include "FWCore/Utilities/interface/GCC11Compatibility.h"
+#include "DataFormats/Provenance/interface/Provenance.h"
 
 namespace edm {
 
