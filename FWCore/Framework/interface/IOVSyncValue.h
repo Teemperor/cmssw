@@ -24,6 +24,7 @@
 // user include files
 #include "DataFormats/Provenance/interface/EventID.h"
 #include "DataFormats/Provenance/interface/Timestamp.h"
+#include "DataFormats/Common/interface/WrapperBase.h"
 
 // forward declarations
 

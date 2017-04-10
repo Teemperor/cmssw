@@ -21,6 +21,7 @@
 #include "FWCore/Utilities/interface/StreamID.h"
 #include "FWCore/Utilities/interface/propagate_const.h"
 #include "FWCore/Concurrency/interface/WaitingTaskHolder.h"
+#include "FWCore/ServiceRegistry/interface/TerminationOrigin.h"
 
 #include <map>
 #include <memory>
