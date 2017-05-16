@@ -1,6 +1,8 @@
 #ifndef GeometryVector_Basic3DVectorLD_h
 #define GeometryVector_Basic3DVectorLD_h
 
+#include "DataFormats/GeometryVector/interface/sseBasic3DVector.h"
+
 #ifdef __clang__
 #pragma clang diagnostic push 
 #pragma clang diagnostic ignored "-Wunused-private-field"
