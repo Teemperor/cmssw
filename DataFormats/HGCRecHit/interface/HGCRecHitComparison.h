@@ -1,6 +1,10 @@
 #ifndef HGCRecHitComparison_H
 #define HGCRecHitComparison_H
 
+#include <cstdint>
+
+#include "DataFormats/HGCRecHit/interface/HGCRecHit.h"
+
 //ordering capability mandatory for lazy getter framework
 // Comparison operators
 inline bool operator<( const HGCRecHit& one, const HGCRecHit& other) {

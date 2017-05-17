@@ -1,11 +1,12 @@
 #ifndef GeometryVector_Basic3DVectorLD_h
 #define GeometryVector_Basic3DVectorLD_h
 
+
 #ifdef __clang__
 #pragma clang diagnostic push 
 #pragma clang diagnostic ignored "-Wunused-private-field"
 #endif
-
+      
 // long double specialization
 template <> 
 class Basic3DVector<long double> {

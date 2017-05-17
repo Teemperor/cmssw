@@ -2,6 +2,7 @@
 #define LocalErrorType_H
 
 #include "DataFormats/Math/interface/AlgebraicROOTObjects.h"
+#include "DataFormats/GeometrySurface/interface/TrivialError.h"
 //
 // Exceptions
 //

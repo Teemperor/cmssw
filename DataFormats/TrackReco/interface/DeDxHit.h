@@ -1,5 +1,7 @@
 #ifndef TrackDeDxHits_H
 #define TrackDeDxHits_H
+#include <cstddef>
+#include <cstdint>
 #include <vector>
 
 namespace reco
