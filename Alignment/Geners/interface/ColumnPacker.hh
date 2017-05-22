@@ -746,7 +746,7 @@ namespace gs {
         typedef typename std::tuple_element<N,Pack>::type element_type;
         typedef typename IOReferredType<element_type>::type stored_type;
 
-        static_assert((IOIsSameType<stored_type, "requested type>::value");
+        static_assert(IOIsSameType<stored_type, requested_type>::value, "");
         static_assert((N < std::tuple_size<Pack>::value), "column number is out of range");
 
         if (row < fillCount_)

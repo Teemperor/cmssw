@@ -7,6 +7,7 @@
 #include "DataFormats/Common/interface/Ptr.h"
 #include "DataFormats/GeometryCommonDetAlgo/interface/Measurement1DFloat.h"
 #include "DataFormats/GeometryCommonDetAlgo/interface/Measurement1D.h"
+#include "DataFormats/ParticleFlowCandidate/interface/PFCandidateElectronExtra.h" // for TrackBaseRef
 
 /**
   \class    pat::VertexAssociation VertexAssociation.h "DataFormats/PatCandidates/interface/Vertexing.h"

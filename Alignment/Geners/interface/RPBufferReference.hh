@@ -2,7 +2,9 @@
 #define GENERS_RPBUFFERREFERENCE_HH_
 
 #include "Alignment/Geners/interface/AbsReference.hh"
+#include "Alignment/Geners/interface/CharBuffer.hh"
 #include "Alignment/Geners/interface/streamposIO.hh"
+
 
 namespace gs {
     namespace Private {
