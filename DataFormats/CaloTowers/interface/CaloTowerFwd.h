@@ -9,7 +9,8 @@
 #include "DataFormats/Common/interface/FwdRef.h"
 #include "DataFormats/Common/interface/FwdPtr.h"
 
-class CaloTower;
+#include "DataFormats/CaloTowers/interface/CaloTower.h"
+
 typedef edm::Ptr<CaloTower> CaloTowerPtr;
 typedef edm::FwdPtr<CaloTower> CaloTowerFwdPtr;
 typedef edm::SortedCollection<CaloTower> CaloTowerCollection;

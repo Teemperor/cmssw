@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 
+#include "Alignment/Geners/interface/AbsArchive.hh"
 #include "Alignment/Geners/interface/CPP11_shared_ptr.hh"
 #include "Alignment/Geners/interface/ClassId.hh"
 #include "Alignment/Geners/interface/SearchSpecifier.hh"

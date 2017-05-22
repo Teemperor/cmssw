@@ -1,7 +1,12 @@
 
 #include "boost/serialization/assume_abstract.hpp"
 #include "CondFormats/PhysicsToolsObjects/interface/Histogram3D.h"
-
+#include "CondFormats/PhysicsToolsObjects/interface/PerformancePayloadFromTable.h" // For the polymorphic stuff
+#include "CondFormats/PhysicsToolsObjects/interface/PerformancePayloadFromTFormula.h"
+#include "CondFormats/PhysicsToolsObjects/interface/PerformancePayloadFromBinnedTFormula.h"
+#include "/home/teemperor/cms/cmssw/CondFormats/PhysicsToolsObjects/interface/MVAComputer.h" // VarProcessor
+#include "CondFormats/Serialization/interface/Instantiate.h"
+      
 // take care of instantiating the concrete templates:
 
 COND_SERIALIZATION_INSTANTIATE(PhysicsTools::Calibration::Histogram<double, double>);
