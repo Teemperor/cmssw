@@ -4,7 +4,7 @@
 // Author: Vincenzo Innocente
 //
 
-#include "CondCore/DBCommon/interface/Time.h"
+#include "CondCore/CondDB/interface/Time.h"
 #include "CondCore/DBOutputService/interface/TagInfo.h"
 #include "CondCore/DBOutputService/interface/LogDBEntry.h"
 

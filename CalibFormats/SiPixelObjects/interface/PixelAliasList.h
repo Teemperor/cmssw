@@ -6,10 +6,16 @@
 *   A longer explanation will be placed here later
 */
 
+#include "CalibFormats/SiPixelObjects/interface/PixelAliasList.h"
 #include "CalibFormats/SiPixelObjects/interface/PixelConfigAlias.h"
+#include "CalibFormats/SiPixelObjects/interface/PixelConfigList.h"
 #include "CalibFormats/SiPixelObjects/interface/PixelVersionAlias.h"
 
+#include <cassert>
 #include <stdlib.h>
+#include <fstream>
+#include <iostream>
+#include <map>
 
 namespace pos{
 /*! \class PixelAliasList PixelAliasList.h "interface/PixelAliasList.h"

@@ -7,6 +7,8 @@
  *  fraction of positive hits.
  */
 
+#include <cmath>
+
 class BinomialProbability {
 public:
 

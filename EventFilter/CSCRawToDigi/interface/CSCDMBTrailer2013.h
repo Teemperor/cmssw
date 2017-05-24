@@ -37,6 +37,7 @@
 #include <iostream>
 #include "DataFormats/CSCDigi/interface/CSCDMBStatusDigi.h"
 #include "EventFilter/CSCRawToDigi/interface/CSCVDMBTrailerFormat.h"
+#include "EventFilter/CSCRawToDigi/interface/CSCDMBHeader.h"
 
 class CSCDMBHeader;
 

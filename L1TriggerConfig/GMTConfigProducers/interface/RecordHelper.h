@@ -15,6 +15,7 @@
 
 #include <boost/type_traits.hpp>
 
+#include "L1TriggerConfig/GMTConfigProducers/interface/GTRecordGroup.h" // for GroupFieldHandler
 #include "RelationalAccess/ICursor.h"
 #include "CoralBase/AttributeList.h"
 #include "CoralBase/AttributeSpecification.h"

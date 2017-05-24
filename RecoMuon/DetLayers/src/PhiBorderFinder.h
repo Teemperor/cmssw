@@ -16,7 +16,9 @@
 
 #include <DataFormats/GeometryVector/interface/Pi.h>
 #include <Utilities/General/interface/precomputed_value_sort.h>
+#include "TrackingTools/DetLayers/interface/DetRod.h"
 #include <TrackingTools/DetLayers/interface/simple_stat.h>
+#include "TrackingTools/DetLayers/interface/RodBarrelLayer.h"
 #include <FWCore/Utilities/interface/Exception.h>
 
 // FIXME: remove this include

@@ -5,8 +5,14 @@
 *
 *   A longer explanation will be placed here later
 */
+#include "CalibFormats/SiPixelObjects/interface/PixelConfig.h"
 
+#include <cassert>
+#include <iostream>
 #include <stdlib.h>
+#include <fstream>
+#include <string>
+#include <vector>
 
 namespace pos{
 /*! \class PixelConfigList PixelConfigList.h "interface/PixelConfigList.h"

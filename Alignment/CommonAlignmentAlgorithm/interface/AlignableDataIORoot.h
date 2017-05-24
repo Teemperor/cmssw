@@ -3,6 +3,7 @@
 
 #include <map>
 
+#include "Alignment/CommonAlignment/interface/Alignable.h"
 #include "Alignment/CommonAlignment/interface/StructureType.h"
 #include "Alignment/CommonAlignmentAlgorithm/interface/AlignableDataIO.h"
 #include "Alignment/CommonAlignmentAlgorithm/interface/AlignmentIORootBase.h"

@@ -13,6 +13,7 @@
 #include "CommonTools/Utils/src/ExpressionBase.h"
 #include "CommonTools/Utils/src/SelectorBase.h"
 #include "CommonTools/Utils/src/ExpressionStack.h"
+#include "CommonTools/Utils/src/SelectorStack.h"
 
 namespace reco {
   namespace parser {

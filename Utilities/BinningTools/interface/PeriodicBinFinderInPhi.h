@@ -4,6 +4,7 @@
 #include "Utilities/BinningTools/interface/BaseBinFinder.h"
 
 #include <cmath>
+#include <algorithm>
 
 /** Periodic Bin Finder around a circle for (almost) equidistant bins.
  *  Phi is the angle on the circle in radians. 

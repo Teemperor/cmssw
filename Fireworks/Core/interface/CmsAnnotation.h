@@ -2,6 +2,7 @@
 #define Fireworks_Core_CmsAnnotation_h
 
 #include "TGLOverlay.h"
+#include "TGLViewerBase.h"
 
 class TGLViewer;
 class FWConfiguration;

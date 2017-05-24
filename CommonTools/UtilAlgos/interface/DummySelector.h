@@ -9,8 +9,11 @@
  *
  * \author Luca Lista, INFN
  */
+#include "CommonTools/UtilAlgos/interface/EventSetupInitTrait.h" // EVENTSETUP_STD_INIT
+
 #include "FWCore/Framework/interface/ConsumesCollector.h"
 #include "FWCore/Utilities/interface/EDMException.h"
+
 
 namespace edm {
   class ParameterSet;

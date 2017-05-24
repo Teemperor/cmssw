@@ -1,6 +1,7 @@
 #ifndef CommonTools_ParticleFlow_ObjectSelectors
 #define CommonTools_ParticleFlow_ObjectSelectors
 
+#include "FWCore/Framework/interface/DataProxyProvider.h"
 #include "CommonTools/ParticleFlow/interface/ObjectSelector.h"
 #include "CommonTools/ParticleFlow/interface/PtMinPFCandidateSelectorDefinition.h"
 #include "CommonTools/ParticleFlow/interface/PdgIdPFCandidateSelectorDefinition.h"

@@ -13,18 +13,18 @@ template <class N, class E>
 class GraphPath
 {
 public:
-  typedef pair<N,N> segment_type;
+  typedef std::pair<N,N> segment_type;
   //FIXME: GraphPath: find memory optimized representation of type paths_type ...
-  typedef std::map< segment_type, set< segment_type > > paths_type;
-  typedef set< std::vector<N> > paths_set;
-  typedef std::vector< pair<N,N> > chain_type;
+  typedef std::map< segment_type, std::set< segment_type > > paths_type;
+  typedef std::set< std::vector<N> > paths_set;
+  typedef std::vector<std::pair<N,N> > chain_type;
   typedef std::vector<std::vector<segment_type> > result_type;
   GraphPath(const graph<N,E> & g, const N & root);
   ~GraphPath() {}
   bool fromTo(const N & from, const N & to, std::vector< std::vector<N> > & result) const;
   
   void calcPaths(const graph<N,E>& g, const N & root);
-  void findSegments(const N & n, set< segment_type >& result);
+  void findSegments(const N & n, std::set< segment_type >& result);
   void stream(std::ostream&);
   
   /**
@@ -40,7 +40,7 @@ public:
 
 
 template <class N, class M>
-std::ostream & operator<<(std::ostream & os, const pair<N,M> & p)
+std::ostream & operator<<(std::ostream & os, const std::pair<N,M> & p)
 {
   os << p.first << ":" << p.second;
 }
@@ -177,11 +177,11 @@ void GraphPath<N,E>::update(segment_type & s, result_type & result, int u) const
    // s ...      segment, which is used to find its children
    // result ... std::vector of path-std::vectors
    // u ...      path in result which is currently under observation, s is it's 'back'
-   const set<segment_type> & segs = paths_.find(s)->second;
-   typename set<segment_type>::const_iterator segit = segs.begin();
+   const std::set<segment_type> & segs = paths_.find(s)->second;
+   typename std::set<segment_type>::const_iterator segit = segs.begin();
 
    if (segs.size()==0)  {
-     cerr << "you should never get here: GraphPath::update(...)" << std::endl;
+     std::cerr << "you should never get here: GraphPath::update(...)" << std::endl;
      exit(1);
    }  
    /*
@@ -218,27 +218,27 @@ void GraphPath<N,E>::calcPaths(const graph<N,E>& g, const N & n)
    // find n(ode) in g(raph) and all its children (get rid of the
    // multiconnections ...
    //set< pair<N,E> > nodes;
-   pair<bool,graph<N,E>::neighbour_range> childRange = g.nodes(n);
+   std::pair<bool,typename graph<N,E>::neighbour_range> childRange = g.nodes(n);
    if (!childRange.first) 
      return;
    
-   set<N> children;
-   typename set< pair<N,E> >::const_iterator nit = childRange.second.first;
+   std::set<N> children;
+   typename std::set< std::pair<N,E> >::const_iterator nit = childRange.second.first;
    for(; nit!=childRange.second.second; ++nit)
      children.insert(nit->first);
    
    // iterate over children and ..
-   typename set<N>::iterator cit = children.begin();
+   typename std::set<N>::iterator cit = children.begin();
    for(; cit!=children.end(); ++cit) {
      segment_type key = segment_type(n,*cit); // create new direct path-segment
      segment_type direct = segment_type(*cit,*cit);
-     set< segment_type > temp;
+     std::set< segment_type > temp;
      temp.insert(direct); // add direct connection as first member of set,
                           // but not as <A,B> but as <B,B> to mark a direct connection
      //if(n != *cit) {			  
        paths_.insert(std::make_pair(key,temp));
        findSegments(n,temp); // look for previous segments leading to n
-       typename set< segment_type >::iterator sit = temp.begin();
+       typename std::set< segment_type >::iterator sit = temp.begin();
        for (; sit!=temp.end(); ++sit) { // iterator over already linked segments
          if (sit->first != key.second) // don't insert <B,B> as key!
            paths_[segment_type(sit->first,key.second)].insert(*sit);
@@ -254,7 +254,7 @@ void GraphPath<N,E>::calcPaths(const graph<N,E>& g, const N & n)
 
 
 template <class N, class E>
-void GraphPath<N,E>::findSegments(const N & n, set< segment_type >& result)
+void GraphPath<N,E>::findSegments(const N & n, std::set< segment_type >& result)
 {
    typename paths_type::iterator pit = paths_.begin();
    for (; pit!=paths_.end(); ++pit) {
@@ -269,7 +269,7 @@ void GraphPath<N,E>::stream(std::ostream & os)
   typename paths_type::iterator it = paths_.begin();
   for(; it!=paths_.end(); ++it) {
     os << "[" << it->first.first << "->" << it->first.second << "] : ";
-    typename set<segment_type>::iterator sit = it->second.begin();
+    typename std::set<segment_type>::iterator sit = it->second.begin();
     os << "< ";
     for(; sit!=it->second.end();++sit) {
       os << " [" << sit->first << "->" << sit->second << "] ";

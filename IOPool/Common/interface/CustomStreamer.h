@@ -2,11 +2,11 @@
 #define IOPool_Common_CustomStreamer_h
 
 #include <string>
+#include "TBuffer.h" // because of the IsReading() below
 #include "TClass.h"
 #include "TClassStreamer.h"
 #include "TClassRef.h"
 #include "FWCore/Utilities/interface/TypeID.h"
-class TBuffer;
 
 namespace edm {
   template <typename T>

@@ -1,9 +1,13 @@
 #ifndef DataFormats_FWLite_interface_InputSource_h
 #define DataFormats_FWLite_interface_InputSource_h
 
+#include "FWCore/ParameterSet/interface/ParameterSet.h"
+#include "FWCore/Utilities/interface/Exception.h"
+
 #include <vector>
 #include <string>
-#include "FWCore/ParameterSet/interface/ParameterSet.h"
+#include <iostream>
+
 
 /**
   \class    InputSource InputSource.h "DataFormats/FWLite/interface/InputSource.h"

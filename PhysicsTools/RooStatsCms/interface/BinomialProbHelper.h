@@ -7,6 +7,8 @@
  *
  */
 
+#include "Math/PdfFuncMathCore.h"
+
 class BinomialProbHelper {
 public:
   BinomialProbHelper(double rho, int x, int n)

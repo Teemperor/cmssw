@@ -2,6 +2,9 @@
 #define MuonIdentification_MuonArbitrationMethods_h
 
 #include "DataFormats/MuonDetId/interface/MuonSubdetId.h"
+#include "DataFormats/MuonReco/interface/MuonChamberMatch.h"
+
+#include "RecoMuon/TrackingTools/interface/MuonSegmentMatcher.h"
 
 // Author: Jake Ribnik (UCSB)
 

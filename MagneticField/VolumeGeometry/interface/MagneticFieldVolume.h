@@ -1,6 +1,13 @@
 #ifndef MagneticFieldVolume_H
 #define MagneticFieldVolume_H
 
+#include "DataFormats/GeometryVector/interface/LocalVector.h"
+#include "DataFormats/GeometryVector/interface/GlobalVector.h"
+#include "MagneticField/VolumeGeometry/interface/BoundVolume.h"
+
+class LocalPoint;
+class GlobalPoint;
+
 class MagneticFieldVolume {
 public:
 

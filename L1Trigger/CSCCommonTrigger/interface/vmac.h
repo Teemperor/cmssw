@@ -7,6 +7,8 @@ Verilog++ SP.
 #ifndef _VMAC_H_FILE_
 #define _VMAC_H_FILE_
 
+#include "L1Trigger/CSCCommonTrigger/interface/vlib.h" // globcontrol
+
 extern globcontrol glc;
 
 #ifdef VGEN

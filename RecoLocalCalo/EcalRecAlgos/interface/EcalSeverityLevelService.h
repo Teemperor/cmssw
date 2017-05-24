@@ -24,24 +24,24 @@ public:
   ~EcalSeverityLevelService(){delete algo_;}
   
 
-  EcalSeverityLevelAlgo::EcalSeverityLevel 
+  EcalSeverityLevel::SeverityLevel 
   severityLevel(const EcalRecHit& rh) const {
     return algo_->severityLevel(rh);
   }
 
-  EcalSeverityLevelAlgo::EcalSeverityLevel 
+  EcalSeverityLevel::SeverityLevel 
   severityLevel(const DetId& id, 
 		const EcalRecHitCollection& rhs, 
 		const edm::EventSetup& es) const {
-    return algo_->severityLevel(id,rhs,es);
+    return algo_->severityLevel(id,rhs);
   }
   
   
-  EcalSeverityLevelAlgo::EcalSeverityLevel 
+  EcalSeverityLevel::SeverityLevel 
   severityLevel(const DetId& id, 
 		const EcalRecHitCollection& rhs, 
 		const EcalChannelStatus& chs) const {
-    return algo_->severityLevel(id,rhs,chs);
+    return algo_->severityLevel(id,rhs);
   }
   
   const EcalSeverityLevelAlgo* getAlgorithm() const {return algo_;}

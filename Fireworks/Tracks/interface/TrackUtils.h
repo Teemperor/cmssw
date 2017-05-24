@@ -6,6 +6,8 @@
 // Class  :     TrackUtils
 //
 
+#include <set>
+
 // system include files
 #include "TEveVSDStructs.h"
 

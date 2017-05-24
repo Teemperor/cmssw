@@ -1,5 +1,6 @@
 #include <numeric>
 #include <cmath>
+#include <algorithm>
 
 /** A trivial class computing the mean value of objects in any
  *  STL container.

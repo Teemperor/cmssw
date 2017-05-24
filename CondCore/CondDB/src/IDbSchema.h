@@ -1,10 +1,16 @@
 #ifndef CondCore_CondDB_IDbSchema_h
 #define CondCore_CondDB_IDbSchema_h
 
+#include <CondCore/CondDB/interface/Types.h>
+#include <CondFormats/Common/interface/Time.h>
+#include <CondCore/CondDB/interface/Types.h>
+
 //
 #include <boost/date_time/posix_time/posix_time.hpp>
 
 namespace cond {
+
+  class Binary;
 
   namespace persistency {
 

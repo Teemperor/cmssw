@@ -19,6 +19,8 @@
 //         Created:  Jan 29 09:01:20 CDT 2009
 //
 
+#include "DataFormats/Common/interface/WrapperBase.h"
+
 #include "FWCore/Utilities/interface/ObjectWithDict.h"
 #include "FWCore/Utilities/interface/TypeID.h"
 #include "FWCore/Utilities/interface/propagate_const.h"

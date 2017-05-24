@@ -1,9 +1,9 @@
 #ifndef RecoTracker_CkfPattern_PrintoutHelper_h
 #define RecoTracker_CkfPattern_PrintoutHelper_h
 
+#include "TrackingTools/PatternTools/interface/Trajectory.h"
 #include "TrackingTools/PatternTools/interface/TrajectoryMeasurement.h"
 #include "TrackingTools/PatternTools/interface/bqueue.h"
-
 class TrackerGeometry;
 
 class PrintoutHelper{

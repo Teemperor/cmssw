@@ -1,7 +1,8 @@
 #ifndef PlanarVolumeBoundary_H
 #define PlanarVolumeBoundary_H
 
-#include "MagneticField/MagVolumeGeometry/interface/BoundaryPlane.h"
+#include "MagneticField/VolumeGeometry/interface/BoundaryPlane.h"
+#include "MagneticField/VolumeGeometry/interface/BoundVolume.h"
 
 class PlanarVolumeBoundary : public VolumeBoundary {
 public:

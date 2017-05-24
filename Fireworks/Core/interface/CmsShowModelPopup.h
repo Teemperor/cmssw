@@ -26,6 +26,7 @@
 #endif
 #include "GuiTypes.h"
 #include "TGFrame.h"
+#include "TGButton.h" // for TGCheckButton
 
 // user include files
 #ifndef __CINT__

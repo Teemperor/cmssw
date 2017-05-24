@@ -49,7 +49,9 @@
 #include <map>
 #include <string>
 #include <cmath>
+#include <iostream>
    
+
 template <class Format>
 class DaqData {
 
@@ -59,10 +61,10 @@ class DaqData {
 
     try {
 
-      if (v.size() == 0)  throw string("DaqData: empty input data vector provided: ");     
+      if (v.size() == 0)  throw std::string("DaqData: empty input data vector provided: ");     
 
       int Nfields = Format::getNumberOfFields();
-      if (v.size()%Nfields != 0)  throw string("DaqData: ERROR. You must provide a number of input values compatibles with the requested format: ");
+      if (v.size()%Nfields != 0)  throw std::string("DaqData: ERROR. You must provide a number of input values compatibles with the requested format: ");
 
 
       int ObjSize = Format::getFieldLastBit(Nfields-1)+1;
@@ -85,7 +87,7 @@ class DaqData {
 	//additional bytes necessary to accomodate the current object
 	int Nbytes = (int) ceil((double)(Format::getFieldLastBit(Nfields-1)+1-8+bitsalreadyfilled)/8); 
 
-	if ((Totbytes+=Nbytes)  > size_) throw string("Exceeded allocated buffer size");
+	if ((Totbytes+=Nbytes)  > size_) throw std::string("Exceeded allocated buffer size");
 	
 	compressObject(p, vit, bitsalreadyfilled);
 
@@ -112,8 +114,8 @@ class DaqData {
 
     catch (std::string s){
 
-      cout<<"DaqData - Exception caught: " << s <<endl;
-      cout<<"Object compression failed! No data has been constructed for format: "<< string(typeid(Format).name())<<endl; 
+      std::cout<<"DaqData - Exception caught: " << s <<std::endl;
+      std::cout<<"Object compression failed! No data has been constructed for format: "<< std::string(typeid(Format).name())<<std::endl; 
       
     }
 
@@ -136,7 +138,7 @@ class DaqData {
       // cout<<"The buffer will be "<<size_ <<" bytes long"<<endl;      
 
       if ((sizeinbytes*8)%ObjSize != 0) {
-	cout<<"DaqData: there will be  " << (sizeinbytes*8)%ObjSize <<" meaningless bits at the end of the buffer"<<endl;
+	std::cout<<"DaqData: there will be  " << (sizeinbytes*8)%ObjSize <<" meaningless bits at the end of the buffer"<<std::endl;
       }
 
       //     buffer_ = new char[sizeinbytes];
@@ -188,7 +190,7 @@ class DaqData {
     catch (std::string s){
 
       std::cout<<"DaqData - Exception caught: " << s <<std::endl;
-      std::cout<<"Object uncompression failed! No data has been constructed for format: "<<std::string(typeid(Format).name())<<endl; 
+      std::cout<<"Object uncompression failed! No data has been constructed for format: "<<std::string(typeid(Format).name())<<std::endl; 
       
     }
 
@@ -237,18 +239,18 @@ class DaqData {
       std::map < int, std::vector<unsigned int> >::const_iterator it = data_.find(indobj);
       if (it != data_.end()) return ((*it).second)[indfield];
       else {
-	cout<<"DaqData - Strange: object should exist but was not found "<<endl;
+	std::cout<<"DaqData - Strange: object should exist but was not found "<<std::endl;
 	return 0;
       }
     }
-    else  cout<<"DaqData - Non existent field or object"<<endl;
+    else  std::cout<<"DaqData - Non existent field or object"<<std::endl;
     return 0;
 
   }
 
  private:
 
-  void uncompressObject(const  unsigned char * ptr, 
+  void uncompressObject(unsigned char * ptr, 
 			std::vector<unsigned int> & objdata, 
 			int & bitsalreadyfilled) {
 
@@ -370,13 +372,13 @@ class DaqData {
 
 
 
-  void compressObject(const unsigned char * ptr, std::vector<unsigned int>::iterator & vit, int & bitsalreadyfilled) {
+  void compressObject(unsigned char * ptr, std::vector<unsigned int>::iterator & vit, int & bitsalreadyfilled) {
 
     int Nfields = Format::getNumberOfFields();
 
     int bitstoaccomodate=Format::getFieldLastBit(0)+1; // of current field
     
-    if (*vit > pow(2.,bitstoaccomodate)-1) throw string("The value is too large to fit in the field ");
+    if (*vit > pow(2.,bitstoaccomodate)-1) throw std::string("The value is too large to fit in the field ");
  
     int ifield = 0;
 
@@ -426,7 +428,7 @@ class DaqData {
        
 	ifield++;
 	bitstoaccomodate=Format::getFieldLastBit(ifield)-Format::getFieldLastBit(ifield-1); 
-	if (*vit > pow(2.,bitstoaccomodate)-1) throw string("The value is too large to fit in the field ");
+	if (*vit > pow(2.,bitstoaccomodate)-1) throw std::string("The value is too large to fit in the field ");
 
 	// cout <<"bitstoaccomodate= "<<bitstoaccomodate<<" bitsalreadyfilled= "<<bitsalreadyfilled<<" ifield="<< ifield<<" Nfields="<<Nfields<<endl;
 
@@ -458,12 +460,12 @@ class DaqData {
 	ifield++;
 	bitstoaccomodate=Format::getFieldLastBit(ifield)-Format::getFieldLastBit(ifield-1); 	
 
-	if (*vit > pow(2.,bitstoaccomodate)-1) throw string("The value is too large to fit in the field ");
+	if (*vit > pow(2.,bitstoaccomodate)-1) throw std::string("The value is too large to fit in the field ");
 
 	// cout <<"bitstoaccomodate= "<<bitstoaccomodate<<" bitsalreadyfilled= "<<bitsalreadyfilled<<" ifield="<< ifield<<" Nfields="<<Nfields<<endl;
 
       }
-      else throw string(" unexpected situation during compression");
+      else throw std::string(" unexpected situation during compression");
 
     } //end of cycle over fields
     

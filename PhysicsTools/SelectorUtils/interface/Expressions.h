@@ -198,7 +198,7 @@ class BinOp {
     typedef typename Operation::RetType RetType;
     typedef typename A::ArgType         ArgType;
 
-    BinOp( const A& A, const B& B ):mA(A), mB(B)
+    BinOp( const A& A_, const B& B_ ):mA(A_), mB(B_)
       { };
 
     RetType operator() (const ArgType& x) const
@@ -290,7 +290,7 @@ struct operator_trait;
 template< template<class T> class Op, class A, class B>
 class operator_trait< Expr<A>, Op, Expr<B> > {
   private:
-    typedef typename ConvTraits<  Expr<A>, Expr<B> >::ResultType  ResultType;
+    typedef typename ConvTrait<  Expr<A>, Expr<B> >::ResultType   ResultType;
   public:
     typedef BinOp< Expr<A>, Op< ResultType >, Expr<B> >           ReturnBaseType;
     typedef Expr< ReturnBaseType >                                ReturnType;
@@ -300,8 +300,8 @@ template< template<class T> class Op, class A, class B >
 class operator_trait< Op, A, Expr<B> > {
   private:
     typedef typename Expr<B>::ArgType                              ArgType;
-    typedef typename ToExprTrait<A, ArgType>::ToExprType           ToExprType;
-    typedef typename ConvTraits ToExprType, Expr<B> >::ResultType  ResultType;
+    typedef typename ToExprTraits<A, ArgType>::ToExprType           ToExprType;
+    typedef typename ConvTrait ToExprType, Expr<B> >::ResultType   ResultType;
   public:
     typedef ToExprType                                             LToExpr;
     typedef BinOp< ToExprType, Op<ResultType>, Expr<B> >           ReturnBaseType;
@@ -312,8 +312,8 @@ template< template<class T> class Op, class A, class B >
 class operator_trait< Op, Expr<A>, B > {
   private:
     typedef typename Expr<A>::ArgType                              ArgType;
-    typedef typename ToExprTrait<B, ArgType>::ToExprType           ToExprType;
-    typedef typename ConvTraits< Expr<A>, ToExprType >::ResultType ResultType;
+    typedef typename ToExprTraits<B, ArgType>::ToExprType           ToExprType;
+    typedef typename ConvTrait< Expr<A>, ToExprType >::ResultType  ResultType;
   public:
     typedef ToExprType                                             RToExpr;
     typedef BinOp< Expr<A>, Op<ResultType>, ToExprType >           ReturnBaseType;
@@ -329,9 +329,9 @@ class operator_trait< Op, Expr<A>, B > {
 // operator+ 
 template< class A, class B >
 typename operator_trait< Expr<A>, Add, Expr<B> >::ReturnType
-operator+( const TExpr<A>& A, const TExpr<B>& B ) {
-  typedef typename operator_trait< Expr<A>, Add, TExpr<B> >::ReturnBaseType ReturnBaseType;
-  typedef typename operator_trait< Expr<A>, Add, TExpr<B> >::ReturnType     ReturnType;
+operator+( const Expr<A>& A, const Expr<B>& B ) {
+  typedef typename operator_trait< Expr<A>, Add, Expr<B> >::ReturnBaseType ReturnBaseType;
+  typedef typename operator_trait< Expr<A>, Add, Expr<B> >::ReturnType     ReturnType;
   return ReturnType( ReturnBaseType(A, B) );
 }
 
@@ -478,20 +478,20 @@ operator<( const Expr<A>& A, const Expr<B>& B ){
 }
 
 template< class A, class B >
-typename operator_trait< A , Less, TExpr<B> >::ReturnType
+typename operator_trait< A , Less, Expr<B> >::ReturnType
 operator<( const A& A, const Expr<B>& B ){
-  typedef typename operator_trait< A, Less, TExpr<B> >::LToExpr        LToExpr;
-  typedef typename operator_trait< A, Less, TExpr<B> >::ReturnBaseType ReturnBaseType;
-  typedef typename operator_trait< A, Less, TExpr<B> >::ReturnType     ReturnType;
+  typedef typename operator_trait< A, Less, Expr<B> >::LToExpr        LToExpr;
+  typedef typename operator_trait< A, Less, Expr<B> >::ReturnBaseType ReturnBaseType;
+  typedef typename operator_trait< A, Less, Expr<B> >::ReturnType     ReturnType;
   return ReturnType( ReturnBaseType(LToExpr(A), B) );
 }
 
 template< class A, class B >
 typename operator_trait< Expr<A>, Less, B  >::ReturnType
 operator<( const Expr<A>& A, const B& B ){
-  typedef typename operator_trait< TLt, TExpr<A>, B >::RToExpr        RToExpr;
-  typedef typename operator_trait< TLt, TExpr<A>, B >::ReturnBaseType ReturnBaseType;
-  typedef typename operator_trait< TLt, TExpr<A>, B >::ReturnType     ReturnType;
+  typedef typename operator_trait< TLt, Expr<A>, B >::RToExpr        RToExpr;
+  typedef typename operator_trait< TLt, Expr<A>, B >::ReturnBaseType ReturnBaseType;
+  typedef typename operator_trait< TLt, Expr<A>, B >::ReturnType     ReturnType;
   return ReturnType( ReturnBaseType(A, RToExpr(B)) );
 }
 
@@ -555,7 +555,7 @@ operator>( const Expr<A>& A, const B& B ) {
 
 // operator>= 
 template< class A, class B >
-typename operator_trait< Expr<A>, MoreEqual, TExpr<B> >::ReturnType
+typename operator_trait< Expr<A>, MoreEqual, Expr<B> >::ReturnType
 operator>=( const Expr<A>& A, const Expr<B>& B ) {
   typedef typename operator_trait< Expr<A>, MoreEqual, Expr<B> >::ReturnBaseType ReturnBaseType;
   typedef typename operator_trait< Expr<A>, MoreEqual, Expr<B> >::ReturnType     ReturnType;
@@ -563,7 +563,7 @@ operator>=( const Expr<A>& A, const Expr<B>& B ) {
 }
 
 template< class A, class B >
-typename operator_trait< A , MoreEqual, TExpr<B> >::ReturnType
+typename operator_trait< A , MoreEqual, Expr<B> >::ReturnType
 operator>=( const A& A, const Expr<B>& B ) {
   typedef typename operator_trait< A, MoreEqual, Expr<B> >::LToExpr        LToExpr;
   typedef typename operator_trait< A, MoreEqual, Expr<B> >::ReturnBaseType ReturnBaseType;

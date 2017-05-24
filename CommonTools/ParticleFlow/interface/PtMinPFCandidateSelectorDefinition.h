@@ -1,6 +1,8 @@
 #ifndef CommonTools_ParticleFlow_PtMinPFCandidateSelectorDefinition
 #define CommonTools_ParticleFlow_PtMinPFCandidateSelectorDefinition
 
+#include "FWCore/Framework/interface/Event.h"
+#include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/Framework/interface/ConsumesCollector.h"
 #include "DataFormats/ParticleFlowCandidate/interface/PFCandidateFwd.h"
 #include "DataFormats/ParticleFlowCandidate/interface/PFCandidate.h"

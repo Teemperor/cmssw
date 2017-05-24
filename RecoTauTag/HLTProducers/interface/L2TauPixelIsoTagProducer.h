@@ -10,6 +10,7 @@
 #include "DataFormats/VertexReco/interface/VertexFwd.h"
 #include "DataFormats/BeamSpot/interface/BeamSpot.h"
 #include "DataFormats/JetReco/interface/Jet.h"
+#include "DataFormats/TrackReco/interface/TrackFwd.h"
 
 /** \class L2TauPixelIsoTagProducer
  * Producer of a JetTagCollection where tag is defined as # of pixel tracks

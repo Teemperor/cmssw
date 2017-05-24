@@ -3,7 +3,9 @@
 #ifndef MATACQTBRAWEVENT_H
 #define MATACQTBRAWEVENT_H
 
+#include <cstddef>
 #include <inttypes.h>
+#include <vector>
 
 #if 0 //replace 1 by 0 to remove XDAQ dependency. In this case it is assumed
       //the machine is little endian.

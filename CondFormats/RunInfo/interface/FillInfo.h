@@ -1,3 +1,6 @@
+#ifndef FillInfo_h
+#define FillInfo_h
+
 #include "CondFormats/Serialization/interface/Serializable.h"
 
 #include "CondFormats/Common/interface/Time.h"
@@ -160,3 +163,5 @@ class FillInfo {
 };
 
 std::ostream & operator<<( std::ostream &, FillInfo fillInfo );
+
+#endif

@@ -3,6 +3,6 @@
 #include<bitset>
 class bitObj {
 public:
-  bitset<int N> m_a;
+  std::bitset<int> m_a;
 };
 #endif
