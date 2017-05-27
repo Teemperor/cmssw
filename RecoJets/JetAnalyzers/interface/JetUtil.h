@@ -8,6 +8,8 @@
 
 #include <cmath>
 
+#include <TMathBase.h>
+
 class PtGreater {
   public:
   template <typename T> bool operator () (const T& i, const T& j) {

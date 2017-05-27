@@ -7,11 +7,12 @@
 
 #include "DataFormats/Common/interface/OrphanHandle.h"
 
-#include "DataFormats/FWLite/interface/Event.h"
-
 #include "FWCore/Framework/interface/ConsumesCollector.h"
 #include "FWCore/ParameterSet/interface/ParameterSetDescriptionFillerBase.h" // for EDFilter
 
+namespace edm {
+  class Event;
+}
 
 namespace helper {
 

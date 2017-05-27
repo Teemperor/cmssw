@@ -103,15 +103,6 @@ public:
   NamedCandCombiner(std::string name, const Selector & select, const PairSelector & selectPair, const Setup & setup, int q1, int q2, int q3, int q4) :
     NamedCandCombinerBase(name, q1, q2, q3, q4), 
     select_(select), selectPair_(selectPair), setup_(setup), name_(name) { }
-  /// constructor from a selector, specifying to check for charge
-  NamedCandCombiner(std::string name, const Selector & select, const PairSelector & selectPair, const Setup & setup,const std::vector <int> & dauCharge) : 
-    NamedCandCombinerBase(name, true, dauCharge), select_(select), selectPair_(selectPair), setup_(setup), name_(name) { }
-  /// constructor from a selector, specifying to check for charge
-  NamedCandCombiner( std::string name, const Selector & select, const PairSelector & selectPair, const std::vector <int> & dauCharge ) : 
-    NamedCandCombinerBase(name, true, dauCharge), select_(select), selectPair_(selectPair), setup_(), name_(name) { }
-  /// constructor from a selector, specifying to check for charge
-  NamedCandCombiner(std::string name, const std::vector <int> & dauCharge) : 
-    NamedCandCombinerBase(name, true, dauCharge), select_(), selectPair_(), setup_(), name_(name) { }
   /// constructor from a selector, specifying optionally to check for charge
   NamedCandCombiner(std::string name, const Selector & select, const PairSelector & selectPair, const Setup & setup,
 	       bool checkCharge, bool checkOverlap, const std::vector <int> & dauCharge) : 

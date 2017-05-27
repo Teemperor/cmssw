@@ -19,6 +19,7 @@
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "DQMServices/Core/interface/MonitorElement.h"
 #include <DQMServices/Core/interface/DQMEDAnalyzer.h>
+#include "DQM/SiStripMonitorCluster/interface/SiStripMonitorCluster.h" // SiStripCluster
 
 class DQMStore;
 

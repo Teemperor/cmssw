@@ -3,6 +3,7 @@
 /* Partial spacialization of parameter set adapeter helper
  *
  */
+#include "PhysicsTools/IsolationAlgos/interface/IsolationProducerNew.h"
 #include "PhysicsTools/IsolationAlgos/interface/CalIsolationAlgo.h"
 #include "CommonTools/UtilAlgos/interface/ParameterAdapter.h"
 #include "FWCore/ParameterSet/interface/ParameterSet.h"

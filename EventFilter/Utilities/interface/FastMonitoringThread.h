@@ -8,6 +8,7 @@
 #include <thread>
 #include <mutex>
 
+#include <boost/shared_ptr.hpp>
 
 namespace evf{
 

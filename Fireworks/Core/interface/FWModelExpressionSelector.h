@@ -22,6 +22,7 @@
 #include <string>
 
 // user include files
+#include <Rtypes.h> // Color_t
 
 // forward declarations
 class FWEventItem;

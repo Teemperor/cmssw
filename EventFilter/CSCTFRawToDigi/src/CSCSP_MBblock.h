@@ -1,6 +1,8 @@
 #ifndef CSCSP_MBblock_h
 #define CSCSP_MBblock_h
 
+#include <string.h>
+
 class CSCSP_MBblock {
 private:
 	/////// word 1 ///////

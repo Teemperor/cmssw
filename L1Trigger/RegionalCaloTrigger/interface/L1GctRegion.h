@@ -34,8 +34,6 @@ public:
     void setMip(bool mip) { myMip = mip; }
     void setQuiet(bool quiet) { myQuiet = quiet; }
 
-	std::ostream& operator << (std::ostream& os, const L1GctRegion& s);
-		
 private:
 
 	std::bitset<10> myEt;

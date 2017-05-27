@@ -5,6 +5,7 @@
  * \author: Luca Lista, INFN
  *
  */
+#include "FWCore/Framework/interface/Event.h"
 #include "DataFormats/Common/interface/OwnVector.h"
 #include "DataFormats/Common/interface/RefVector.h"
 #include "DataFormats/Common/interface/RefToBase.h"

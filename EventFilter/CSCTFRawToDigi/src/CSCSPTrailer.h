@@ -1,6 +1,8 @@
 #ifndef CSCSPTrailer_h
 #define CSCSPTrailer_h
 
+#include <string.h>
+
 class CSCSPTrailer {
 private:
 	/////// word 1 ///////

@@ -8,6 +8,8 @@
 
 #include "PhysicsTools/Utilities/interface/Simplify_begin.h"
 
+#include <boost/mpl/if.hpp>
+
 namespace funct {
 
   // a * ( b * c ) = ( a * b ) * c

@@ -8,6 +8,7 @@
  */
 
 #include "Math/PdfFuncMathCore.h"
+#include <cmath>
 
 class BinomialProbHelper {
 public:

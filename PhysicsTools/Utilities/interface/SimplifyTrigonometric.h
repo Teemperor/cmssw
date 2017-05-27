@@ -13,6 +13,8 @@
 
 #include "PhysicsTools/Utilities/interface/Simplify_begin.h"
 
+#include <boost/mpl/if.hpp>
+
 namespace funct {
   // sin(-a) = - sin(a)
   SIN_RULE(TYPT1, MINUS_S(A), MINUS(SIN(A)), -sin(_._));

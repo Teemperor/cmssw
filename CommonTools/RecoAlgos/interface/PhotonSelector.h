@@ -14,6 +14,7 @@
  */
 
 #include "DataFormats/EgammaCandidates/interface/Photon.h"
+#include "DataFormats/EgammaCandidates/interface/PhotonFwd.h"
 #include "DataFormats/EgammaReco/interface/SuperCluster.h"
 #include "CommonTools/UtilAlgos/interface/ObjectSelector.h"
 
@@ -44,8 +45,8 @@ namespace helper {
     }
     size_t size() const { return selPhotons_->size(); }
   private:
-    std::auto_ptr<reco::PhotonCollection> selPhotons_;
-    std::auto_ptr<reco::SuperClusterCollection> selSuperClusters_;
+    std::unique_ptr<reco::PhotonCollection> selPhotons_;
+    std::unique_ptr<reco::SuperClusterCollection> selSuperClusters_;
   };
 
   class PhotonSelectorBase : public edm::EDFilter {

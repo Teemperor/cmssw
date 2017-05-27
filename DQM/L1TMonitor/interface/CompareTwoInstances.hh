@@ -94,7 +94,6 @@ public:
 // initialize in the constructor
 //  Coll1_ = iConfig.getUntrackedParameter<edm::InputTag>("Coll1");
 //  Coll2_ = iConfig.getUntrackedParameter<edm::InputTag>("Coll2");
-/    
 //  a_ = CompareTwoInstances<L1GctEmCand, unsigned>(
 // 					  &L1GctEmCand::etaIndex,
 // 					  "GctEmEta", "GCT EM ETA",

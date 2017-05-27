@@ -127,7 +127,7 @@ void CandMatcherBase<C1, C2>::initMaps() {
     for( size_t i = 0; i < matchedSize; ++ i ) {
       const Candidate & c = matched[ i ];
       for( Candidate::const_iterator d = c.begin(); d != c.end(); ++ d ) {
-	std;:vector<const Candidate *> daus = getDaughters( & * d );
+	std::vector<const Candidate *> daus = getDaughters( & * d );
 	for( size_t j = 0; j < daus.size(); ++ j ) {
 	  const Candidate * daughter = daus[ j ];
 	  typename MatchedRefMap::const_iterator f = matchedRefs_.find( daughter );
@@ -161,7 +161,7 @@ typename CandMatcherBase<C1, C2>::ref_type CandMatcherBase<C1, C2>::operator()( 
       // if a daughter does not match, return a null ref.
       if ( m.isNull() ) return ref_type();
       // get matched mother indices (fetched previously)
-      const set<size_t> & allMomDaughters = matchedMothers_[ m.key() ];
+      const std::set<size_t> & allMomDaughters = matchedMothers_[ m.key() ];
       momDaughters.clear();
       for( std::set<size_t>::const_iterator k = allMomDaughters.begin(); 
 	   k != allMomDaughters.end(); ++ k ) {

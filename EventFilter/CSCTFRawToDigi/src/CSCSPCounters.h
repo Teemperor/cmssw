@@ -1,6 +1,8 @@
 #ifndef CSCSPCounters_h
 #define CSCSPCounters_h
 
+#include <string.h>
+
 class CSCSPCounters {
 private:
 	// Block of counters

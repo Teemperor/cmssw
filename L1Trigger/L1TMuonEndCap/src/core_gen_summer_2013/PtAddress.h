@@ -6,6 +6,10 @@
 
 #include "CondFormats/DataRecord/interface/L1MuTriggerScalesRcd.h"
 #include "CondFormats/DataRecord/interface/L1MuTriggerPtScaleRcd.h"
+#include "L1Trigger/CSCTrackFinder/interface/CSCTrackFinderDataTypes.h" // for ptadd
+
+#include <iostream>
+#include <cmath>
 
 ptadd getAddress(std::vector<std::vector<int>> TP){
 

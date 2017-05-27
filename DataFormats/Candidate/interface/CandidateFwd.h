@@ -2,9 +2,7 @@
 #define Candidate_CandidateFwd_h
 #include "DataFormats/Common/interface/OwnVector.h"
 
-namespace reco {
-  class Candidate;
-}
+#include "DataFormats/Candidate/interface/Candidate.h"
 
 #include "DataFormats/Common/interface/Ref.h"
 #include "DataFormats/Common/interface/Ptr.h"

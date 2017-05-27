@@ -21,7 +21,10 @@
 
 #include "Fireworks/Core/interface/FWSimpleProxyHelper.h"
 
+#include "Rtypes.h" // for Color_t
+
 class TEveWindow;
+class TEveWindowSlot;
 class FWModelId;
 class FWEventItem;
 

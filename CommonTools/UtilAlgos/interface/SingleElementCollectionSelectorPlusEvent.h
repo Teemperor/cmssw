@@ -12,10 +12,12 @@
  * $Id: SingleElementCollectionSelectorPlusEvent.h,v 1.1 2009/03/03 13:07:28 llista Exp $
  *
  */
+#include "FWCore/Framework/interface/Event.h"
 #include "FWCore/Framework/interface/ConsumesCollector.h"
 #include "CommonTools/UtilAlgos/interface/SelectionAdderTrait.h"
 #include "CommonTools/UtilAlgos/interface/StoreContainerTrait.h"
 #include "CommonTools/UtilAlgos/interface/ParameterAdapter.h"
+#include "CommonTools/UtilAlgos/interface/SelectedOutputCollectionTrait.h"
 
 template<typename InputCollection, typename Selector,
 	 typename OutputCollection = typename helper::SelectedOutputCollectionTrait<InputCollection>::type,

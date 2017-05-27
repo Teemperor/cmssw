@@ -1,6 +1,10 @@
 #ifndef CartesianStateAdaptor_H
 #define CartesianStateAdaptor_H
 
+#include "DataFormats/GeometryVector/interface/Basic3DVector.h"
+#include "FWCore/Utilities/interface/Visibility.h" // for dso_internal
+#include "TrackPropagation/RungeKutta/src/RKSmallVector.h"
+
 class dso_internal CartesianStateAdaptor {
 public:
 

@@ -2,6 +2,7 @@
 #define PhysicsTools_Utilities_SimplifyNumerical_h
 #include "PhysicsTools/Utilities/interface/Numerical.h"
 #include "PhysicsTools/Utilities/interface/Operations.h"
+#include "PhysicsTools/Utilities/interface/Fraction.h"
 
 namespace funct {
 

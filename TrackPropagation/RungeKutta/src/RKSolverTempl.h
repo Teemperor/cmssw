@@ -9,9 +9,9 @@
 /// ABC for Runge-Kutta solvers
 
 template <typename T, 
-	  template class Deriv<typename, int>, 
-	  template class Dist<typename, int>,
-	  template class StepWithPrec<typename, class, class, int>,
+	  template<typename, int> class Deriv, 
+	  template<typename, int> class Dist,
+	  template<typename, class, class, int> class StepWithPrec,
 	  int N>
 class dso_internal RKSolverTempl {
 public:

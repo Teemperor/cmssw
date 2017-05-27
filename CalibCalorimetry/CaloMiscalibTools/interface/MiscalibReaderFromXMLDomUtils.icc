@@ -2,6 +2,8 @@
 #ifndef _MISCALIB_READER_FROM_XML_DOM_UTILS_ICC
 #define _MISCALIB_READER_FROM_XML_DOM_UTILS_ICC
 
+#include <xercesc/dom/DOMNode.hpp> // For DOMNode used in getNodeValue()
+
 //----------------------------------------------------------------------
 
 inline std::string 

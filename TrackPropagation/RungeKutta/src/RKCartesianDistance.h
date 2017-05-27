@@ -5,6 +5,7 @@
 #include "RKDistance.h"
 #include "RKSmallVector.h"
 #include "CartesianStateAdaptor.h"
+#include "DataFormats/GeometryVector/interface/Basic3DVector.h"
 
 #include <cmath>
 

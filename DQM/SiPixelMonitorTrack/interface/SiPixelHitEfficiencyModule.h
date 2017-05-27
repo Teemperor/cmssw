@@ -19,6 +19,7 @@
 #include <utility>
 
 //#include "DataFormats/GeometryCommonDetAlgo/interface/MeasurementVector.h"
+#include "FWCore/Framework/interface/EventSetup.h"
 #include "DQMServices/Core/interface/MonitorElement.h"
 #include "DQMServices/Core/interface/DQMStore.h"
 #include "DataFormats/TrackerRecHit2D/interface/SiPixelRecHitCollection.h"

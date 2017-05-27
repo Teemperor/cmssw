@@ -6,6 +6,7 @@
 #include <cstddef>
 #include <inttypes.h>
 #include <vector>
+#include <time.h> // for time_t
 
 #if 0 //replace 1 by 0 to remove XDAQ dependency. In this case it is assumed
       //the machine is little endian.

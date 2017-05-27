@@ -4,6 +4,7 @@
 #include "CommonTools/Clustering1D/interface/Cluster1D.h"
 #include "CommonTools/Clustering1D/interface/WeightEstimator.h"
 
+#include "DataFormats/Math/interface/Point3D.h" // for math::XYZPoint
 #include <Math/Point3Dfwd.h> // FOR XYZPoint
 
 /**

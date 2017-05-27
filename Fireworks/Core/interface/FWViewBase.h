@@ -26,6 +26,8 @@
 #include "Fireworks/Core/interface/FWConfigurableParameterizable.h"
 #include "Fireworks/Core/interface/FWViewType.h"
 
+#include "Rtypes.h" // for Int_t
+
 // forward declarations
 class TGFrame;
 class FWViewContextMenuHandlerBase;
