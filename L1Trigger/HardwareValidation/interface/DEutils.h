@@ -8,7 +8,7 @@
  *\date 07.04
  */
 
-#include <iostream>
+#include <iomanip>
 
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
 #include "L1Trigger/HardwareValidation/interface/DEtrait.h"

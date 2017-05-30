@@ -6,6 +6,7 @@
 #include <algorithm>
 
 #include "PhysicsTools/MVAComputer/interface/AtomicId.h"
+#include "PhysicsTools/MVATrainer/interface/SourceVariable.h"
 
 namespace PhysicsTools {
 

@@ -4,6 +4,7 @@
  *
  * \author Luca Lista, INFN
  */
+#include "CommonTools/CandAlgos/interface/CandDecaySelector.h" // for spez of StoreManagerTrait<reco::CandidateCollection, EdmFilter>
 #include "CommonTools/CandAlgos/interface/ObjectShallowCloneSelector.h"
 #include "CommonTools/UtilAlgos/interface/StoreContainerTrait.h"
 #include "CommonTools/UtilAlgos/interface/SelectionAdderTrait.h"

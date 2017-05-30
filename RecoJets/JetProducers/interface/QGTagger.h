@@ -2,6 +2,8 @@
 #define JetProducers_QGTagger_h
 #include <tuple>
 
+#include "DataFormats/VertexReco/interface/VertexFwd.h"
+
 #include "FWCore/Framework/interface/Frameworkfwd.h"
 #include "FWCore/Framework/interface/global/EDProducer.h"
 
@@ -10,6 +12,7 @@
 
 #include "JetMETCorrections/JetCorrector/interface/JetCorrector.h"
 #include "RecoJets/JetAlgorithms/interface/QGLikelihoodCalculator.h"
+
 
 class QGTagger : public edm::global::EDProducer<>{
    public:

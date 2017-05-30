@@ -5,6 +5,7 @@
  * \author Luca Lista, INFN
  *
  */
+#include "CommonTools/CandAlgos/interface/CandDecaySelector.h" // ObjectSelector, StoreManagerTrait specialization
 #include "CommonTools/UtilAlgos/interface/ObjectSelector.h"
 #include "DataFormats/Candidate/interface/ShallowCloneCandidate.h"
 #include "DataFormats/Common/interface/RefVector.h"

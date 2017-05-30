@@ -3,7 +3,7 @@
 
 #include <iomanip>
 #include <sstream>
-#include <sys/types.h> // for getpid
+#include <unistd.h>
 
 namespace fffnaming {
 

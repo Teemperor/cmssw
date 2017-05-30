@@ -30,6 +30,7 @@
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 
 #include "SimG4CMS/Forward/interface/CastorNumberingScheme.h"
+#include "SimG4CMS/Calo/interface/CaloG4HitCollection.h"
 
 #include <cassert>
 #include <iostream>
