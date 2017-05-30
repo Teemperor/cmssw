@@ -38,7 +38,7 @@ protected:
   mutable CovarianceMatrix cov_;
 };
 
-#include "PhysicsTools/UtilAlgos/interface/ParameterAdapter.h"
+#include "CommonTools/UtilAlgos/interface/ParameterAdapter.h"
 
 template<typename Fitter>
 class CandCommonVertexFitter : public CandCommonVertexFitterBase {

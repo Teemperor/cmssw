@@ -445,7 +445,7 @@ CMSSW_CATEGORIES={"Operations": ["Configuration/Applications",
   "TopQuarkAnalysis/TopObjectResolutions", "TopQuarkAnalysis/TopPairBSM",
   "TopQuarkAnalysis/TopSkimming", "TopQuarkAnalysis/TopTools",
   "Utilities/BinningTools", "PhysicsTools/SelectorUtils",
-  "PhysicsTools/TagAndProbe", "PhysicsTools/UtilAlgos", "PhysicsTools/Utilities",
+  "PhysicsTools/TagAndProbe", "CommonTools/UtilAlgos", "PhysicsTools/Utilities",
   "QCDAnalysis/ChargedHadronSpectra", "QCDAnalysis/Configuration",
   "QCDAnalysis/Skimming", "QCDAnalysis/UEAnalysis"], "Fast Simulation":
   ["FastSimDataFormats/External", "FastSimDataFormats/L1GlobalMuonTrigger",

@@ -6,7 +6,7 @@
 <use   name="Geometry/CaloTopology"/>
 <use   name="RecoLocalCalo/EcalDeadChannelRecoveryAlgos"/>
 <use   name="CommonTools/UtilAlgos"/>
-<use   name="PhysicsTools/UtilAlgos"/>
+<use   name="CommonTools/UtilAlgos"/>
 
 <library file="plugins/*.cc" name="testEcalDeadChannelRecoveryAlgos">
   <flags EDM_PLUGIN="1"/>

@@ -1,6 +1,6 @@
 #ifndef PhysicsToolsPatUtils_RazorComputer_H
 #define PhysicsToolsPatUtils_RazorComputer_H
-#include "PhysicsTools/UtilAlgos/interface/CachingVariable.h"
+#include "CommonTools/UtilAlgos/interface/CachingVariable.h"
 #include "DataFormats/PatCandidates/interface/Jet.h"
 #include "DataFormats/PatCandidates/interface/MET.h"
 

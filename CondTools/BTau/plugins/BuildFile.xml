@@ -12,5 +12,5 @@
   <use   name="CondCore/PluginSystem"/>
   <use   name="CondCore/DBOutputService"/>
   <use   name="PhysicsTools/CondLiteIO"/>
-  <use   name="PhysicsTools/UtilAlgos"/>
+  <use   name="CommonTools/UtilAlgos"/>
 </library>

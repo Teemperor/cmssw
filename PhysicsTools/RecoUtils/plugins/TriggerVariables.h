@@ -1,4 +1,4 @@
-#include "PhysicsTools/UtilAlgos/interface/CachingVariable.h"
+#include "CommonTools/UtilAlgos/interface/CachingVariable.h"
 
 #include "DataFormats/L1GlobalTrigger/interface/L1GlobalTriggerReadoutRecord.h"
 

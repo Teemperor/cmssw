@@ -11,7 +11,7 @@
   <use   name="CondFormats/DataRecord"/>
   <use   name="CondFormats/SiPixelObjects"/>
   <use   name="CondCore/DBOutputService"/>
-  <use   name="PhysicsTools/UtilAlgos"/>
+  <use   name="CommonTools/UtilAlgos"/>
   <use   name="root"/>
   <use   name="rootminuit"/>
   <use   name="Geometry/Records"/>

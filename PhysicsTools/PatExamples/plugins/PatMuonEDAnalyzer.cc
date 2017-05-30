@@ -5,7 +5,7 @@
   using the full framework and cmsRun. You can find the example to use this code in 
   PhysicsTools/PatExamples/test/....
 */
-#include "PhysicsTools/UtilAlgos/interface/EDAnalyzerWrapper.h"
+#include "CommonTools/UtilAlgos/interface/EDAnalyzerWrapper.h"
 #include "PhysicsTools/PatExamples/interface/PatMuonAnalyzer.h"
 
 typedef edm::AnalyzerWrapper<PatMuonAnalyzer> PatMuonEDAnalyzer;

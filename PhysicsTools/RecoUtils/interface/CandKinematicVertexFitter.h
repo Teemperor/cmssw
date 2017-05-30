@@ -11,7 +11,7 @@
 #include "RecoVertex/VertexPrimitives/interface/TransientVertex.h"
 #include "DataFormats/RecoCandidate/interface/RecoCandidate.h"
 #include "RecoVertex/KinematicFit/interface/KinematicParticleVertexFitter.h"
-#include "PhysicsTools/UtilAlgos/interface/ParameterAdapter.h"
+#include "CommonTools/UtilAlgos/interface/ParameterAdapter.h"
 #include "RecoVertex/KinematicFitPrimitives/interface/KinematicParticleFactoryFromTransientTrack.h"
 #include "SimGeneral/HepPDTRecord/interface/ParticleDataTable.h"
 #include <vector>

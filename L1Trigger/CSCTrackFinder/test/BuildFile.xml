@@ -13,7 +13,7 @@
 <use   name="rootgraphics"/>
 
 <use name="FWCore/ParameterSet"/>
-<use name="PhysicsTools/UtilAlgos"/>
+<use name="CommonTools/UtilAlgos"/>
 
 # the following blocks are used by CSCTF experts 
 # to generate and test PT and SR LUTs, 

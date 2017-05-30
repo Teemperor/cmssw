@@ -23,7 +23,7 @@
     <use   name="SimDataFormats/CrossingFrame"/>
     <use   name="SimDataFormats/TrackingAnalysis"/>
     <use   name="RecoLocalTracker/SiPixelRecHits"/>
-    <use   name="PhysicsTools/UtilAlgos"/>
+    <use   name="CommonTools/UtilAlgos"/>
     <use   name="FWCore/ServiceRegistry"/>
     <use   name="clhep"/>
     <use   name="DataFormats/EcalDigi"/>

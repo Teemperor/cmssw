@@ -9,7 +9,7 @@
 <use   name="RecoMuon/MuonIsolation"/>
 <use   name="RecoMuon/MuonIdentification"/>
 <use   name="DataFormats/RecoCandidate"/>
-<use   name="PhysicsTools/UtilAlgos"/>
+<use   name="CommonTools/UtilAlgos"/>
 <use   name="CommonTools/Utils"/>
 <library   file="*.cc" name="TestMuonMuonIdentificationPlugins">
   <flags   EDM_PLUGIN="1"/>

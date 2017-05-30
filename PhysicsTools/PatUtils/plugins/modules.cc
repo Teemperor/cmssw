@@ -3,7 +3,7 @@
 #include "FWCore/Framework/interface/ModuleFactory.h"
 #include "FWCore/ServiceRegistry/interface/ServiceMaker.h"
 
-#include "PhysicsTools/UtilAlgos/interface/CachingVariable.h"
+#include "CommonTools/UtilAlgos/interface/CachingVariable.h"
 
 namespace configurableAnalysis{
   constexpr char Jet[]="pat::Jet";

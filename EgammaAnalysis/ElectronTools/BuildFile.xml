@@ -16,7 +16,7 @@
 <use   name="DataFormats/EgammaReco"/>
 <use   name="DataFormats/TrackReco"/>
 <use   name="TrackingTools/IPTools"/>
-<use   name="PhysicsTools/UtilAlgos"/>
+<use   name="CommonTools/UtilAlgos"/>
 <use   name="PhysicsTools/SelectorUtils"/>
 <use   name="clhep"/>
 <use   name="root"/>

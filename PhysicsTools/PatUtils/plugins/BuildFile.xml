@@ -19,5 +19,5 @@
   <use   name="JetMETCorrections/Modules"/>
   <use   name="RecoMET/METAlgorithms"/>
   <use   name="PhysicsTools/PatUtils"/>
-  <use   name="PhysicsTools/UtilAlgos"/>
+  <use   name="CommonTools/UtilAlgos"/>
 </library>

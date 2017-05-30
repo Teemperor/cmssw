@@ -2,10 +2,10 @@
 #include <string>
 
 #include "TH2.h"
-#include "PhysicsTools/UtilAlgos/interface/BasicAnalyzer.h"
+#include "CommonTools/UtilAlgos/interface/BasicAnalyzer.h"
 
 /**
-   \class AnalysisTasksAnalyzerJEC AnalysisTasksAnalyzerJEC.h "PhysicsTools/UtilAlgos/interface/AnalysisTasksAnalyzerJEC.h"
+   \class AnalysisTasksAnalyzerJEC AnalysisTasksAnalyzerJEC.h "CommonTools/UtilAlgos/interface/AnalysisTasksAnalyzerJEC.h"
    \brief Example class that can be used both within FWLite and within the full framework
 
    This is an example for keeping classes that can be used both within FWLite and within the full

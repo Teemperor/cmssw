@@ -10,7 +10,7 @@
   <use name="DataFormats/TauReco"/>
   <use name="RecoTauTag/RecoTau"/>
   <use name="PhysicsTools/PatAlgos"/>
-  <use name="PhysicsTools/UtilAlgos"/>
+  <use name="CommonTools/UtilAlgos"/>
   <use name="FWCore/ServiceRegistry"/>
   <use name="clhep"/>
   <use name="root"/>

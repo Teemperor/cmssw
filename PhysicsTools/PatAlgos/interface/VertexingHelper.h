@@ -24,7 +24,7 @@
 #include "FWCore/Framework/interface/ESHandle.h"
 #include "TrackingTools/TransientTrack/interface/TransientTrackBuilder.h"
 
-#include "PhysicsTools/UtilAlgos/interface/ParameterAdapter.h"
+#include "CommonTools/UtilAlgos/interface/ParameterAdapter.h"
 namespace reco {
     namespace modules {
         /// Helper struct to convert from ParameterSet to ElectronSelection

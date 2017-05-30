@@ -16,7 +16,7 @@ DEFINE_EDM_PLUGIN(EventSelectorFactoryFromHelper, CandidateSEventVetoSelector, "
 #include "PhysicsTools/RecoUtils/plugins/HLTEventSelector.h"
 DEFINE_EDM_PLUGIN(EventSelectorFactoryFromHelper, HLTEventSelector, "HLTEventSelector");
 
-#include "PhysicsTools/UtilAlgos/interface/CachingVariable.h"
+#include "CommonTools/UtilAlgos/interface/CachingVariable.h"
 
 namespace configurableAnalysis{
   char Candidate[]="reco::Candidate";

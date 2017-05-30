@@ -4,7 +4,7 @@
   <use   name="lwtnn"/>
   <use   name="boost"/>
   <use   name="classlib"/>
-  <use   name="PhysicsTools/UtilAlgos"/>
+  <use   name="CommonTools/UtilAlgos"/>
   <use   name="FWCore/PluginManager"/>
   <use   name="FWCore/ServiceRegistry"/>
   <use   name="RecoBTag/SecondaryVertex"/>

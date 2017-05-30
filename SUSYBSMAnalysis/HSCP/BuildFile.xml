@@ -23,7 +23,7 @@
 <use   name="Geometry/EcalMapping"/>
 <use   name="Geometry/RPCGeometry"/>
 <use   name="Geometry/Records"/>
-<use   name="PhysicsTools/UtilAlgos"/>
+<use   name="CommonTools/UtilAlgos"/>
 <use   name="RecoLocalCalo/EcalRecAlgos"/>
 <use   name="RecoMuon/GlobalTrackFinder"/>
 <use   name="RecoMuon/TrackingTools"/>

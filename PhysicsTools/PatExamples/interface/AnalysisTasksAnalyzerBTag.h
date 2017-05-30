@@ -3,10 +3,10 @@
 
 #include "DataFormats/PatCandidates/interface/Jet.h"
 #include "TH1.h"
-#include "PhysicsTools/UtilAlgos/interface/BasicAnalyzer.h"
+#include "CommonTools/UtilAlgos/interface/BasicAnalyzer.h"
 
 /**
-   \class AnalysisTasksAnalyzerBTag AnalysisTasksAnalyzerBTag.h "PhysicsTools/UtilAlgos/interface/AnalysisTasksAnalyzerBTag.h"
+   \class AnalysisTasksAnalyzerBTag AnalysisTasksAnalyzerBTag.h "CommonTools/UtilAlgos/interface/AnalysisTasksAnalyzerBTag.h"
    \brief Example class that can be used both within FWLite and within the full framework
 
    This is an example for keeping classes that can be used both within FWLite and within the full

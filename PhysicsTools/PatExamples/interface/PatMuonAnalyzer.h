@@ -2,7 +2,7 @@
 #include <string>
 
 #include "TH1.h"
-#include "PhysicsTools/UtilAlgos/interface/BasicAnalyzer.h"
+#include "CommonTools/UtilAlgos/interface/BasicAnalyzer.h"
 #include "DataFormats/PatCandidates/interface/Muon.h"
 
 /**
