@@ -1,8 +1,8 @@
 #ifndef Alignment_APEEstimation_TrackerDetectorStruct_h
 #define Alignment_APEEstimation_TrackerDetectorStruct_h
 
-
-//#include "TH1.h"
+class TH1;
+class TH2;
 
 struct TrackerDetectorStruct{
   
