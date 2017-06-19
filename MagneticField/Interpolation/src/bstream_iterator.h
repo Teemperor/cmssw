@@ -4,6 +4,7 @@
 #include "binary_ifstream.h"
 #include "binary_ofstream.h"
 #include <iterator>
+#include <cstddef>
 #include "FWCore/Utilities/interface/Visibility.h"
 
 template <typename T>

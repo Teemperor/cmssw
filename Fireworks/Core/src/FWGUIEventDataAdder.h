@@ -29,6 +29,7 @@
 // forward declarations
 class FWEventItemsManager;
 class FWJobMetadataManager;
+class TGFrame;
 class TGTransientFrame;
 class TGTextEntry;
 class TGTextButton;

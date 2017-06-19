@@ -1,6 +1,8 @@
 #ifndef CSCSP_MEblock_h
 #define CSCSP_MEblock_h
 
+#include <string.h>
+
 class CSCSP_MEblock {
 private:
 	/////// word 1 ///////

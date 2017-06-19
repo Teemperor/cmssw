@@ -1,9 +1,11 @@
 #ifndef CSCSP_SPblock_h
 #define CSCSP_SPblock_h
 #include <vector>
+#include <string.h>
 
 #include "EventFilter/CSCTFRawToDigi/src/CSCSP_MEblock.h"
 #include "EventFilter/CSCTFRawToDigi/src/CSCSP_MBblock.h"
+
 
 class CSCSP_SPblock {
 private:

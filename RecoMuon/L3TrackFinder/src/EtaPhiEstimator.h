@@ -1,6 +1,12 @@
+#ifndef RecoMuon_L3TrackFinder_EtaPhiEstimator_H
+#define RecoMuon_L3TrackFinder_EtaPhiEstimator_H
+
+#include "FWCore/MessageLogger/interface/MessageLogger.h" // For LogDebug
 #include "TrackingTools/KalmanUpdators/interface/Chi2MeasurementEstimatorBase.h"
+#include "TrackingTools/TrajectoryState/interface/TrajectoryStateOnSurface.h" // for tsos.globalPosition()
 #include "DataFormats/Math/interface/deltaPhi.h"
 #include "DataFormats/Math/interface/deltaR.h"
+#include "DataFormats/TrackingRecHit/interface/TrackingRecHit.h" // for aRecHit.globalPosition()
 
 class EtaPhiEstimator : public Chi2MeasurementEstimatorBase {
  public:
@@ -50,3 +56,5 @@ class EtaPhiEstimator : public Chi2MeasurementEstimatorBase {
     const Chi2MeasurementEstimatorBase * estimator_;
     double thedEta,thedPhi,thedEta2,thedPhi2;
 };
+
+#endif
