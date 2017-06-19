@@ -7,6 +7,9 @@
  * \version $Id: CandMapTrait.h,v 1.2 2007/10/20 16:00:52 llista Exp $
  *
  */
+#include "DataFormats/Candidate/interface/CandidateFwd.h"
+#include "DataFormats/Common/interface/AssociationMap.h"
+
 namespace reco {
   namespace helper {
     template<typename C1, typename C2 = C1>
