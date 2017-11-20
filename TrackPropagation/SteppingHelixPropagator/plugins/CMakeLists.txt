@@ -1,0 +1,14 @@
+add_library(TrackPropagationSteppingHelixPropagatorPlugins OBJECT 
+  module.cc
+  SteppingHelixPropagatorESProducer.cc
+)
+
+target_include_directories(TrackPropagationSteppingHelixPropagatorPlugins PUBLIC /usr/include/boost/python/)
+target_include_directories(TrackPropagationSteppingHelixPropagatorPlugins PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(TrackPropagationSteppingHelixPropagatorPlugins PUBLIC /usr/include/python2.7/)
+target_include_directories(TrackPropagationSteppingHelixPropagatorPlugins PUBLIC /usr/include/root/)
+target_include_directories(TrackPropagationSteppingHelixPropagatorPlugins PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(TrackPropagationSteppingHelixPropagatorPlugins PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(TrackPropagationSteppingHelixPropagatorPlugins PUBLIC /usr/include/boost/)
+target_include_directories(TrackPropagationSteppingHelixPropagatorPlugins PUBLIC /usr/include/boost/regex/)
+

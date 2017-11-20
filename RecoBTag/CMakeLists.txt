@@ -1,0 +1,55 @@
+add_subdirectory(Skimming)
+add_subdirectory(BTagTools)
+add_subdirectory(XMLCalibration)
+add_subdirectory(CTagging)
+add_subdirectory(SecondaryVertex)
+add_subdirectory(TrackProbability)
+add_subdirectory(ImpactParameter)
+add_subdirectory(Records)
+add_subdirectory(PerformanceDB)
+add_subdirectory(SoftLepton)
+add_subdirectory(Combined)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoBTag_all)
+add_dependencies(RecoBTag_all
+  RecoBTagSkimming
+  RecoBTagBTagTools
+  RecoBTagXMLCalibration
+  testRecoBTagXMLCalibration
+  RecoBTagCTagging
+  RecoBTagCTaggingPlugins
+  RecoBTagSecondaryVertex
+  RecoBTagSecondaryVertexProducer
+  RecoBTagSecondaryVertexESProducers
+  RecoBTagTrackProbability
+  TrackProbabilityAnalyzer
+  IPAnalyzer
+  RecoBTagImpactParameterPlugins
+  RecoBTagRecords
+  RecoBTagPerformanceDB
+  testRecoBTagTestPerformanceDBPlugins
+  validateRecoBTagPerformanceDBPlugins
+  RecoBTagPerformanceDBplugins
+  RecoBTagSoftLepton
+  testLeptonAssociator
+  testMuonAssociator
+  RecoBTagSoftLeptonPlugins
+  RecoBTagCombined
+  RecoBTagCombinedPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoBTag_libs)
+add_dependencies(RecoBTag_libs
+  RecoBTagSkimming
+  RecoBTagBTagTools
+  RecoBTagXMLCalibration
+  RecoBTagCTagging
+  RecoBTagSecondaryVertex
+  RecoBTagTrackProbability
+  RecoBTagRecords
+  RecoBTagPerformanceDB
+  RecoBTagSoftLepton
+  RecoBTagCombined
+)

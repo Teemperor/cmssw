@@ -1,0 +1,110 @@
+add_library(CondToolsDQMSummaryPopConAnalyzer OBJECT 
+  DQMSummaryPopConAnalyzer.cc
+)
+
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /usr/include/boost/serialization/)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(CondToolsDQMSummaryPopConAnalyzer PUBLIC /usr/include/boost/regex/)
+
+add_library(CondToolsDQMSummaryEventSetupAnalyzer OBJECT 
+  DQMSummaryEventSetupAnalyzer.cc
+)
+
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /usr/include/boost/serialization/)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(CondToolsDQMSummaryEventSetupAnalyzer PUBLIC /usr/include/boost/regex/)
+
+add_library(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer OBJECT 
+  DQMReferenceHistogramRootFilePopConAnalyzer.cc
+)
+
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /usr/include/boost/serialization/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(CondToolsDQMReferenceHistogramRootFilePopConAnalyzer PUBLIC /usr/include/boost/regex/)
+
+add_library(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer OBJECT 
+  DQMReferenceHistogramRootFileEventSetupAnalyzer.cc
+)
+
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/classlib)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /usr/include/boost/serialization/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer PUBLIC /usr/include/boost/regex/)
+
+add_library(CondToolsDQMXMLFilePopConAnalyzer OBJECT 
+  DQMXMLFilePopConAnalyzer.cc
+)
+
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /usr/include/boost/serialization/)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(CondToolsDQMXMLFilePopConAnalyzer PUBLIC /usr/include/boost/regex/)
+
+add_library(CondToolsDQMXMLFileEventSetupAnalyzer OBJECT 
+  DQMXMLFileEventSetupAnalyzer.cc
+)
+
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/classlib)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /usr/include/boost/serialization/)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(CondToolsDQMXMLFileEventSetupAnalyzer PUBLIC /usr/include/boost/regex/)
+

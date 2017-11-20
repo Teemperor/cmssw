@@ -1,0 +1,208 @@
+add_subdirectory(Integration)
+add_subdirectory(SiPixelPhase1TrackClusters)
+add_subdirectory(Physics)
+add_subdirectory(SiStripMonitorHardware)
+add_subdirectory(PhysicsObjectsMonitoring)
+add_subdirectory(SiStripMonitorCluster)
+add_subdirectory(SiStripCommon)
+add_subdirectory(HcalTasks)
+add_subdirectory(TrackingMonitorClient)
+add_subdirectory(SiPixelPhase1RawData)
+add_subdirectory(HLXMonitor)
+add_subdirectory(EcalPreshowerMonitorModule)
+add_subdirectory(CastorMonitor)
+add_subdirectory(SiStripCommissioningAnalysis)
+add_subdirectory(HcalCommon)
+add_subdirectory(SiPixelCommon)
+add_subdirectory(SiStripMonitorPedestals)
+add_subdirectory(SiStripCommissioningSources)
+add_subdirectory(CTPPS)
+add_subdirectory(TrigXMonitor)
+add_subdirectory(L1TMonitorClient)
+add_subdirectory(EcalPreshowerMonitorClient)
+add_subdirectory(EcalMonitorDbModule)
+add_subdirectory(SiPixelMonitorTrack)
+add_subdirectory(SiStripCommissioningClients)
+add_subdirectory(SiPixelMonitorRawData)
+add_subdirectory(SiStripMonitorTrack)
+add_subdirectory(RCTMonitor)
+add_subdirectory(SiStripCommissioningSummary)
+add_subdirectory(SiPixelPhase1Digis)
+add_subdirectory(RPCMonitorClient)
+add_subdirectory(SiPixelPhase1TrackResiduals)
+add_subdirectory(SiStripMonitorClient)
+add_subdirectory(TrigXMonitorClient)
+add_subdirectory(SiPixelMonitorRecHit)
+add_subdirectory(EcalCommon)
+add_subdirectory(SiStripMonitorSummary)
+add_subdirectory(DTMonitorModule)
+add_subdirectory(TrackerCommon)
+add_subdirectory(SiPixelMonitorDigi)
+add_subdirectory(L1TMonitor)
+add_subdirectory(DTMonitorClient)
+add_subdirectory(SiStripHistoricInfoClient)
+add_subdirectory(TrackerMonitorTrack)
+add_subdirectory(SiPixelPhase1Clusters)
+add_subdirectory(SiPixelPhase1RecHits)
+add_subdirectory(SiPixelPhase1TrackEfficiency)
+add_subdirectory(TrackingMonitor)
+add_subdirectory(DataScouting)
+add_subdirectory(SiPixelPhase1Summary)
+add_subdirectory(EcalMonitorTasks)
+add_subdirectory(SiStripCommissioningDbClients)
+add_subdirectory(SiStripMonitorDigi)
+add_subdirectory(RPCMonitorDigi)
+add_subdirectory(SiPixelPhase1Common)
+add_subdirectory(EcalMonitorClient)
+add_subdirectory(SiPixelMonitorCluster)
+add_subdirectory(SiPixelMonitorClient)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(DQM_all)
+add_dependencies(DQM_all
+  DQMSiPixelPhase1TrackClusters
+  DQMPhysics
+  DQMSiStripMonitorHardware
+  DQMPhysicsObjectsMonitoring
+  DQMSiStripMonitorCluster
+  DQMSiStripCommon
+  testTkHistoMap
+  Test_SiStrip_HistId
+  DQMHcalTasks
+  DQMTrackingMonitorClient
+  DQMSiPixelPhase1RawData
+  DQMHLXMonitor
+  DQMEcalPreshowerMonitorModule
+  DQMCastorMonitor
+  DQMSiStripCommissioningAnalysis
+  DQMHcalCommon
+  DQMSiPixelCommon
+  DQMSiStripMonitorPedestals
+  DQMSiStripCommissioningSources
+  DQMSiStripCommissioningSourcesPlugins
+  DQMSiStripCommissioningSourcesTracking
+  DQMCTPPSPlugins
+  DQMTrigXMonitor
+  DQML1TMonitorClient
+  DQMEcalPreshowerMonitorClient
+  DQMEcalMonitorDbModule
+  DQMEcalMonitorDbModulePlugins
+  DQMSiPixelMonitorTrack
+  DQMSiStripCommissioningClients
+  DQMSiStripCommissioningClientsPlugins
+  DQMSiPixelMonitorRawData
+  DQMSiStripMonitorTrack
+  DQMRCTMonitor
+  DQMSiStripCommissioningSummary
+  DQMSiPixelPhase1Digis
+  DQMRPCMonitorClient
+  DQMSiPixelPhase1TrackResiduals
+  DQMSiStripMonitorClient
+  check_runcomplete
+  listbadmodule
+  modulediff
+  ls_cert
+  lsbs_cert
+  moduleOccupancyPlots
+  moduleOccupancyTrend
+  DQMTrigXMonitorClient
+  DQMSiPixelMonitorRecHit
+  DQMEcalCommon
+  DQMEcalCommonPlugins
+  DQMSiStripMonitorSummary
+  makePlots
+  makeTKTrend
+  makeModulePlots
+  DQMSiStripMonitorSummaryplugins
+  DQMDTMonitorModule
+  DQMDTMonitorModulePlugins
+  DQMTrackerCommon
+  TrackerRunCertification
+  DQMTrackerCommonPlugins
+  DQMSiPixelMonitorDigi
+  DQML1TMonitor
+  DQML1TMonitorPlugins
+  DQMDTMonitorClient
+  DQMSiStripHistoricInfoClient
+  DQMSiStripHistoricInfoClientPlugin
+  DQMTrackerMonitorTrack
+  DQMSiPixelPhase1Clusters
+  DQMSiPixelPhase1RecHits
+  DQMSiPixelPhase1TrackEfficiency
+  DQMTrackingMonitor
+  DQMDataScouting
+  DQMDataScoutingPlugins
+  DQMSiPixelPhase1Summary
+  DQMEcalMonitorTasks
+  DQMEcalMonitorTasksPlugins
+  DQMSiStripCommissioningDbClients
+  DQMSiStripCommissioningDbClientsPlugins
+  DQMSiStripMonitorDigi
+  DQMRPCMonitorDigi
+  DQMSiPixelPhase1Common
+  DQMEcalMonitorClient
+  DQMEcalMonitorClientPlugins
+  DQMSiPixelMonitorCluster
+  DQMSiPixelMonitorClient
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(DQM_libs)
+add_dependencies(DQM_libs
+  DQMSiPixelPhase1TrackClusters
+  DQMPhysics
+  DQMSiStripMonitorHardware
+  DQMPhysicsObjectsMonitoring
+  DQMSiStripMonitorCluster
+  DQMSiStripCommon
+  DQMHcalTasks
+  DQMTrackingMonitorClient
+  DQMSiPixelPhase1RawData
+  DQMHLXMonitor
+  DQMEcalPreshowerMonitorModule
+  DQMCastorMonitor
+  DQMSiStripCommissioningAnalysis
+  DQMHcalCommon
+  DQMSiPixelCommon
+  DQMSiStripMonitorPedestals
+  DQMSiStripCommissioningSources
+  DQMTrigXMonitor
+  DQML1TMonitorClient
+  DQMEcalPreshowerMonitorClient
+  DQMEcalMonitorDbModule
+  DQMSiPixelMonitorTrack
+  DQMSiStripCommissioningClients
+  DQMSiPixelMonitorRawData
+  DQMSiStripMonitorTrack
+  DQMRCTMonitor
+  DQMSiStripCommissioningSummary
+  DQMSiPixelPhase1Digis
+  DQMRPCMonitorClient
+  DQMSiPixelPhase1TrackResiduals
+  DQMSiStripMonitorClient
+  DQMTrigXMonitorClient
+  DQMSiPixelMonitorRecHit
+  DQMEcalCommon
+  DQMSiStripMonitorSummary
+  DQMDTMonitorModule
+  DQMTrackerCommon
+  DQMSiPixelMonitorDigi
+  DQML1TMonitor
+  DQMDTMonitorClient
+  DQMSiStripHistoricInfoClient
+  DQMTrackerMonitorTrack
+  DQMSiPixelPhase1Clusters
+  DQMSiPixelPhase1RecHits
+  DQMSiPixelPhase1TrackEfficiency
+  DQMTrackingMonitor
+  DQMDataScouting
+  DQMSiPixelPhase1Summary
+  DQMEcalMonitorTasks
+  DQMSiStripCommissioningDbClients
+  DQMSiStripMonitorDigi
+  DQMRPCMonitorDigi
+  DQMSiPixelPhase1Common
+  DQMEcalMonitorClient
+  DQMSiPixelMonitorCluster
+  DQMSiPixelMonitorClient
+)

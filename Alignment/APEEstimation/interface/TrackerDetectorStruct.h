@@ -3,6 +3,7 @@
 
 class TH1;
 class TH2;
+class TProfile;
 
 struct TrackerDetectorStruct{
   

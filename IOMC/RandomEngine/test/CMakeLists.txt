@@ -1,0 +1,39 @@
+add_library(IOMCRandomEngineTestRandomNumberServiceAnalyzer OBJECT 
+  TestRandomNumberServiceAnalyzer.cc
+)
+
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceAnalyzer PUBLIC /usr/include/boost/regex/)
+
+add_library(IOMCRandomEngineTestRandomNumberServiceGlobal OBJECT 
+  TestRandomNumberServiceGlobal.cc
+)
+
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceGlobal PUBLIC /usr/include/boost/python/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceGlobal PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceGlobal PUBLIC /usr/include/python2.7/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceGlobal PUBLIC /usr/include/root/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceGlobal PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceGlobal PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceGlobal PUBLIC /usr/include/boost/)
+target_include_directories(IOMCRandomEngineTestRandomNumberServiceGlobal PUBLIC /usr/include/boost/regex/)
+
+add_library(TestIOMCRandomEngineService OBJECT 
+  TestIOMCRandomEngineService.cpp
+)
+
+target_include_directories(TestIOMCRandomEngineService PUBLIC /usr/include/boost/python/)
+target_include_directories(TestIOMCRandomEngineService PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(TestIOMCRandomEngineService PUBLIC /usr/include/python2.7/)
+target_include_directories(TestIOMCRandomEngineService PUBLIC /usr/include/root/)
+target_include_directories(TestIOMCRandomEngineService PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(TestIOMCRandomEngineService PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(TestIOMCRandomEngineService PUBLIC /usr/include/boost/)
+target_include_directories(TestIOMCRandomEngineService PUBLIC /usr/include/boost/regex/)
+

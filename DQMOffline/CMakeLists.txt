@@ -1,0 +1,55 @@
+add_subdirectory(Hcal)
+add_subdirectory(Alignment)
+add_subdirectory(PFTau)
+add_subdirectory(Trigger)
+add_subdirectory(CalibMuon)
+add_subdirectory(L1Trigger)
+add_subdirectory(Muon)
+add_subdirectory(RecoB)
+add_subdirectory(CalibTracker)
+add_subdirectory(JetMET)
+add_subdirectory(Ecal)
+add_subdirectory(CalibCalo)
+add_subdirectory(EGamma)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(DQMOffline_all)
+add_dependencies(DQMOffline_all
+  DQMOfflineHcal
+  DQMOfflineAlignment
+  DQMOfflinePFTau
+  DQMOfflinePFTau_plugins
+  DQMOfflineTrigger
+  DQMOfflineTriggerPlugins
+  DQMOfflineCalibMuon
+  DQMOfflineL1Trigger
+  DQMOfflineMuon
+  DQMOfflineRecoB
+  DQMOfflineRecoBPlugins
+  DQMOfflineCalibTracker
+  DQMOfflineCalibTrackerplugins
+  DQMOfflineJetMET
+  DQMOfflineJetMETPlugins
+  DQMOfflineEcalPlugins
+  DQMOfflineCalibCalo
+  DQMOfflineCalibCaloPlugins
+  DQMOfflineEGamma
+  DQMOfflineEGammaPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(DQMOffline_libs)
+add_dependencies(DQMOffline_libs
+  DQMOfflineHcal
+  DQMOfflineAlignment
+  DQMOfflinePFTau
+  DQMOfflineTrigger
+  DQMOfflineCalibMuon
+  DQMOfflineL1Trigger
+  DQMOfflineMuon
+  DQMOfflineRecoB
+  DQMOfflineCalibTracker
+  DQMOfflineJetMET
+  DQMOfflineCalibCalo
+  DQMOfflineEGamma
+)

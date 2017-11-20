@@ -1,0 +1,206 @@
+add_subdirectory(Integration)
+add_subdirectory(Concurrency)
+add_subdirectory(FWLite)
+add_subdirectory(Catalog)
+add_subdirectory(PrescaleService)
+add_subdirectory(Version)
+add_subdirectory(Modules)
+add_subdirectory(Services)
+add_subdirectory(PluginManager)
+add_subdirectory(MessageLogger)
+add_subdirectory(ParameterSet)
+add_subdirectory(PythonParameterSet)
+add_subdirectory(PythonFramework)
+add_subdirectory(Utilities)
+add_subdirectory(ServiceRegistry)
+add_subdirectory(Framework)
+add_subdirectory(Common)
+add_subdirectory(TFWLiteSelectorTest)
+add_subdirectory(TFWLiteSelector)
+add_subdirectory(Sources)
+add_subdirectory(MessageService)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(FWCore_all)
+add_dependencies(FWCore_all
+  FWCoreIntegration
+  FWCoreConcurrency
+  testFWCoreConcurrency
+  test_xercesInitialize
+  test_threadSafeOutputFileStream
+  ThreadSafeAddOnlyContainer_t
+  TestFWCoreConcurrencyDriver
+  FWCoreFWLite
+  edmClassStorageSize
+  edmBranchStorageSize
+  testFWCoreFWLite
+  TestRunnerFWCoreFWLite
+  FWCoreCatalog
+  edmCatalogFileLocator_t
+  FWCorePrescaleService
+  FWCorePrescaleServicePlugin
+  FWCoreVersion
+  FWCoreModules
+  FWCoreServices
+  cmsGetFnConnect
+  FpeTester
+  StuckAnalyzer
+  SiteLocalConfigUnitTestClient
+  TestFWCoreServicesDriver
+  FWCoreServicesPlugins
+  FWCorePluginManager
+  edmPluginDump
+  edmPluginRefresh
+  TestFWCorePluginManagerPluginFactoryManager
+  TestFWCorePluginManagerPluginManager
+  TestFWCorePluginManagerCacheParser
+  TestFWCorePluginManagerPluginFactory
+  TestFWCorePluginManagerDummyFactory
+  TestFWCorePluginManagerDummyPlugins
+  FWCoreMessageLogger
+  FWCoreParameterSet
+  edmPluginHelp
+  edmWriteConfigs
+  testParameterSet
+  TestFWCoreParameterSetDescription
+  TestFWCoreParameterSetDriver
+  FWCorePythonParameterSet
+  edmConfigHash
+  edmParameterSetDump
+  testPythonParameterSet
+  FWCorePythonFramework
+  TestFWCorePythonFrameworkDriver
+  FWCoreUtilities
+  edmToFriendlyClassName
+  cms_adler32
+  Exception_t
+  EDMException_t
+  TestHelper_t
+  value_ptr_t
+  atomic_value_ptr_t
+  Digest_t
+  CRC32Calculator_t
+  Guid_t
+  typedefs_t
+  HRTime_t
+  isFinite_t
+  clone_ptr_t
+  MallocOpts_t
+  testFWCoreUtilities
+  InputTag_t
+  EDGetToken_t
+  RunningAverage_t
+  FWCoreServiceRegistry
+  FWCoreServiceRegistryTestDummyService
+  FWCoreServiceRegistryTestDummyServicePlugin
+  testServiceRegistry
+  servicesmanager_order
+  FWCoreFramework
+  cmsRunGlibC
+  cmsRunTC
+  cmsRun
+  cmsRunVDT
+  cmsRunJE
+  FWCoreFrameworkTestDummyForEventSetup
+  FWCoreFrameworkTest
+  TestOutputModule
+  TestFilterModule
+  TestTBBTasksAnalyzer
+  TestFWCoreFrameworkTBBTasks
+  TestTriggerNames
+  TestMergeResults
+  RunLumiEventAnalyzer
+  TestMod
+  TestToyModules
+  TestGlobalModules
+  TestOneModules
+  TestStreamModules
+  TestSchedulerModule1
+  TestSchedulerModule2
+  TestLoadableDummyFinder
+  TestLoadableDummyESSource
+  TestLoadableDummyEventSetupRecordRetriever
+  TestLoadableDummyProvider
+  FWCoreFrameworkTestDummyLooper
+  FWCoreFrameworkTestESDummyDataAnalyzer
+  FWCoreFrameworkTestPRegisterModules
+  FWCoreFrameworkTestBeginEndJobAnalyzer
+  FWCoreFrameworkTestFailuresAnalyzer
+  FWCoreFrameworkHistoryAnalyzer
+  TestFWCoreFramework
+  TestFWCoreFrameworkeventsetup
+  TestFWCoreFrameworkeventprocessor
+  TestFWCoreFrameworkeventprincipal
+  TestFWCoreFrameworkEvent
+  TestFWCoreFrameworkView
+  TestFWCoreFrameworkCmsRun
+  TestFWCoreFrameworkESRefer
+  TestFWCoreFrameworkUnscheduled
+  TestFWCoreFrameworkGlobalStreamOne
+  TestFWCoreFrameworkMayConsumesDeadlock
+  TestFWCoreFrameworkReplace
+  TestFWCoreFrameworkESProducerLooper
+  TestFWCoreFrameworkTrigBit
+  TestFWCoreFrameworkTrigMask
+  TestXMLSafeException
+  TestFWCoreFrameworkProductSelector
+  TestFWCoreFrameworkEventSelector
+  TestFWCoreFrameworkEventSelWildcard
+  TestFWCoreFrameworkEventSelExc
+  TestFWCoreFrameworkEventSelOverlap
+  TestFWCoreFrameworkRegistryTemplate
+  TestFWCoreOutputModuleUtilities
+  TestFWCoreFrameworkStatemachine
+  TestFWCoreFrameworkStatemachineSH
+  TestFWCoreFrameworkInputTagFailure
+  TestFWCoreFrameworkDeleteEarly
+  TestFWCoreFrameworkEarlyTerminationSignal
+  TestFWCoreFrameworkPrintDependencies
+  FWCoreCommon
+  FWCoreTFWLiteSelectorTest
+  FWCoreTFWLiteSelector
+  TestRunnerFWCoreTFWLiteSelector
+  FWCoreSources
+  FWCoreMessageService
+  Standalone
+  standAloneWithMessageLogger
+  trivial_main
+  testLoggerInCmsRun
+  unitTestsGroup_d
+  unitTestsGroup_1
+  unitTestsStatistics
+  unitTestsLimits
+  unitTestsGroup_2
+  unitTestsGroup_3
+  unitTestsGroup_4
+  unitTestsGroup_5
+  unitTestsGroup_6
+  makeJobReport
+  FWCoreMessageServicePlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(FWCore_libs)
+add_dependencies(FWCore_libs
+  FWCoreIntegration
+  FWCoreConcurrency
+  FWCoreFWLite
+  FWCoreCatalog
+  FWCorePrescaleService
+  FWCoreVersion
+  FWCoreModules
+  FWCoreServices
+  FWCorePluginManager
+  FWCoreMessageLogger
+  FWCoreParameterSet
+  FWCorePythonParameterSet
+  FWCorePythonFramework
+  FWCoreUtilities
+  FWCoreServiceRegistry
+  FWCoreFramework
+  FWCoreCommon
+  FWCoreTFWLiteSelectorTest
+  FWCoreTFWLiteSelector
+  FWCoreSources
+  FWCoreMessageService
+)

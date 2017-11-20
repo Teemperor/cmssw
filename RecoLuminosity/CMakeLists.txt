@@ -1,0 +1,54 @@
+add_subdirectory(LumiProducer)
+add_subdirectory(TCPReceiver)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoLuminosity_all)
+add_dependencies(RecoLuminosity_all
+  RecoLuminosityLumiProducer
+  PCCNTupler
+  TestLumiProd
+  testWrite2LumiDB
+  testWriteHLTConf2LumiDB
+  standaloneScanLumiRaw
+  parseLSstate
+  testBoostRegex
+  populateDummy2LumiDB
+  cmmdLoadLumiDB
+  testBoostXML
+  TestLumiProducer
+  TestExpressLumiProducer
+  TestLumiCorrectionSource
+  TestDIPLumiProducer
+  testEvtLoop
+  testSiteService
+  genLumiRaw
+  LumiServicesPlugins
+  RecoLuminosityLumiCalculator
+  HLTConfDummy2DB
+  HLTConf2DB
+  HLTDummy2DB
+  HLTV32DB
+  LumiDummy2DB
+  Lumi2DB
+  CMSRunSummaryDummy2DB
+  CMSRunSummary2DB
+  TRGDummy2DB
+  TRGScalers2DB
+  TRGWBM2DB
+  LumiProducer
+  BunchSpacingProducer
+  ExpressLumiProducer
+  DIPLumiProducer
+  LumiCorrectionSource
+  RecoLuminosityLumiProducerfPoly
+  RecoLuminosityTCPReceiver
+  TestTCPSender
+  TestTCPReceiver
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoLuminosity_libs)
+add_dependencies(RecoLuminosity_libs
+  RecoLuminosityLumiProducer
+  RecoLuminosityTCPReceiver
+)

@@ -1,0 +1,55 @@
+add_subdirectory(MCJet)
+add_subdirectory(InterpolationTables)
+add_subdirectory(MinBias)
+add_subdirectory(JetParton)
+add_subdirectory(JetVertexAssociation)
+add_subdirectory(Modules)
+add_subdirectory(Algorithms)
+add_subdirectory(JetCorrector)
+add_subdirectory(Objects)
+add_subdirectory(TauJet)
+add_subdirectory(FFTJetObjects)
+add_subdirectory(Type1MET)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(JetMETCorrections_all)
+add_dependencies(JetMETCorrections_all
+  ReadTree
+  ResponseFitter
+  L3Correction
+  L2Correction
+  JetMETCorrectionsMCJetPlugins
+  JetMETCorrectionsInterpolationTables
+  JetMETCorrectionsMinBias
+  JetMETCorrectionsJetParton
+  JetMETCorrectionsJetVertexAssociation
+  AnalysisJV
+  JetMETCorrectionsModules
+  TestJetMETCorrectionsModulesJetResolutionObject
+  JetMETCorrectionsModulesPlugins
+  JetMETCorrectionsAlgorithms
+  JetMETCorrectionsJetCorrector
+  JetMETCorrectionsObjects
+  JetMETCorrectionsTauJet
+  TauJetCorrectorExample
+  JetMETCorrectionsFFTJetObjects
+  JetMETCorrectionsType1MET
+  testJetMETCorrectionsType1MET
+  JetMETCorrectionsType1MET_plugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(JetMETCorrections_libs)
+add_dependencies(JetMETCorrections_libs
+  JetMETCorrectionsInterpolationTables
+  JetMETCorrectionsMinBias
+  JetMETCorrectionsJetParton
+  JetMETCorrectionsJetVertexAssociation
+  JetMETCorrectionsModules
+  JetMETCorrectionsAlgorithms
+  JetMETCorrectionsJetCorrector
+  JetMETCorrectionsObjects
+  JetMETCorrectionsTauJet
+  JetMETCorrectionsFFTJetObjects
+  JetMETCorrectionsType1MET
+)

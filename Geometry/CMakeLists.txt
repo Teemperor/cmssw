@@ -1,0 +1,162 @@
+add_subdirectory(VeryForwardGeometryBuilder)
+add_subdirectory(GEMGeometryBuilder)
+add_subdirectory(HcalEventSetup)
+add_subdirectory(CSCGeometry)
+add_subdirectory(HcalTowerAlgo)
+add_subdirectory(RPCGeometryBuilder)
+add_subdirectory(HcalCommonData)
+add_subdirectory(RPCGeometry)
+add_subdirectory(ForwardGeometry)
+add_subdirectory(GEMGeometry)
+add_subdirectory(CommonDetUnit)
+add_subdirectory(CSCGeometryBuilder)
+add_subdirectory(MuonNumbering)
+add_subdirectory(HGCalGeometry)
+add_subdirectory(VeryForwardRPTopology)
+add_subdirectory(DTGeometry)
+add_subdirectory(EcalAlgo)
+add_subdirectory(EcalCommonData)
+add_subdirectory(DTGeometryBuilder)
+add_subdirectory(Records)
+add_subdirectory(EcalMapping)
+add_subdirectory(CommonTopologies)
+add_subdirectory(CaloTopology)
+add_subdirectory(EcalTestBeam)
+add_subdirectory(TrackerGeometryBuilder)
+add_subdirectory(CaloGeometry)
+add_subdirectory(HGCalCommonData)
+add_subdirectory(TrackerNumberingBuilder)
+add_subdirectory(TrackingGeometryAligner)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(Geometry_all)
+add_dependencies(Geometry_all
+  GeometryVeryForwardGeometryBuilder
+  GeometryVeryForwardGeometryBuilderPlugins
+  GeometryGEMGeometryBuilder
+  GEMGeometryESModule
+  ME0GeometryESModule
+  GeometryHcalEventSetup
+  testHcalDDDGeometryESProducer
+  GeometryCSCGeometry
+  testCSCGeometry
+  testCSCGeometryAsChambers
+  testCSCGeometryAsLayers
+  testCSCGeometryOfWires
+  testCSCGeometryOfStrips
+  testCSCLayerGeometryInside
+  testCSCGACwithB
+  GeometryHcalTowerAlgo
+  testHcalTowerAlgoTester
+  GeometryHcalTowerAlgoPlugins
+  GeometryRPCGeometryBuilder
+  RPCGeometryESModule
+  GeometryHcalCommonData
+  testHcalParametersAnalyzer
+  testHcalSimNumberingTester
+  testHcalRecNumberingTester
+  GeometryHcalCommonDataPlugins
+  GeometryRPCGeometry
+  testGeometryRPCGeometry
+  testGeometryRPCSector
+  testGeometryRPCRadii
+  testGeometryRPCGEO
+  testGeometryRPCGEO2
+  testGeometryRPCCSC
+  GeometryForwardGeometry
+  GeometryForwardGeometryPlugins
+  GeometryGEMGeometry
+  GEMGeometryAnalyzer
+  ME0GeometryAnalyzer1EtaPart
+  ME0GeometryAnalyzer10EtaPart
+  GeometryCommonDetUnit
+  testDetSort
+  testGeomDetEnumerators
+  GeometryCSCGeometryBuilder
+  CSCGeometryESModule
+  GeometryMuonNumbering
+  testGeometryMuonNumbering
+  GeometryMuonNumberingPlugins
+  GeometryHGCalGeometry
+  testGeometryHCCalGeometry
+  GeometryHGCalGeometryPlugins
+  GeometryVeryForwardRPTopology
+  GeometryDTGeometry
+  testDTGeometry
+  testDTTopology
+  GeometryEcalAlgo
+  GeometryEcalAlgoPlugin
+  GeometryEcalCommonData
+  GeometryEcalCommonDataPlugins
+  GeometryDTGeometryBuilder
+  DTGeometryESModule
+  GeometryRecords
+  GeometryEcalMapping
+  GeometryEcalMappingPlugins
+  GeometryCommonTopologies
+  GeometryCommonTopologiesTestPlugins
+  GeometryCommonTopologiesTestDriver
+  GeometryCaloTopology
+  testGeometryHcalTopology
+  testGeometryHGCalTopology
+  testGeometryCaloTowerTopology
+  testGeometryFastTimeTopology
+  GeometryEcalTestBeam
+  GeometryEcalTestBeamPlugins
+  GeometryTrackerGeometryBuilder
+  TrackerDigiGeometryAnalyzer
+  TrackerParametersAnalyzer
+  TrackerMapTool
+  ModuleInfo
+  GeoHierarchyTest
+  GeometryTrackerGeometryBuilderPlugins
+  GeometryCaloGeometry
+  TestRounding
+  GeometryHGCalCommonData
+  testHGCGeometry
+  testHGCalNumbering
+  testFastTimeNumbering
+  HGCalParametersAnalyzer
+  GeometryHGCalCommonDataPlugin
+  GeometryHGCalCommonDataESModules
+  GeometryHGCalCommonDataFastTimeESModules
+  GeometryTrackerNumberingBuilder
+  GeometricDetLoader
+  ModuleNumbering
+  testGeometryTrackerNumberingBuilder
+  TrackerTopologyAnalyzer
+  GeometryTrackerNumberingBuilderPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(Geometry_libs)
+add_dependencies(Geometry_libs
+  GeometryVeryForwardGeometryBuilder
+  GeometryGEMGeometryBuilder
+  GeometryHcalEventSetup
+  GeometryCSCGeometry
+  GeometryHcalTowerAlgo
+  GeometryRPCGeometryBuilder
+  GeometryHcalCommonData
+  GeometryRPCGeometry
+  GeometryForwardGeometry
+  GeometryGEMGeometry
+  GeometryCommonDetUnit
+  GeometryCSCGeometryBuilder
+  GeometryMuonNumbering
+  GeometryHGCalGeometry
+  GeometryVeryForwardRPTopology
+  GeometryDTGeometry
+  GeometryEcalAlgo
+  GeometryEcalCommonData
+  GeometryDTGeometryBuilder
+  GeometryRecords
+  GeometryEcalMapping
+  GeometryCommonTopologies
+  GeometryCaloTopology
+  GeometryEcalTestBeam
+  GeometryTrackerGeometryBuilder
+  GeometryCaloGeometry
+  GeometryHGCalCommonData
+  GeometryTrackerNumberingBuilder
+)

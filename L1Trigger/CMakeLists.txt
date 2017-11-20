@@ -1,0 +1,156 @@
+add_subdirectory(DTTriggerServerPhi)
+add_subdirectory(DTTraco)
+add_subdirectory(L1TNtuples)
+add_subdirectory(TrackTrigger)
+add_subdirectory(CSCTriggerPrimitives)
+add_subdirectory(L1THGCal)
+add_subdirectory(L1GctAnalyzer)
+add_subdirectory(CSCTrackFinder)
+add_subdirectory(CSCCommonTrigger)
+add_subdirectory(DTTrigger)
+add_subdirectory(L1TCommon)
+add_subdirectory(RPCTechnicalTrigger)
+add_subdirectory(L1ExtraFromDigis)
+add_subdirectory(L1TMuonOverlap)
+add_subdirectory(L1TMuon)
+add_subdirectory(Skimmer)
+add_subdirectory(RPCTrigger)
+add_subdirectory(DTUtilities)
+add_subdirectory(L1TCaloLayer1)
+add_subdirectory(ME0Trigger)
+add_subdirectory(DTBti)
+add_subdirectory(GlobalTrigger)
+add_subdirectory(GlobalMuonTrigger)
+add_subdirectory(DTTriggerServerTheta)
+add_subdirectory(GlobalCaloTrigger)
+add_subdirectory(L1TMuonEndCap)
+add_subdirectory(HardwareValidation)
+add_subdirectory(TextToDigi)
+add_subdirectory(GlobalTriggerAnalyzer)
+add_subdirectory(RegionalCaloTrigger)
+add_subdirectory(DTTrackFinder)
+add_subdirectory(DTSectorCollector)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(L1Trigger_all)
+add_dependencies(L1Trigger_all
+  L1TriggerDTTriggerServerPhi
+  L1TriggerDTTraco
+  L1TriggerL1TNtuples
+  L1TriggerL1TNtuplePlugins
+  L1TriggerTrackTrigger
+  TrackTriggerPlugins
+  L1TriggerCSCTriggerPrimitives
+  L1TriggerCSCTriggerPrimitivesAnalyzer
+  CSCTriggerPrimitivesReader
+  CSCTriggerPrimitivesDQM
+  CSCTriggerPrimitivesPlugins
+  L1TriggerL1THGCal
+  testL1TriggerL1THGCal
+  TestBestChoiceCodec
+  L1TriggerL1THGCalPlugins
+  L1TriggerL1THGCalPlugins_geometries
+  L1TriggerL1THGCalPlugins_fe_be
+  L1TriggerL1THGCalPlugins_ntuples
+  L1TriggerL1GctAnalyzer
+  L1TriggerCSCTrackFinder
+  CSCMakeSRLUT
+  CSCMakePTLUT
+  CSCTFAnaHelpers
+  CSCTFEfficiency
+  CSCTFLCTAna
+  CSCTFFilter
+  L1TriggerCSCTrackFinderPlugins
+  L1TriggerCSCCommonTrigger
+  L1TriggerDTTrigger
+  L1TriggerL1TCommon
+  L1TriggerRPCTechnicalTrigger
+  L1TriggerL1ExtraFromDigis
+  L1TriggerL1TMuonOverlap
+  L1TriggerL1TMuonOverlapPlugins
+  L1TriggerL1TMuon
+  L1TriggerL1TMuonPlugins
+  L1TriggerSkimmer
+  L1TriggerRPCTrigger
+  L1TriggerRPCTriggerPlugins
+  L1TriggerDTUtilities
+  L1TriggerL1TCaloLayer1
+  testUCTGeometry
+  testUCTLayer1
+  testUCTLayer1HF
+  L1TriggerME0Trigger
+  ME0TriggerPlugins
+  L1TriggerDTBti
+  L1TriggerGlobalTrigger
+  L1TriggerGlobalTriggerPlugins
+  L1TriggerGlobalMuonTrigger
+  CruzetL1DTfilter
+  L1MuGMTDump
+  L1MuGMTTree
+  L1GmtTriggerSource
+  L1MuGMTPattern
+  L1TriggerDTTriggerServerTheta
+  L1TriggerGlobalCaloTrigger
+  L1GctTest
+  checkLut
+  printMap
+  printLut
+  testGctMap
+  testEtTypes
+  testJetFinder
+  testElectronSorter
+  testJetFinalStage
+  testJetEtCalibrationLut
+  L1TriggerGlobalCaloTriggerPlugins
+  L1TriggerL1TMuonEndCap
+  L1TriggerL1TMuonEndCapPlugins
+  L1TriggerHardwareValidation
+  L1TriggerHardwareValidationPlugins
+  L1TriggerTextToDigi
+  testSourceCardRouting
+  L1TriggerTextToDigiPlugins
+  L1TriggerGlobalTriggerAnalyzer
+  L1TriggerGlobalTriggerAnalyzerPlugins
+  L1TriggerRegionalCaloTrigger
+  L1TriggerRegionalCaloTriggerPlugins
+  L1TriggerDTTrackFinder
+  L1TriggerDTTrackFinderPlugins
+  L1TriggerDTSectorCollector
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(L1Trigger_libs)
+add_dependencies(L1Trigger_libs
+  L1TriggerDTTriggerServerPhi
+  L1TriggerDTTraco
+  L1TriggerL1TNtuples
+  L1TriggerTrackTrigger
+  L1TriggerCSCTriggerPrimitives
+  L1TriggerL1THGCal
+  L1TriggerL1GctAnalyzer
+  L1TriggerCSCTrackFinder
+  L1TriggerCSCCommonTrigger
+  L1TriggerDTTrigger
+  L1TriggerL1TCommon
+  L1TriggerRPCTechnicalTrigger
+  L1TriggerL1ExtraFromDigis
+  L1TriggerL1TMuonOverlap
+  L1TriggerL1TMuon
+  L1TriggerSkimmer
+  L1TriggerRPCTrigger
+  L1TriggerDTUtilities
+  L1TriggerL1TCaloLayer1
+  L1TriggerME0Trigger
+  L1TriggerDTBti
+  L1TriggerGlobalTrigger
+  L1TriggerGlobalMuonTrigger
+  L1TriggerDTTriggerServerTheta
+  L1TriggerGlobalCaloTrigger
+  L1TriggerL1TMuonEndCap
+  L1TriggerHardwareValidation
+  L1TriggerTextToDigi
+  L1TriggerGlobalTriggerAnalyzer
+  L1TriggerRegionalCaloTrigger
+  L1TriggerDTTrackFinder
+  L1TriggerDTSectorCollector
+)

@@ -1,0 +1,14 @@
+add_library(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules OBJECT 
+  src/SealModule.cc
+  src/EcnaAnalyzer.cc
+)
+
+target_include_directories(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules PUBLIC /usr/include/boost/python/)
+target_include_directories(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules PUBLIC /usr/include/python2.7/)
+target_include_directories(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules PUBLIC /usr/include/root/)
+target_include_directories(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules PUBLIC /usr/include/boost/)
+target_include_directories(CalibCalorimetryEcalCorrelatedNoiseAnalysisModules PUBLIC /usr/include/boost/regex/)
+

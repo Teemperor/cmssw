@@ -1,0 +1,139 @@
+add_subdirectory(HIPAlignmentAlgorithm)
+add_subdirectory(MillePedeAlignmentAlgorithm)
+add_subdirectory(CommonAlignment)
+add_subdirectory(OfflineValidation)
+add_subdirectory(CommonAlignmentParametrization)
+add_subdirectory(CocoaDDLObjects)
+add_subdirectory(SurveyAnalysis)
+add_subdirectory(CommonAlignmentAlgorithm)
+add_subdirectory(TwoBodyDecay)
+add_subdirectory(Geners)
+add_subdirectory(CommonAlignmentMonitor)
+add_subdirectory(APEEstimation)
+add_subdirectory(CocoaApplication)
+add_subdirectory(CocoaFit)
+add_subdirectory(CocoaDaq)
+add_subdirectory(CocoaUtilities)
+add_subdirectory(ReferenceTrajectories)
+add_subdirectory(MuonAlignmentAlgorithms)
+add_subdirectory(LaserAlignment)
+add_subdirectory(CocoaModel)
+add_subdirectory(MuonAlignment)
+add_subdirectory(CocoaToDDL)
+add_subdirectory(TrackerAlignment)
+add_subdirectory(LaserAlignmentSimulation)
+add_subdirectory(CommonAlignmentProducer)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(Alignment_all)
+add_dependencies(Alignment_all
+  AlignmentHIPAlignmentAlgorithm
+  AlignmentMillePedeAlignmentAlgorithm
+  AlignmentCommonAlignment
+  test_AlignableObjectId
+  AlignmentOfflineValidation
+  AlignmentOfflinevalidationPlugins
+  AlignmentCommonAlignmentParametrization
+  AlignmentCocoaDDLObjects
+  AlignmentSurveyAnalysis
+  AlignmentSurveyAnalysisTest
+  AlignmentSurveyAnalysisTest2
+  AlignmentSurveyAnalysisPlugins
+  AlignmentCommonAlignmentAlgorithm
+  CommonAlignmentAlgorithmPlugin
+  AlignmentTwoBodyDecay
+  AlignmentGeners
+  cmerge
+  crecover
+  print_items
+  gssa_dump
+  cdump
+  GenersTestHelper_t
+  AlignmentCommonAlignmentMonitor
+  AlignmentMonitorTemplate
+  AlignmentMonitorGeneric
+  AlignmentMonitorMuonResiduals
+  AlignmentMonitorSegmentDifferences
+  AlignmentMonitorMuonVsCurvature
+  AlignmentMonitorMuonSystemMap1D
+  AlignmentMonitorSurvey
+  AlignmentMonitorAsAnalyzer
+  TrackerToMuonPropagator
+  AlignmentStats
+  ApeEstimatorApeEstimatorPlugins
+  AlignmentCocoaApplication
+  cocoa
+  AlignmentCocoaFit
+  AlignmentCocoaDaq
+  AlignmentCocoaUtilities
+  AlignmentReferenceTrajectories
+  AlignmentReferenceTrajectoriesPlugins
+  AlignmentMuonAlignmentAlgorithms
+  AlignmentMuonAlignmentAlgorithms_test
+  CSCOverlapsAlignmentAlgorithm
+  MuonAlignmentFromReference
+  MuonAlignmentPreFilter
+  MuonMillepedeAlgorithm
+  AlignmentLaserAlignment
+  LaserAlignmentPlugins
+  AlignmentCocoaModel
+  AlignmentMuonAlignment
+  AlignmentMuonAlignment_test
+  MisalignedMuonESProducer
+  MuonGeometryDBConverter
+  MuonGeometrySanityCheck
+  MuonGeometrySVGTemplate
+  MuonGeometryArrange
+  AlignmentCocoaToDDL
+  AlignmentTrackerAlignment
+  AlignmentTrackerAlignment_test
+  TrackerGeometryAnalyzerPlugin
+  AlignmentTrackerAlignmentPlugin
+  AlignmentTrackerAlignmentSkimPlugin
+  AlignmentTrackerTreeGeneratorPlugins
+  AlignmentTrackerAlignmentRecordGeneratorPlugins
+  AlignmentCosmicRateAnalyzerPlugins
+  AlignmentLaserAlignmentSimulation
+  testLaserAlignmentSimulation
+  LaserAlignmentSimulationPlugins
+  LaserAlignmentProducer
+  LaserOpticalPhysics
+  AlignmentCommonAlignmentProducer
+  CommonAlignmentProducerRcdScans
+  TestAccessGeom
+  AlignmentCommonAlignmentFakeProducers
+  AlignmentCommonAlignmentProducerPlugin
+  AlignmentCommonAlignmentProducerAsAnalyzerPlugin
+  CommonAlignmentProducerSelectors
+  AlignmentCommonAlignmentProducerGlobal
+  AlignmentCommonAlignmentProducerFilter
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(Alignment_libs)
+add_dependencies(Alignment_libs
+  AlignmentHIPAlignmentAlgorithm
+  AlignmentMillePedeAlignmentAlgorithm
+  AlignmentCommonAlignment
+  AlignmentOfflineValidation
+  AlignmentCommonAlignmentParametrization
+  AlignmentCocoaDDLObjects
+  AlignmentSurveyAnalysis
+  AlignmentCommonAlignmentAlgorithm
+  AlignmentTwoBodyDecay
+  AlignmentGeners
+  AlignmentCommonAlignmentMonitor
+  AlignmentCocoaApplication
+  AlignmentCocoaFit
+  AlignmentCocoaDaq
+  AlignmentCocoaUtilities
+  AlignmentReferenceTrajectories
+  AlignmentMuonAlignmentAlgorithms
+  AlignmentLaserAlignment
+  AlignmentCocoaModel
+  AlignmentMuonAlignment
+  AlignmentCocoaToDDL
+  AlignmentTrackerAlignment
+  AlignmentLaserAlignmentSimulation
+  AlignmentCommonAlignmentProducer
+)

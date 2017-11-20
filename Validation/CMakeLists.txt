@@ -1,0 +1,160 @@
+add_subdirectory(MuonHits)
+add_subdirectory(TrackerHits)
+add_subdirectory(RPCRecHits)
+add_subdirectory(RecoVertex)
+add_subdirectory(GlobalDigis)
+add_subdirectory(HcalRecHits)
+add_subdirectory(CaloTowers)
+add_subdirectory(MuonIsolation)
+add_subdirectory(MuonGEMRecHits)
+add_subdirectory(EcalDigis)
+add_subdirectory(DTRecHits)
+add_subdirectory(MuonGEMDigis)
+add_subdirectory(EventGenerator)
+add_subdirectory(RecoEgamma)
+add_subdirectory(MuonIdentification)
+add_subdirectory(EcalClusters)
+add_subdirectory(EcalHits)
+add_subdirectory(HcalDigis)
+add_subdirectory(RecoMuon)
+add_subdirectory(EcalRecHits)
+add_subdirectory(GlobalRecHits)
+add_subdirectory(RecoB)
+add_subdirectory(Geometry)
+add_subdirectory(Performance)
+add_subdirectory(GlobalHits)
+add_subdirectory(Tools)
+add_subdirectory(RecoParticleFlow)
+add_subdirectory(MuonRPCDigis)
+add_subdirectory(L1T)
+add_subdirectory(MuonRPCGeometry)
+add_subdirectory(MuonDTDigis)
+add_subdirectory(RecoTrack)
+add_subdirectory(RecoMET)
+add_subdirectory(MuonGEMHits)
+add_subdirectory(CSCRecHits)
+add_subdirectory(Mixing)
+add_subdirectory(RecoTau)
+add_subdirectory(CheckOverlap)
+add_subdirectory(HcalHits)
+add_subdirectory(EcalTriggerPrimitives)
+add_subdirectory(TrackerRecHits)
+add_subdirectory(MuonCSCDigis)
+add_subdirectory(RecoJets)
+add_subdirectory(MuonME0Validation)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(Validation_all)
+add_dependencies(Validation_all
+  ValidationMuonHits
+  ValidationTrackerHits
+  ValidationRPCRecHits
+  ValidationRecoVertex
+  ValidationRecoVertexMacros
+  ValidationGlobalDigis
+  ValidationHcalRecHits
+  ValidationCaloTowers
+  ValidationMuonIsolation
+  ValidationMuonGEMRecHits
+  ValidationMuonGEMRecHitsPlugin
+  ValidationEcalDigis
+  ValidationDTRecHits
+  ValidationDTRecHitsPlugins
+  ValidationMuonGEMDigis
+  ValidationMuonGEMDigisPlugin
+  ValidationEventGenerator
+  ValidationEventGenerator_plugins
+  ValidationRecoEgammaPlugins
+  ValidationMuonIdentification
+  ValidationEcalClusters
+  ValidationEcalHits
+  ValidationHcalDigis
+  ValidationRecoMuon
+  multiPlotter
+  makePlot
+  ValidationRecoMuonPlugins
+  ValidationEcalRecHits
+  ValidationGlobalRecHits
+  ValidationRecoB
+  ValidationRecoBPlugins
+  ValidationGeometry
+  ValidationPerformance
+  cmsScimark2
+  ValidationGlobalHits
+  ValidationRecoParticleFlow
+  HistoData
+  PlotCompareUtility
+  plotCompare
+  ValidationRecoParticleFlow_plugins
+  ValidationMuonRPCDigis
+  ValidationL1T
+  ValidationMuonRPCGeometry
+  ValidationMuonRPCGeometryPlugins
+  ValidationMuonDTDigis
+  ValidationRecoTrack
+  ValidationRecoTrackPlugins
+  ValidationRecoMET
+  ValidationMuonGEMHits
+  ValidationMuonGEMHitsPlugin
+  ValidationCSCRecHits
+  ValidationCSCRecHitsPlugin
+  ValidationMixing
+  ValidationRecoTau
+  ValidationRecoTauPlugin
+  ValidationCheckOverlap
+  ValidationHcalHits
+  testValidationHcalHits
+  ValidationEcalTriggerPrimitives
+  ValidationTrackerRecHits
+  ValidationTrackerRecHitsTestModules
+  ValidationMuonCSCDigis
+  ValidationMuonCSCDigisPlugin
+  ValidationRecoJetsPlugins
+  ValidationMuonME0Validation
+  ValidationMuonME0Plugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(Validation_libs)
+add_dependencies(Validation_libs
+  ValidationMuonHits
+  ValidationTrackerHits
+  ValidationRPCRecHits
+  ValidationRecoVertex
+  ValidationGlobalDigis
+  ValidationHcalRecHits
+  ValidationCaloTowers
+  ValidationMuonIsolation
+  ValidationMuonGEMRecHits
+  ValidationEcalDigis
+  ValidationDTRecHits
+  ValidationMuonGEMDigis
+  ValidationEventGenerator
+  ValidationMuonIdentification
+  ValidationEcalClusters
+  ValidationEcalHits
+  ValidationHcalDigis
+  ValidationRecoMuon
+  ValidationEcalRecHits
+  ValidationGlobalRecHits
+  ValidationRecoB
+  ValidationGeometry
+  ValidationPerformance
+  ValidationGlobalHits
+  ValidationRecoParticleFlow
+  ValidationMuonRPCDigis
+  ValidationL1T
+  ValidationMuonRPCGeometry
+  ValidationMuonDTDigis
+  ValidationRecoTrack
+  ValidationMuonGEMHits
+  ValidationCSCRecHits
+  ValidationMixing
+  ValidationRecoTau
+  ValidationCheckOverlap
+  ValidationHcalHits
+  ValidationEcalTriggerPrimitives
+  ValidationTrackerRecHits
+  ValidationMuonCSCDigis
+  ValidationMuonME0Validation
+)

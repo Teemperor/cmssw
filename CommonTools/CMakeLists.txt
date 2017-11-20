@@ -1,0 +1,66 @@
+add_subdirectory(ParticleFlow)
+add_subdirectory(RecoAlgos)
+add_subdirectory(Utils)
+add_subdirectory(TrackerMap)
+add_subdirectory(CandUtils)
+add_subdirectory(PileupAlgos)
+add_subdirectory(TriggerUtils)
+add_subdirectory(CandAlgos)
+add_subdirectory(RecoUtils)
+add_subdirectory(Clustering1D)
+add_subdirectory(Statistics)
+add_subdirectory(UtilAlgos)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(CommonTools_all)
+add_dependencies(CommonTools_all
+  CommonToolsParticleFlow
+  CommonToolsParticleFlowTest
+  CommonToolsParticleFlow_plugins
+  CommonToolsRecoAlgos
+  FKDTree_t
+  CommonToolsRecoAlgos_plugins
+  CommonToolsUtils
+  testCommonToolsUtil
+  testCommonToolsUtilThreaded
+  testExpressionEvaluator
+  ExprEvalPopen_t
+  ExpressionEvaluatorUnitTest
+  testDynArray
+  CommonToolsTrackerMap
+  print_TrackerMap
+  CommonToolsCandUtils
+  testCommonToolsCandUtils
+  CommonToolsPileupAlgos
+  CommonToolsPileupAlgos_plugins
+  CommonToolsTriggerUtils
+  CommonToolsTriggerUtils_test
+  CommonToolsTriggerUtilsPlugins
+  CommonToolsCandAlgos
+  CommonToolsCandAlgos_plugins
+  CommonToolsRecoUtils
+  PFPUAssoMapPlugins
+  CommonToolsClustering1D
+  ClusteringTest
+  CommonToolsStatistics
+  CommonToolsUtilAlgos
+  TestTFileServiceAnalyzer
+  CommonToolsToolsUtilAlgos_plugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(CommonTools_libs)
+add_dependencies(CommonTools_libs
+  CommonToolsParticleFlow
+  CommonToolsRecoAlgos
+  CommonToolsUtils
+  CommonToolsTrackerMap
+  CommonToolsCandUtils
+  CommonToolsPileupAlgos
+  CommonToolsTriggerUtils
+  CommonToolsCandAlgos
+  CommonToolsRecoUtils
+  CommonToolsClustering1D
+  CommonToolsStatistics
+  CommonToolsUtilAlgos
+)

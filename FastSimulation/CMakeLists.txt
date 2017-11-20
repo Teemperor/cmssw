@@ -1,0 +1,78 @@
+add_subdirectory(Calorimetry)
+add_subdirectory(TrackingRecHitProducer)
+add_subdirectory(CTPPSFastTrackingProducer)
+add_subdirectory(TrackerSetup)
+add_subdirectory(L1CaloTriggerProducer)
+add_subdirectory(ParticlePropagator)
+add_subdirectory(CalorimeterProperties)
+add_subdirectory(MuonSimHitProducer)
+add_subdirectory(CaloHitMakers)
+add_subdirectory(Particle)
+add_subdirectory(CaloGeometryTools)
+add_subdirectory(BaseParticlePropagator)
+add_subdirectory(ShowerDevelopment)
+add_subdirectory(Tracking)
+add_subdirectory(MaterialEffects)
+add_subdirectory(CTPPSFastGeometry)
+add_subdirectory(CTPPSRecHitProducer)
+add_subdirectory(TrajectoryManager)
+add_subdirectory(ParticleDecay)
+add_subdirectory(Utilities)
+add_subdirectory(EventProducer)
+add_subdirectory(Event)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(FastSimulation_all)
+add_dependencies(FastSimulation_all
+  FastSimulationCalorimetry
+  FastSimulationTrackingRecHitProducer
+  FastSimulationTrackerSetup
+  FastSimulationTrackerSetupPlugin
+  FastSimulationParticlePropagator
+  FastSimulationParticlePropagatorPlugin
+  FastSimulationCalorimeterProperties
+  FastSimulationMuonSimHitProducer
+  FastSimulationCaloHitMakers
+  testEcalHitMaker
+  FastSimulationParticle
+  FastSimulationCaloGeometryTools
+  testCaloGeometryTools
+  FastSimulationBaseParticlePropagator
+  FastSimulationShowerDevelopment
+  FastSimulationTracking
+  testGeneralTracks
+  FastSimulationTrackingPlugins
+  FastSimulationMaterialEffects
+  testMaterialEffects
+  testNuclearInteractions
+  FastSimulationCTPPSFastGeometry
+  FastSimulationTrajectoryManager
+  FastSimulationParticleDecay
+  FastSimulationUtilities
+  FastSimulationEventProducer
+  FastSimulationEvent
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(FastSimulation_libs)
+add_dependencies(FastSimulation_libs
+  FastSimulationCalorimetry
+  FastSimulationTrackingRecHitProducer
+  FastSimulationTrackerSetup
+  FastSimulationParticlePropagator
+  FastSimulationCalorimeterProperties
+  FastSimulationMuonSimHitProducer
+  FastSimulationCaloHitMakers
+  FastSimulationParticle
+  FastSimulationCaloGeometryTools
+  FastSimulationBaseParticlePropagator
+  FastSimulationShowerDevelopment
+  FastSimulationTracking
+  FastSimulationMaterialEffects
+  FastSimulationCTPPSFastGeometry
+  FastSimulationTrajectoryManager
+  FastSimulationParticleDecay
+  FastSimulationUtilities
+  FastSimulationEventProducer
+  FastSimulationEvent
+)

@@ -1,0 +1,127 @@
+add_subdirectory(HijingInterface)
+add_subdirectory(PartonShowerVeto)
+add_subdirectory(PyquenInterface)
+add_subdirectory(TauolaInterface)
+add_subdirectory(AMPTInterface)
+add_subdirectory(PhotosInterface)
+add_subdirectory(RivetInterface)
+add_subdirectory(AlpgenInterface)
+add_subdirectory(ExhumeInterface)
+add_subdirectory(PomwigInterface)
+add_subdirectory(HiGenCommon)
+add_subdirectory(ReggeGribovPartonMCInterface)
+add_subdirectory(CosmicMuonGenerator)
+add_subdirectory(Herwig6Interface)
+add_subdirectory(ExternalDecays)
+add_subdirectory(LHEInterface)
+add_subdirectory(Pythia8Interface)
+add_subdirectory(HydjetInterface)
+add_subdirectory(EvtGenInterface)
+add_subdirectory(Hydjet2Interface)
+add_subdirectory(BeamHaloGenerator)
+add_subdirectory(Core)
+add_subdirectory(SherpaInterface)
+add_subdirectory(GenFilters)
+add_subdirectory(CascadeInterface)
+add_subdirectory(Pythia6Interface)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(GeneratorInterface_all)
+add_dependencies(GeneratorInterface_all
+  GeneratorInterfaceHijingInterface
+  GeneratorInterfaceHijingInterfacePlugins
+  GeneratorInterfacePartonShowerVeto
+  GeneratorInterfacePyquenInterface
+  PyquenAnalyzer
+  GeneratorInterfacePyquenInterfacePlugins
+  GeneratorInterfaceTauolaInterface
+  TauolappInterface
+  TauSpinnerInterface
+  GeneratorInterfaceAMPTInterface
+  AMPTAnalyzer
+  GeneratorInterfaceAMPTInterfacePlugins
+  GeneratorInterfacePhotosInterface
+  PhotosInterfaceDefault
+  PhotosppInterface
+  GeneratorInterfaceRivetInterface
+  GeneratorInterfaceRivetInterface_plugins
+  GeneratorInterfaceAlpgenInterface
+  GeneratorInterfaceAlpgenExtractor
+  GeneratorInterfaceAlpgenSource
+  GeneratorInterfaceExhumeInterface
+  ExhumeAnalyzer
+  GeneratorInterfaceExhumeFilter
+  GeneratorInterfacePomwigInterface
+  GeneratorInterfacePomwigInterface_test
+  GeneratorInterfacePomwigFilter
+  GeneratorInterfaceHiGenCommon
+  GeneratorInterfaceHiGenCommonPlugins
+  GeneratorInterfaceReggeGribovPartonMCInterface
+  GeneratorInterfaceReggeGribovPartonMCInterfacePlugins
+  GeneratorInterfaceCosmicMuonGenerator
+  GeneratorInterfaceHerwig6Interface
+  H4muExampleAnalyzer
+  GeneratorInterfaceHerwig6Hadronizer
+  GeneratorInterfaceExternalDecays
+  EvtGenTestAnalyzer
+  GeneratorInterfaceLHEInterface
+  DummyLHEAnalyzer
+  GeneratorInterfaceLHEProducer
+  GeneratorInterfaceLHEIO
+  GeneratorInterfaceLHECOMWeightProducer
+  GeneratorInterfacePythia8Interface
+  AnalyserHepMC
+  ZJetsTestAnalyzer
+  GeneratorInterfacePythia8Filters
+  GeneratorInterfacePythia8Guns
+  GeneratorInterfaceHydjetInterface
+  HydjetAnalyzer
+  GeneratorInterfaceHydjetInterfacePlugins
+  GeneratorInterfaceEvtGenInterface
+  EvtGenInterface
+  GenDataCardFileWriter
+  GeneratorInterfaceHydjet2Interface
+  Hydjet2Analyzer
+  GeneratorInterfaceHydjet2InterfacePlugins
+  GeneratorInterfaceBeamHaloGenerator
+  GeneratorInterfaceCore
+  GeneratorInterfaceCore_plugins
+  GeneratorInterfaceSherpaInterface
+  GeneratorInterfaceGenFilters
+  GeneratorInterfaceCascadeInterface
+  GeneratorInterfacePythia6Interface
+  HZZ4muExampleAnalyzer
+  SimpleGenTesters
+  GeneratorInterfacePythia6Filters
+  GeneratorInterfacePythia6Guns
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(GeneratorInterface_libs)
+add_dependencies(GeneratorInterface_libs
+  GeneratorInterfaceHijingInterface
+  GeneratorInterfacePartonShowerVeto
+  GeneratorInterfacePyquenInterface
+  GeneratorInterfaceTauolaInterface
+  GeneratorInterfaceAMPTInterface
+  GeneratorInterfacePhotosInterface
+  GeneratorInterfaceRivetInterface
+  GeneratorInterfaceAlpgenInterface
+  GeneratorInterfaceExhumeInterface
+  GeneratorInterfacePomwigInterface
+  GeneratorInterfaceHiGenCommon
+  GeneratorInterfaceReggeGribovPartonMCInterface
+  GeneratorInterfaceCosmicMuonGenerator
+  GeneratorInterfaceHerwig6Interface
+  GeneratorInterfaceExternalDecays
+  GeneratorInterfaceLHEInterface
+  GeneratorInterfacePythia8Interface
+  GeneratorInterfaceHydjetInterface
+  GeneratorInterfaceEvtGenInterface
+  GeneratorInterfaceHydjet2Interface
+  GeneratorInterfaceBeamHaloGenerator
+  GeneratorInterfaceCore
+  GeneratorInterfaceSherpaInterface
+  GeneratorInterfaceGenFilters
+  GeneratorInterfacePythia6Interface
+)

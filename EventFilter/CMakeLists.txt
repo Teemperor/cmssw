@@ -1,0 +1,120 @@
+add_subdirectory(L1TRawToDigi)
+add_subdirectory(HcalRawToDigi)
+add_subdirectory(SiStripRawToDigi)
+add_subdirectory(L1GlobalTriggerRawToDigi)
+add_subdirectory(CSCRawToDigi)
+add_subdirectory(RctRawToDigi)
+add_subdirectory(SiPixelRawToDigi)
+add_subdirectory(Playback)
+add_subdirectory(LTCRawToDigi)
+add_subdirectory(RPCRawToDigi)
+add_subdirectory(FEDInterface)
+add_subdirectory(ScalersRawToDigi)
+add_subdirectory(EcalTBRawToDigi)
+add_subdirectory(SiStripChannelChargeFilter)
+add_subdirectory(EcalDigiToRaw)
+add_subdirectory(EcalRawToDigi)
+add_subdirectory(Utilities)
+add_subdirectory(CastorRawToDigi)
+add_subdirectory(CTPPSRawToDigi)
+add_subdirectory(Phase2TrackerRawToDigi)
+add_subdirectory(DTTFRawToDigi)
+add_subdirectory(RawDataCollector)
+add_subdirectory(CSCTFRawToDigi)
+add_subdirectory(ESDigiToRaw)
+add_subdirectory(GctRawToDigi)
+add_subdirectory(ESRawToDigi)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(EventFilter_all)
+add_dependencies(EventFilter_all
+  EventFilterL1TRawToDigi
+  EventFilterHcalRawToDigi
+  EventFilterHcalRawToDigiPlugins
+  EventFilterHcalRawToDigiFiltersPlugins
+  EventFilterSiStripRawToDigi
+  testEventFilterSiStripRawToDigiPlugins
+  EventFilterSiStripRawToDigiPlugins
+  EventFilterL1GlobalTriggerRawToDigi
+  EventFilterCSCRawToDigi
+  cscRawToDigiTest
+  EventFilterCSCRawToDigiPlugins
+  EventFilterRctRawToDigi
+  EventFilterRctRawToDigiPlugins
+  EventFilterSiPixelRawToDigi
+  SiPixelRawDumper
+  FedErrorDumper
+  findHotPixels
+  EventFilterSiPixelRawToDigiPlugins
+  EventFilterPlayback
+  EventFilterPlaybackPlugins
+  EventFilterLTCRawToDigi
+  EventFilterRPCRawToDigi
+  EventFilterRPCRawToDigiPlugins
+  EventFilterFEDInterface
+  EventFilterFEDInterfacePlugins
+  EventFilterScalersRawToDigi
+  EventFilterEcalTBRawToDigi
+  EcalDigiDumperModule
+  EcalDCCHeaderDumperModule
+  EcalHexDumperModule
+  EcalMatacqHist
+  EcalGraphDumperModule
+  EcalPnGraphDumperModule
+  EventFilterSiStripChannelChargeFilter
+  EventFilterEcalDigiToRaw
+  EventFilterEcalRawToDigi
+  EventFilterEcalRawToDigiPlugins
+  EventFilterUtilities
+  EventFilterUtilitiesTest
+  EventFilterUtilitiesPlugins
+  EventFilterCastorRawToDigi
+  EventFilterCastorRawToDigiPlugins
+  EventFilterCTPPSRawToDigi
+  EventFilterCTPPSRawToDigiTest
+  EventFilterCTPPSRawToDigiPlugins
+  EventFilterPhase2TrackerRawToDigi
+  testEventFilterPhase2TrackerRawToDigiPlugins
+  EventFilterPhase2TrackerRawToDigiPlugins
+  EventFilterDTTFRawToDigi
+  EventFilterRawDataCollector
+  EventFilterCSCTFRawToDigi
+  EventFilterCSCTFSingleGen_test
+  testCSCTFRawToDigi
+  EventFilterCSCTFRawToDigiPlugins
+  EventFilterESDigiToRaw
+  EventFilterGctRawToDigi
+  EventFilterGctRawToDigiPlugins
+  EventFilterESRawToDigi
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(EventFilter_libs)
+add_dependencies(EventFilter_libs
+  EventFilterL1TRawToDigi
+  EventFilterHcalRawToDigi
+  EventFilterSiStripRawToDigi
+  EventFilterL1GlobalTriggerRawToDigi
+  EventFilterCSCRawToDigi
+  EventFilterRctRawToDigi
+  EventFilterSiPixelRawToDigi
+  EventFilterPlayback
+  EventFilterLTCRawToDigi
+  EventFilterRPCRawToDigi
+  EventFilterFEDInterface
+  EventFilterScalersRawToDigi
+  EventFilterEcalTBRawToDigi
+  EventFilterSiStripChannelChargeFilter
+  EventFilterEcalDigiToRaw
+  EventFilterEcalRawToDigi
+  EventFilterUtilities
+  EventFilterCastorRawToDigi
+  EventFilterCTPPSRawToDigi
+  EventFilterPhase2TrackerRawToDigi
+  EventFilterDTTFRawToDigi
+  EventFilterRawDataCollector
+  EventFilterCSCTFRawToDigi
+  EventFilterESDigiToRaw
+  EventFilterGctRawToDigi
+  EventFilterESRawToDigi
+)

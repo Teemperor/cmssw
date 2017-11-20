@@ -1,0 +1,58 @@
+add_subdirectory(HGCalRecAlgos)
+add_subdirectory(CastorReco)
+add_subdirectory(EcalRecAlgos)
+add_subdirectory(HGCalRecProducers)
+add_subdirectory(HcalLaserReco)
+add_subdirectory(Castor)
+add_subdirectory(EcalDeadChannelRecoveryAlgos)
+add_subdirectory(EcalRecProducers)
+add_subdirectory(CaloTowersCreator)
+add_subdirectory(HcalRecProducers)
+add_subdirectory(HcalRecAlgos)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoLocalCalo_all)
+add_dependencies(RecoLocalCalo_all
+  RecoLocalCaloHGCalRecAlgos
+  RecoLocalCaloCastorReco
+  RecoLocalCaloCastorRecoPlugins
+  RecoLocalCaloEcalRecAlgos
+  testEcalSeverity
+  testEcalSeverityLevelAlgo
+  RecoLocalCalo_EcalRecAlgos_plugins
+  RecoLocalCaloHGCalRecProducers
+  RecoLocalCaloHGCalRecProducersPlugins
+  RecoLocalCaloHcalLaserReco
+  RecoLocalCaloCastor
+  RecoLocalCaloEcalDeadChannelRecoveryAlgos
+  testEcalDeadChannelRecoveryAlgos
+  RecoLocalCaloEcalRecProducers
+  testEcalLocalReco
+  EcalBasicUncalibRecHitFilter
+  testEcalCompactTrigPrimProducer
+  testEcalSampleMaskRecordESProducer
+  testEcalRecHitProducersPlugins
+  RecoLocalCaloEcalRecProducersPlugins
+  RecoLocalCaloCaloTowersCreator
+  RecoLocalCaloHcalRecProducers
+  RecoLocalCaloHcalRecAlgos
+  HcalSevLvlAnalyzer
+  HcalRecHitReflagger
+  RecoLocalCaloHcalRecAlgosPlugin
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoLocalCalo_libs)
+add_dependencies(RecoLocalCalo_libs
+  RecoLocalCaloHGCalRecAlgos
+  RecoLocalCaloCastorReco
+  RecoLocalCaloEcalRecAlgos
+  RecoLocalCaloHGCalRecProducers
+  RecoLocalCaloHcalLaserReco
+  RecoLocalCaloCastor
+  RecoLocalCaloEcalDeadChannelRecoveryAlgos
+  RecoLocalCaloEcalRecProducers
+  RecoLocalCaloCaloTowersCreator
+  RecoLocalCaloHcalRecProducers
+  RecoLocalCaloHcalRecAlgos
+)

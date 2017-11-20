@@ -24,7 +24,7 @@ namespace {
 
 BOOST_PYTHON_MODULE(libFWCorePythonFramework)
 {
-  boost::python::register_exception_translator<cms::Exception>(translator2);
+  boost::python::register_exception_translator<cms::Exception>(translator);
 
   boost::python::class_<PythonEventProcessor, boost::noncopyable>("PythonEventProcessor", boost::python::init<PythonProcessDesc const&>())
     .def("run", &PythonEventProcessor::run)

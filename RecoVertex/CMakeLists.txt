@@ -1,0 +1,80 @@
+add_subdirectory(GaussianSumVertexFit)
+add_subdirectory(V0Producer)
+add_subdirectory(KinematicFit)
+add_subdirectory(LinearizationPointFinders)
+add_subdirectory(GhostTrackFitter)
+add_subdirectory(AdaptiveVertexFit)
+add_subdirectory(MultiVertexFit)
+add_subdirectory(NuclearInteractionProducer)
+add_subdirectory(VertexTools)
+add_subdirectory(KalmanVertexFit)
+add_subdirectory(VertexPrimitives)
+add_subdirectory(BeamSpotProducer)
+add_subdirectory(AdaptiveVertexFinder)
+add_subdirectory(ConfigurableVertexReco)
+add_subdirectory(TrimmedKalmanVertexFinder)
+add_subdirectory(TrimmedVertexFit)
+add_subdirectory(KinematicFitPrimitives)
+add_subdirectory(PrimaryVertexProducer)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoVertex_all)
+add_dependencies(RecoVertex_all
+  RecoVertexGaussianSumVertexFit
+  GaussianSumVertexFitTest
+  RecoVertexV0Producer
+  RecoVertexV0Analyzer
+  RecoVertexKinematicFit
+  RecoVertexLinearizationPointFinders
+  RecoVertexGhostTrackFitter
+  RecoVertexAdaptiveVertexFit
+  RecoVertexMultiVertexFit
+  RecoVertexNuclearInteractionProducer
+  RecoVertexNuclearInteractionProducerPlugins
+  RecoVertexVertexTools
+  RecoVertexKalmanVertexFit
+  RecoVertexKalmanVertexFitPlugins
+  RecoVertexVertexPrimitives
+  RecoVertexBeamSpotProducer
+  NtupleHelper
+  beamfit
+  BeamSpotProducer
+  BeamSpotOnlineProducer
+  BeamSpotAnalyzer
+  BeamSpotWrite2DB
+  BeamSpotFakeConditions
+  BeamSpotFromDB
+  RecoVertexAdaptiveVertexFinder
+  RecoVertexAdaptiveVertexFinderPlugins
+  RecoVertexConfigurableVertexReco
+  CVRTest
+  RecoVertexTrimmedKalmanVertexFinder
+  RecoVertexTrimmedVertexFit
+  RecoVertexKinematicFitPrimitives
+  KinematicState_t
+  RecoVertexPrimaryVertexProducer
+  RecoVertexPrimaryVertexProducerPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoVertex_libs)
+add_dependencies(RecoVertex_libs
+  RecoVertexGaussianSumVertexFit
+  RecoVertexV0Producer
+  RecoVertexKinematicFit
+  RecoVertexLinearizationPointFinders
+  RecoVertexGhostTrackFitter
+  RecoVertexAdaptiveVertexFit
+  RecoVertexMultiVertexFit
+  RecoVertexNuclearInteractionProducer
+  RecoVertexVertexTools
+  RecoVertexKalmanVertexFit
+  RecoVertexVertexPrimitives
+  RecoVertexBeamSpotProducer
+  RecoVertexAdaptiveVertexFinder
+  RecoVertexConfigurableVertexReco
+  RecoVertexTrimmedKalmanVertexFinder
+  RecoVertexTrimmedVertexFit
+  RecoVertexKinematicFitPrimitives
+  RecoVertexPrimaryVertexProducer
+)

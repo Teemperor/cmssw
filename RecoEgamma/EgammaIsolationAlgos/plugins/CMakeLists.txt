@@ -1,0 +1,51 @@
+add_library(RecoEgammaEgammaIsolationAlgosPlugins OBJECT 
+  EgammaElectronTkNumIsolationProducer.cc
+  module.cc
+  EgammaHcalExtractor.cc
+  ParticleBasedIsoProducer.cc
+  GamIsoDetIdCollectionProducer.cc
+  EgammaIsoESDetIdCollectionProducer.cc
+  EgammaTrackExtractor.cc
+  EgammaEcalRecHitIsolationProducer.cc
+  EgammaPhotonTkNumIsolationProducer.cc
+  EgammaEcalExtractor.cc
+  EgammaRecHitExtractor.cc
+  EleIsoDetIdCollectionProducer.cc
+  EgammaTowerIsolationProducer.cc
+  EgammaHcalPFClusterIsolationProducer.cc
+  EgammaIsoHcalDetIdCollectionProducer.cc
+  EgammaElectronTkIsolationProducer.cc
+  EgammaEcalPFClusterIsolationProducer.cc
+  EgammaPhotonTkIsolationProducer.cc
+  EgammaTowerExtractor.cc
+)
+
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /usr/include/boost/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /usr/include/root/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins PUBLIC /usr/include/boost/regex/)
+
+add_library(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones OBJECT 
+  isolation_cones/PhotonPFIsolationWithMapBasedVeto.cc
+  isolation_cones/ElectronPFIsolationWithConeVeto.cc
+  isolation_cones/PhotonPFIsolationWithConeVeto.cc
+  isolation_cones/ElectronPFIsolationWithMapBasedVeto.cc
+)
+
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /usr/include/boost/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /usr/include/root/)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones PUBLIC /usr/include/boost/regex/)
+

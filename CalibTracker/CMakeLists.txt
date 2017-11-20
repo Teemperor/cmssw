@@ -1,0 +1,75 @@
+add_subdirectory(SiStripLorentzAngle)
+add_subdirectory(SiStripCommon)
+add_subdirectory(SiPixelESProducers)
+add_subdirectory(SiStripDCS)
+add_subdirectory(SiPixelSCurveCalibration)
+add_subdirectory(SiPixelTools)
+add_subdirectory(SiStripAPVAnalysis)
+add_subdirectory(SiStripESProducers)
+add_subdirectory(SiPixelConnectivity)
+add_subdirectory(SiPixelIsAliveCalibration)
+add_subdirectory(SiStripHitEfficiency)
+add_subdirectory(SiStripQuality)
+add_subdirectory(Records)
+add_subdirectory(SiPixelErrorEstimation)
+add_subdirectory(SiStripChannelGain)
+add_subdirectory(SiPixelLorentzAngle)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(CalibTracker_all)
+add_dependencies(CalibTracker_all
+  CalibTrackerSiStripLorentzAngle
+  CalibTrackerSiStripLorentzAnglePlugins
+  CalibTrackerSiStripCommon
+  CalibTrackerSiStripCommonPlugins
+  CalibTrackerSiPixelESProducers
+  testCalibTrackerSiPixelESProducers
+  CalibTrackerSiPixelESProducersPlugins
+  CalibTrackerSiStripDCS
+  SyncCalibTrackerSiStripDCSPlugins
+  TestSiStripDCS
+  CalibTrackerSiStripDCSPlugins
+  CalibTrackerSiPixelSCurveCalibration
+  CalibTrackerSiPixelTools
+  CalibTrackerSiStripAPVAnalysis
+  CalibTrackerSiStripAPVAnalysisPlugins
+  CalibTrackerSiStripESProducers
+  testCalibTrackerSiStripESProducers
+  CalibTrackerSiStripFakeESProducersPlugins
+  CalibTrackerSiStripRealESProducersPlugins
+  CalibTrackerSiStripGeomESProducersPlugins
+  CalibTrackerSiStripESProducersDBWriterPlugins
+  CalibTrackerSiPixelConnectivity
+  SiPixelFedCablingMapWriter
+  CalibTrackerSiPixelConnectivityPlugins
+  CalibTrackerSiPixelIsAliveCalibration
+  CalibTrackerSiStripHitEfficiency
+  CalibTrackerSiStripHitEffPlugins
+  CalibTrackerSiStripQuality
+  CalibTrackerSiStripQualityPlugins
+  CalibTrackerRecords
+  CalibTrackerSiPixelErrorEstimation
+  CalibTrackerSiStripChannelGain
+  CalibTrackerSiPixelLorentzAngle
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(CalibTracker_libs)
+add_dependencies(CalibTracker_libs
+  CalibTrackerSiStripLorentzAngle
+  CalibTrackerSiStripCommon
+  CalibTrackerSiPixelESProducers
+  CalibTrackerSiStripDCS
+  CalibTrackerSiPixelSCurveCalibration
+  CalibTrackerSiPixelTools
+  CalibTrackerSiStripAPVAnalysis
+  CalibTrackerSiStripESProducers
+  CalibTrackerSiPixelConnectivity
+  CalibTrackerSiPixelIsAliveCalibration
+  CalibTrackerSiStripHitEfficiency
+  CalibTrackerSiStripQuality
+  CalibTrackerRecords
+  CalibTrackerSiPixelErrorEstimation
+  CalibTrackerSiStripChannelGain
+  CalibTrackerSiPixelLorentzAngle
+)

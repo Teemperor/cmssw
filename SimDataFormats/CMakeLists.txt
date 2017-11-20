@@ -1,0 +1,82 @@
+add_subdirectory(ValidationFormats)
+add_subdirectory(TrackingHit)
+add_subdirectory(GEMDigiSimLink)
+add_subdirectory(Vertex)
+add_subdirectory(CrossingFrame)
+add_subdirectory(SimHitMaker)
+add_subdirectory(CaloTest)
+add_subdirectory(DigiSimLinks)
+add_subdirectory(RandomEngine)
+add_subdirectory(JetMatching)
+add_subdirectory(RPCDigiSimLink)
+add_subdirectory(TrackingAnalysis)
+add_subdirectory(Forward)
+add_subdirectory(HiGenData)
+add_subdirectory(PileupSummaryInfo)
+add_subdirectory(CaloHit)
+add_subdirectory(EcalTestBeam)
+add_subdirectory(EncodedEventId)
+add_subdirectory(TrackerDigiSimLink)
+add_subdirectory(GeneratorProducts)
+add_subdirectory(Associations)
+add_subdirectory(CaloAnalysis)
+add_subdirectory(HcalTestBeam)
+add_subdirectory(Track)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(SimDataFormats_all)
+add_dependencies(SimDataFormats_all
+  SimDataFormatsValidationFormats
+  SimDataFormatsTrackingHit
+  SimDataFormatsGEMDigiSimLink
+  SimDataFormatsVertex
+  SimDataFormatsCrossingFrame
+  SimDataFormatsSimHitMaker
+  SimDataFormatsCaloTest
+  SimDataFormatsDigiSimLinks
+  SimDataFormatsRandomEngine
+  SimDataFormatsJetMatching
+  SimDataFormatsRPCDigiSimLink
+  SimDataFormatsTrackingAnalysis
+  SimDataFormatsForward
+  SimDataFormatsHiGenData
+  SimDataFormatsPileupSummaryInfo
+  SimDataFormatsCaloHit
+  SimDataFormatsEcalTestBeam
+  SimDataFormatsEncodedEventId
+  SimDataFormatsTrackerDigiSimLink
+  SimDataFormatsGeneratorProducts
+  SimDataFormatsAssociations
+  SimDataFormatsCaloAnalysis
+  SimDataFormatsHcalTestBeam
+  SimDataFormatsTrack
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(SimDataFormats_libs)
+add_dependencies(SimDataFormats_libs
+  SimDataFormatsValidationFormats
+  SimDataFormatsTrackingHit
+  SimDataFormatsGEMDigiSimLink
+  SimDataFormatsVertex
+  SimDataFormatsCrossingFrame
+  SimDataFormatsSimHitMaker
+  SimDataFormatsCaloTest
+  SimDataFormatsDigiSimLinks
+  SimDataFormatsRandomEngine
+  SimDataFormatsJetMatching
+  SimDataFormatsRPCDigiSimLink
+  SimDataFormatsTrackingAnalysis
+  SimDataFormatsForward
+  SimDataFormatsHiGenData
+  SimDataFormatsPileupSummaryInfo
+  SimDataFormatsCaloHit
+  SimDataFormatsEcalTestBeam
+  SimDataFormatsEncodedEventId
+  SimDataFormatsTrackerDigiSimLink
+  SimDataFormatsGeneratorProducts
+  SimDataFormatsAssociations
+  SimDataFormatsCaloAnalysis
+  SimDataFormatsHcalTestBeam
+  SimDataFormatsTrack
+)

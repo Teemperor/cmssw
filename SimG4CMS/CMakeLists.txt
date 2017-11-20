@@ -1,0 +1,55 @@
+add_subdirectory(FP420)
+add_subdirectory(HGCalTestBeam)
+add_subdirectory(Muon)
+add_subdirectory(Forward)
+add_subdirectory(CherenkovAnalysis)
+add_subdirectory(Calo)
+add_subdirectory(ShowerLibraryProducer)
+add_subdirectory(EcalTestBeam)
+add_subdirectory(Tracker)
+add_subdirectory(HcalTestBeam)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(SimG4CMS_all)
+add_dependencies(SimG4CMS_all
+  SimG4CMSFP420
+  SimG4CMSFP420Plugins
+  SimG4CMSHGCalTestBeam
+  SimG4CMSTestBeamPlugins
+  SimG4CMSMuon
+  SimG4CMSForward
+  SimG4CMSForwardPlugins
+  SimG4CMSCherenkovAnalysis
+  CherenkovAnalysisTest
+  XtalDedxAnalysisTest
+  SimG4CMSCherenkovAnalysisPlugins
+  SimG4CMSCalo
+  testCaloSimHits
+  SimG4CMSCaloPlugins
+  SimG4CMSShowerLibraryProducer
+  CastorShowerLibraryMerger
+  testAnalyzeTuples
+  SimG4CMSHcalForwardLibWriter
+  SimG4CMSShowerLibraryProducerPlugins
+  SimG4CMSEcalTestBeam
+  SimG4CMSTracker
+  testSimG4CMSTracker
+  SimG4CMSTrackerPlugins
+  SimG4CMSHcalTestBeam
+  SimG4CMSHcalTestBeamPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(SimG4CMS_libs)
+add_dependencies(SimG4CMS_libs
+  SimG4CMSFP420
+  SimG4CMSHGCalTestBeam
+  SimG4CMSMuon
+  SimG4CMSForward
+  SimG4CMSCherenkovAnalysis
+  SimG4CMSCalo
+  SimG4CMSShowerLibraryProducer
+  SimG4CMSEcalTestBeam
+  SimG4CMSTracker
+  SimG4CMSHcalTestBeam
+)

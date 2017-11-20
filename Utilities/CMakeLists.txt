@@ -1,0 +1,62 @@
+add_subdirectory(StorageFactory)
+add_subdirectory(LStoreAdaptor)
+add_subdirectory(ReleaseScripts)
+add_subdirectory(DCacheAdaptor)
+add_subdirectory(DavixAdaptor)
+add_subdirectory(BinningTools)
+add_subdirectory(Xerces)
+add_subdirectory(XrdAdaptor)
+add_subdirectory(General)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(Utilities_all)
+add_dependencies(Utilities_all
+  UtilitiesStorageFactory
+  cms_anycp
+  test_StorageFactory_t0Repack
+  test_StorageFactory_randomread
+  test_StorageFactory_Any
+  test_StorageFactory_Local
+  test_StorageFactory_Local2
+  test_StorageFactory_Local3
+  test_StorageFactory_Ftp
+  test_StorageFactory_Ftp2
+  test_StorageFactory_Rfio2
+  test_StorageFactory_Rfio3
+  test_StorageFactory_Write
+  test_StorageFactory_Mkstemp
+  UtilitiesStorageFactoryPlugins
+  UtilitiesLStoreAdaptor
+  UtilitiesLStoreAdaptorPlugin
+  UtilitiesDCacheAdaptor
+  UtilitiesDCacheAdaptorPlugin
+  UtilitiesDavixAdaptor
+  test_DavixCheck_http
+  test_DavixRead_http
+  test_DavixReadV_http
+  test_DavixReadWrongUrl_http
+  test_DavixReadFileNotFound_http
+  test_StorageFactory_Http
+  test_StorageFactory_Http2
+  test_StorageFactory_Http3
+  test_StorageFactory_Http4
+  UtilitiesDavixAdaptorPlugin
+  UtilitiesBinningTools
+  UtilitiesXrdAdaptor
+  UtilitiesXrdAdaptorPlugin
+  UtilitiesGeneral
+  test_precomputed_value_sort
+  TestTBB
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(Utilities_libs)
+add_dependencies(Utilities_libs
+  UtilitiesStorageFactory
+  UtilitiesLStoreAdaptor
+  UtilitiesDCacheAdaptor
+  UtilitiesDavixAdaptor
+  UtilitiesBinningTools
+  UtilitiesXrdAdaptor
+  UtilitiesGeneral
+)

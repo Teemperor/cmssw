@@ -1,0 +1,64 @@
+add_subdirectory(RegressionTest)
+add_subdirectory(OfflineDBLoader)
+add_subdirectory(Base)
+add_subdirectory(Algorithm)
+add_subdirectory(Core)
+add_subdirectory(Parser)
+add_subdirectory(ExprAlgo)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(DetectorDescription_all)
+add_dependencies(DetectorDescription_all
+  DetectorDescriptionRegressionTest
+  DOMCount
+  DDErrorReport
+  DetectorDescriptionRegressionTestDDErrorReport
+  DetectorDescriptionRegressionTestDOMCount
+  DDCompareCPV
+  html_ddd
+  simple_dom_parser
+  simple_dom_parser2
+  named_types
+  DetectorDescriptionTestAlgorithmPlugins
+  algorithm_plugin_test
+  testrot
+  reg_ddcore
+  reg_ddparser
+  const_dump
+  DetectorDescriptionTutorial
+  CompareDDViews
+  DetectorDescriptionOfflineDBLoader
+  OutputDDToDDL
+  DetectorDescriptionBase
+  Singleton_
+  DetectorDescriptionAlgorithm
+  DetectorDescriptionAlgorithmPlugins
+  DetectorDescriptionCore
+  testCore
+  testStrVector
+  testDDFilter
+  testShapes
+  clhepToROOTMath
+  test_DDRotation
+  DetectorDescriptionParser
+  dumpDDExpandedView
+  DetectorDescriptionParserTE
+  testDoc
+  testmat
+  dumpDDCompactView
+  testNew
+  testDDCompactView
+  DetectorDescriptionExprAlgo
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(DetectorDescription_libs)
+add_dependencies(DetectorDescription_libs
+  DetectorDescriptionRegressionTest
+  DetectorDescriptionOfflineDBLoader
+  DetectorDescriptionBase
+  DetectorDescriptionAlgorithm
+  DetectorDescriptionCore
+  DetectorDescriptionParser
+  DetectorDescriptionExprAlgo
+)

@@ -1,0 +1,45 @@
+add_subdirectory(SiPixelRecHits)
+add_subdirectory(SubCollectionProducers)
+add_subdirectory(Phase2TrackerRecHits)
+add_subdirectory(Records)
+add_subdirectory(SiStripZeroSuppression)
+add_subdirectory(SiStripClusterizer)
+add_subdirectory(ClusterParameterEstimator)
+add_subdirectory(SiStripRecHitConverter)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoLocalTracker_all)
+add_dependencies(RecoLocalTracker_all
+  RecoLocalTrackerSiPixelRecHits
+  ReadPixelRecHit
+  CPEAccessTester
+  RecoLocalTrackerSiPixelRecHitsPlugins
+  RecoLocalTrackerSubCollectionProducers
+  RecoLocalTrackerSubCollectionProducersTestPlugins
+  RecoLocalTrackerPhase2TrackerRecHits
+  Phase2TrackerRecHitsValidation
+  RecoLocalTrackerPhase2TrackerRecHitsPlugins
+  RecoLocalTrackerRecords
+  RecoLocalTrackerSiStripZeroSuppression
+  RecoLocalTrackerSiStripZeroSuppressionPlugins
+  RecoLocalTrackerSiStripClusterizer
+  RecoLocalTrackerSiStripClusterizerTestPlugins
+  RecoLocalTrackerSiStripClusterizerPlugins
+  RecoLocalTrackerClusterParameterEstimator
+  RecoLocalTrackerSiStripRecHitConverter
+  RecoLocalTrackerSiStripRecHitConverterTestModules
+  RecoLocalTrackerSiStripRecHitConverterPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoLocalTracker_libs)
+add_dependencies(RecoLocalTracker_libs
+  RecoLocalTrackerSiPixelRecHits
+  RecoLocalTrackerSubCollectionProducers
+  RecoLocalTrackerPhase2TrackerRecHits
+  RecoLocalTrackerRecords
+  RecoLocalTrackerSiStripZeroSuppression
+  RecoLocalTrackerSiStripClusterizer
+  RecoLocalTrackerClusterParameterEstimator
+  RecoLocalTrackerSiStripRecHitConverter
+)

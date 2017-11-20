@@ -1,0 +1,21 @@
+
+{
+  'version': 0,
+  'ignore-non-existent-contents': false,
+  'roots': [
+  { 'name': '/usr/include/', 'type': 'directory',
+    'contents': [
+      { 'name' : 'module.modulemap', 'type': 'file',
+        'external-contents': '/home/teemperor/cms/cmssw/system.modulemap'
+      }
+    ]
+  },
+  { 'name': '/usr/include/c++/7.2.0/', 'type': 'directory',
+    'contents': [
+      { 'name' : 'module.modulemap', 'type': 'file',
+        'external-contents': '/home/teemperor/cms/cmssw/stl.modulemap'
+      }
+    ]
+  }
+  ]
+}

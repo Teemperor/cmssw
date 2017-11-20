@@ -1,0 +1,24 @@
+add_library(RecoMuonMuonIsolationPlugins OBJECT 
+  MuonPFIsolationWithConeVeto.cc
+  module.cc
+  TrackSelector.cc
+  TrackExtractor.cc
+  JetExtractor.cc
+  ExtractorFromDeposits.cc
+  PixelTrackExtractor.cc
+  CutsIsolatorWithCorrection.cc
+  MuPFIsoEmbedder.cc
+  CaloExtractor.cc
+  CaloExtractorByAssociator.cc
+)
+
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /usr/include/root/)
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /usr/include/boost/)
+target_include_directories(RecoMuonMuonIsolationPlugins PUBLIC /usr/include/boost/regex/)
+

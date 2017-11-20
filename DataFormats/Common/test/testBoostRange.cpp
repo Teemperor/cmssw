@@ -139,7 +139,7 @@ void test_const_itr_is_const(T const& t) {
 }
 
 template<typename T>
-void test(T t) {
+static void test_range(T t) {
     testFill(t);
     test_const_itr_is_const(t);
     test_sort(t);
@@ -175,10 +175,10 @@ DISABLE_SORT_BARE(edm::RefVector<Coll>)
 int main(int, char**) try {
    dummies_.clear();
    for(int i = 0; i < 12; ++i) dummies_.push_back(Dummy(i));
-   test(vector<Dummy>());
-   test(RefVector<Coll>());
-   test(PtrVector<Dummy>());
-   test(OwnVector<Dummy>());
+   test_range(vector<Dummy>());
+   test_range(RefVector<Coll>());
+   test_range(PtrVector<Dummy>());
+   test_range(OwnVector<Dummy>());
    return 0;
 } catch(cms::Exception const& e) {
     std::cerr << e.explainSelf() << std::endl;

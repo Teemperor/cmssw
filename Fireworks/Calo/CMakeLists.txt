@@ -1,0 +1,30 @@
+add_subdirectory(plugins)
+add_library(FireworksCalo OBJECT 
+  src/FWFromSliceSelector.cc
+  src/FWCaloDataProxyBuilderBase.cc
+  src/makeEveJetCone.cc
+  src/FWTauProxyBuilderBase.cc
+  src/FWFromTEveCaloDataSelector.cc
+  src/FWHistSliceSelector.cc
+  src/FWECALCaloDataDetailViewBuilder.cc
+  src/FWBoxRecHit.cc
+  src/thetaBins.cc
+  src/FWECALDetailViewBuilder.cc
+  src/FWCaloDataHistProxyBuilder.cc
+)
+
+target_include_directories(FireworksCalo PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/python2.7/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/boost/program_options/)
+target_include_directories(FireworksCalo PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(FireworksCalo PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/boost/serialization/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/boost/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/boost/python/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/root/)
+target_include_directories(FireworksCalo PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(FireworksCalo PUBLIC /usr/include/boost/system/)
+target_include_directories(FireworksCalo PUBLIC /usr/include/boost/regex/)
+

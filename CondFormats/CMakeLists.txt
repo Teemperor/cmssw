@@ -1,0 +1,183 @@
+add_subdirectory(CSCObjects)
+add_subdirectory(Alignment)
+add_subdirectory(Serialization)
+add_subdirectory(ESObjects)
+add_subdirectory(PCLConfig)
+add_subdirectory(CastorObjects)
+add_subdirectory(SiStripObjects)
+add_subdirectory(EgammaObjects)
+add_subdirectory(External)
+add_subdirectory(EcalCorrections)
+add_subdirectory(RPCObjects)
+add_subdirectory(HIObjects)
+add_subdirectory(RecoMuonObjects)
+add_subdirectory(BeamSpotObjects)
+add_subdirectory(DataRecord)
+add_subdirectory(PhysicsToolsObjects)
+add_subdirectory(RunInfo)
+add_subdirectory(DQMObjects)
+add_subdirectory(SiPixelObjects)
+add_subdirectory(BTauObjects)
+add_subdirectory(Luminosity)
+add_subdirectory(OptAlignObjects)
+add_subdirectory(Calibration)
+add_subdirectory(MFObjects)
+add_subdirectory(L1TObjects)
+add_subdirectory(HLTObjects)
+add_subdirectory(EcalObjects)
+add_subdirectory(CTPPSReadoutObjects)
+add_subdirectory(Common)
+add_subdirectory(AlignmentRecord)
+add_subdirectory(GeometryObjects)
+add_subdirectory(DTObjects)
+add_subdirectory(JetMETObjects)
+add_subdirectory(HcalObjects)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(CondFormats_all)
+add_dependencies(CondFormats_all
+  CondFormatsCSCObjects
+  CSCPedestalReadAnalyzer
+  CSCReadChamberMapValuesAnalyzer
+  CSCReadChamberIndexValuesAnalyzer
+  CSCReadDDUMapValuesAnalyzer
+  CSCReadChamberTimeCorrAnalyzer
+  CSCReadCrateMapValuesAnalyzer
+  CSCChipSpeedCorrectionDBReadAnalyzer
+  CSCPedestalDBReadAnalyzer
+  CSCGainsReadAnalyzer
+  CSCGainsDBReadAnalyzer
+  CSCCrossTalkReadAnalyzer
+  CSCCrossTalkDBReadAnalyzer
+  CSCNoiseMatrixReadAnalyzer
+  CSCNoiseMatrixDBReadAnalyzer
+  CSCReadBadStripsAnalyzer
+  CSCReadBadWiresAnalyzer
+  CSCGainsStudy
+  CSCReadoutMapTest
+  CSCReadBadChambersAnalyzer
+  testCSCMapping
+  testCSCTriggerMapping
+  CSCReadDCSDataAnalyzer
+  CSCReadChamberTimeCorrectionsAnalyzer
+  testSerializationCSCObjects
+  CondFormatsAlignment
+  testSerializationAlignment
+  CondFormatsSerialization
+  testSerializationEqual
+  CondFormatsESObjects
+  testSerializationESObjects
+  CondFormatsPCLConfig
+  testSerializationPCLConfig
+  AlignPCLThresholdsWriter
+  AlignPCLThresholdsReader
+  CondFormatsCastorObjects
+  testSerializationCastorObjects
+  CondFormatsSiStripObjects
+  TestSiStripLatency
+  TestCondFormatsSiStripObjects
+  testSerializationSiStripObjects
+  CondFormatsEgammaObjects
+  testSerializationEgammaObjects
+  testSerializationExternal
+  CondFormatsEcalCorrections
+  testEcalShowerContainmentCorrections
+  testSerializationEcalCorrections
+  CondFormatsRPCObjects
+  testSerializationRPCObjects
+  CondFormatsHIObjects
+  testSerializationHIObjects
+  CondFormatsRecoMuonObjects
+  CondFormatsRecoMuonObjectsTest
+  CondFormatsBeamSpotObjects
+  testSerializationBeamSpotObjects
+  CondFormatsDataRecord
+  CondFormatsPhysicsToolsObjects
+  CondFormatsPhysicsToolsObjectsTest
+  testSerializationPhysicsToolsObjects
+  CondFormatsRunInfo
+  testSerializationRunInfo
+  fromXML
+  CondFormatsDQMObjects
+  testSerializationDQMObjects
+  CondFormatsSiPixelObjects
+  SiPixelObjectsTest
+  testSerializationSiPixelObjects
+  CondFormatsBTauObjects
+  testSerializationBTauObjects
+  testBTagEntry
+  testBTagCalibration
+  CondFormatsLuminosity
+  testSerializationLuminosity
+  CondFormatsOptAlignObjects
+  testSerializationOptAlignObjects
+  CondFormatsCalibration
+  testSerializationCalibration
+  CondFormatsMFObjects
+  CondFormatsMFObjectsTest
+  testSerializationMFObjects
+  CondFormatsL1TObjects
+  test_L1GtDefinitions
+  CondFormatsHLTObjects
+  testSerializationHLTObjects
+  CondFormatsEcalObjects
+  testSerializationEcalObjects
+  CondFormatsCTPPSReadoutObjects
+  CondFormatsCTPPSReadoutObjectsPlugins
+  CondFormatsCommon
+  exCondTime
+  hash64_t
+  SmallWORMDict_t
+  CondFormatsCommonTest
+  testSerializationCommon
+  CondFormatsAlignmentRecord
+  CondFormatsGeometryObjects
+  testSerializationGeometryObjects
+  CondFormatsDTObjects
+  testDTBufferTree
+  CondFormatsDTObjectsTest
+  testSerializationDTObjects
+  CondFormatsJetMETObjects
+  JetResolution_t
+  testSerializationJetMETObjects
+  CondFormatsHcalObjects
+  testSerializationHcalObjects
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(CondFormats_libs)
+add_dependencies(CondFormats_libs
+  CondFormatsCSCObjects
+  CondFormatsAlignment
+  CondFormatsSerialization
+  CondFormatsESObjects
+  CondFormatsPCLConfig
+  CondFormatsCastorObjects
+  CondFormatsSiStripObjects
+  CondFormatsEgammaObjects
+  CondFormatsEcalCorrections
+  CondFormatsRPCObjects
+  CondFormatsHIObjects
+  CondFormatsRecoMuonObjects
+  CondFormatsBeamSpotObjects
+  CondFormatsDataRecord
+  CondFormatsPhysicsToolsObjects
+  CondFormatsRunInfo
+  CondFormatsDQMObjects
+  CondFormatsSiPixelObjects
+  CondFormatsBTauObjects
+  CondFormatsLuminosity
+  CondFormatsOptAlignObjects
+  CondFormatsCalibration
+  CondFormatsMFObjects
+  CondFormatsL1TObjects
+  CondFormatsHLTObjects
+  CondFormatsEcalObjects
+  CondFormatsCTPPSReadoutObjects
+  CondFormatsCommon
+  CondFormatsAlignmentRecord
+  CondFormatsGeometryObjects
+  CondFormatsDTObjects
+  CondFormatsJetMETObjects
+  CondFormatsHcalObjects
+)

@@ -1,0 +1,83 @@
+add_subdirectory(EcalTrivialCondModules)
+add_subdirectory(HcalTPGIO)
+add_subdirectory(EcalLaserCorrection)
+add_subdirectory(CaloTPG)
+add_subdirectory(HcalPlugins)
+add_subdirectory(EcalCorrelatedNoiseAnalysisModules)
+add_subdirectory(HcalAlgos)
+add_subdirectory(CastorCalib)
+add_subdirectory(EcalLaserSorting)
+add_subdirectory(HcalTPGAlgos)
+add_subdirectory(EcalTPGTools)
+add_subdirectory(HcalTPGEventSetup)
+add_subdirectory(CaloMiscalibTools)
+add_subdirectory(EcalSRTools)
+add_subdirectory(EcalCorrectionModules)
+add_subdirectory(EcalPedestalOffsets)
+add_subdirectory(EcalCorrelatedNoiseAnalysisAlgos)
+add_subdirectory(EcalLaserAnalyzer)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(CalibCalorimetry_all)
+add_dependencies(CalibCalorimetry_all
+  CalibCalorimetryEcalTrivialCondModules
+  CalibCalorimetryHcalTPGIO
+  CalibCalorimetryEcalLaserCorrection
+  EcalLaserTestAnalyzer
+  EcalLaserDbAnalyzer
+  CalibCalorimetryEcalLaserCorrectionService
+  CalibCalorimetryCaloTPG
+  CalibCalorimetryCaloTPGPlugins
+  CalibCalorimetryHcalPlugins
+  CalibCalorimetryEcalCorrelatedNoiseAnalysisModules
+  CalibCalorimetryHcalAlgos
+  HcalShapeIntegrator
+  HcalPulseContainmentTest
+  MapTester
+  CalibCalorimetryCastorCalib
+  CalibCalorimetryCastorPlugins
+  CalibCalorimetryEcalLaserSorting
+  CalibCalorimetryHcalTPGAlgos
+  CalibCalorimetryEcalTPGTools
+  changeTPGLutThreshold
+  CalibCalorimetryEcalTPGToolsPlugins
+  CalibCalorimetryHcalTPGEventSetup
+  CalibCalorimetryCaloMiscalibTools
+  CalibCalorimetryCaloMiscalibToolsPlugin
+  CalibCalorimetryEcalSRTools
+  CalibCalorimetryEcalCorrectionModules
+  EcalContainmentCorrectionAnalyzer
+  CalibCalorimetryEcalPedestalOffsets
+  CalibCalorimetryEcalCorrelatedNoiseAnalysisAlgos
+  EcnaGuiEB
+  EcnaGuiEE
+  EcnaHistosExample1
+  EcnaHistosExample2
+  EcnaCalculationsExample
+  CalibCalorimetryEcalLaserAnalyzer
+  print_ecal_geom
+  CalibCalorimetryEcalLaserAnalyzerPlugin
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(CalibCalorimetry_libs)
+add_dependencies(CalibCalorimetry_libs
+  CalibCalorimetryEcalTrivialCondModules
+  CalibCalorimetryHcalTPGIO
+  CalibCalorimetryEcalLaserCorrection
+  CalibCalorimetryCaloTPG
+  CalibCalorimetryHcalPlugins
+  CalibCalorimetryEcalCorrelatedNoiseAnalysisModules
+  CalibCalorimetryHcalAlgos
+  CalibCalorimetryCastorCalib
+  CalibCalorimetryEcalLaserSorting
+  CalibCalorimetryHcalTPGAlgos
+  CalibCalorimetryEcalTPGTools
+  CalibCalorimetryHcalTPGEventSetup
+  CalibCalorimetryCaloMiscalibTools
+  CalibCalorimetryEcalSRTools
+  CalibCalorimetryEcalCorrectionModules
+  CalibCalorimetryEcalPedestalOffsets
+  CalibCalorimetryEcalCorrelatedNoiseAnalysisAlgos
+  CalibCalorimetryEcalLaserAnalyzer
+)

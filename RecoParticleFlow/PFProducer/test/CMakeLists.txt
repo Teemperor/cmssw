@@ -1,0 +1,147 @@
+add_library(RecoParticleFlowPFBlockComparator OBJECT 
+  PFBlockComparator.cc
+)
+
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/boost/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/root/)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(RecoParticleFlowPFBlockComparator PUBLIC /usr/include/boost/regex/)
+
+add_library(RecoParticleFlowEgGEDPhotonAnalyzer OBJECT 
+  EgGEDPhotonAnalyzer.cc
+)
+
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(RecoParticleFlowEgGEDPhotonAnalyzer PUBLIC /usr/include/boost/regex/)
+
+add_library(RecoParticleFlowGsfGEDElectronAnalyzer OBJECT 
+  GsfGEDElectronAnalyzer.cc
+)
+
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/boost/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/root/)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(RecoParticleFlowGsfGEDElectronAnalyzer PUBLIC /usr/include/boost/regex/)
+
+add_library(RecoParticleFlowPFSuperClusterReader OBJECT 
+  PFSuperClusterReader.cc
+)
+
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/boost/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/root/)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(RecoParticleFlowPFSuperClusterReader PUBLIC /usr/include/boost/regex/)
+
+add_library(RecoParticleFlowPFEGammaCandidateChecker OBJECT 
+  PFEGammaCandidateChecker.cc
+)
+
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/boost/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/root/)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(RecoParticleFlowPFEGammaCandidateChecker PUBLIC /usr/include/boost/regex/)
+
+add_library(RecoParticleFlowPFIsoReader OBJECT 
+  PFIsoReader.cc
+)
+
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/boost/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/root/)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(RecoParticleFlowPFIsoReader PUBLIC /usr/include/boost/regex/)
+
+add_library(RecoParticleFlowComparePFCandidateEGTreeMaker OBJECT 
+  PFEGCandidateTreeMaker.cc
+)
+
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/boost/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/eigen3/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/root/)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(RecoParticleFlowComparePFCandidateEGTreeMaker PUBLIC /usr/include/boost/regex/)
+

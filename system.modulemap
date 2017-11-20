@@ -1,0 +1,178 @@
+
+module libc {
+    module stdio { header "stdio.h" export * }
+    module stdlib { header "stdlib.h" export * }
+    module string { header "string.h" export * }
+    module stdint { header "stdint.h" export * }
+    module errno { header "errno.h" export * }
+    module alloca { header "alloca.h" export * }
+    module malloc { header "malloc.h" export * }
+    //module xlocale { header "xlocale.h" export * }
+    module signal { header "signal.h" export * }
+    module unistd { header "unistd.h" export * }
+    module dlfcn { header "dlfcn.h" export * }
+    module math { header "math.h" export * }
+    module libio { header "libio.h" export * }
+    module wchar { header "wchar.h" export * }
+    module pthread { header "pthread.h" export * }
+    module endian { header "endian.h" export * }
+    module sched { header "sched.h" export * }
+    module time { header "time.h" export * }
+    module netdb { header "netdb.h" export * }
+    module features { header "features.h" export * }
+    module bits {
+        module types { header "bits/types.h" export * }
+        module wchar { header "bits/wchar.h" export * }
+    }
+    module sys {
+        module select { header "sys/select.h" export * }
+        module types { header "sys/types.h" export * }
+        module wait { header "sys/wait.h" export * }
+        module time { header "sys/time.h" export * }
+        module ipc { header "sys/ipc.h" export * }
+        module msg { header "sys/msg.h" export * }
+        module signal { header "sys/signal.h" export * }
+        module socket { header "sys/socket.h" export * }
+        module stat { header "sys/stat.h" export * }
+        module fcntl { header "sys/fcntl.h" export * }
+        module resource { header "sys/resource.h" export * }
+    }
+    export *
+}
+
+module HepMC {
+    module "PythiaWrapper6_4" { header "HepMC/PythiaWrapper6_4.h" export *}
+    export *
+}
+
+module tbb {
+    module task { header "tbb/task.h" export * }
+    module concurrent_queue { header "tbb/concurrent_queue.h" export * }
+    module concurrent_vector { header "tbb/concurrent_vector.h" export * }
+    module concurrent_unordered_map { header "tbb/concurrent_unordered_map.h" export * }
+    module parallel_for { header "tbb/parallel_for.h" export * }
+    export *
+}
+
+module Pythia8 {
+    module "Analysis.h" { header "Pythia8/Analysis.h" export * }
+    module "Basics.h" { header "Pythia8/Basics.h" export * }
+    module "BeamParticle.h" { header "Pythia8/BeamParticle.h" export * }
+    module "BeamRemnants.h" { header "Pythia8/BeamRemnants.h" export * }
+    module "BeamShape.h" { header "Pythia8/BeamShape.h" export * }
+    module "BoseEinstein.h" { header "Pythia8/BoseEinstein.h" export * }
+    module "ColourReconnection.h" { header "Pythia8/ColourReconnection.h" export * }
+    module "ColourTracing.h" { header "Pythia8/ColourTracing.h" export * }
+    module "Event.h" { header "Pythia8/Event.h" export * }
+    module "FJcore.h" { header "Pythia8/FJcore.h" export * }
+    module "FragmentationFlavZpT.h" { header "Pythia8/FragmentationFlavZpT.h" export * }
+    module "FragmentationSystems.h" { header "Pythia8/FragmentationSystems.h" export * }
+    module "GammaKinematics.h" { header "Pythia8/GammaKinematics.h" export * }
+    module "HadronLevel.h" { header "Pythia8/HadronLevel.h" export * }
+    module "HadronScatter.h" { header "Pythia8/HadronScatter.h" export * }
+    module "HardDiffraction.h" { header "Pythia8/HardDiffraction.h" export * }
+    module "HelicityBasics.h" { header "Pythia8/HelicityBasics.h" export * }
+    module "HelicityMatrixElements.h" { header "Pythia8/HelicityMatrixElements.h" export * }
+    module "HiddenValleyFragmentation.h" { header "Pythia8/HiddenValleyFragmentation.h" export * }
+    module "History.h" { header "Pythia8/History.h" export * }
+    module "Info.h" { header "Pythia8/Info.h" export * }
+    module "JunctionSplitting.h" { header "Pythia8/JunctionSplitting.h" export * }
+    module "LesHouches.h" { header "Pythia8/LesHouches.h" export * }
+    module "LHEF3.h" { header "Pythia8/LHEF3.h" export * }
+    module "Merging.h" { header "Pythia8/Merging.h" export * }
+    module "MergingHooks.h" { header "Pythia8/MergingHooks.h" export * }
+    module "MiniStringFragmentation.h" { header "Pythia8/MiniStringFragmentation.h" export * }
+    module "MultipartonInteractions.h" { header "Pythia8/MultipartonInteractions.h" export * }
+    module "ParticleData.h" { header "Pythia8/ParticleData.h" export * }
+    module "ParticleDecays.h" { header "Pythia8/ParticleDecays.h" export * }
+    module "PartonDistributions.h" { header "Pythia8/PartonDistributions.h" export * }
+    module "PartonLevel.h" { header "Pythia8/PartonLevel.h" export * }
+    module "PartonSystems.h" { header "Pythia8/PartonSystems.h" export * }
+    module "PhaseSpace.h" { header "Pythia8/PhaseSpace.h" export * }
+    module "ProcessContainer.h" { header "Pythia8/ProcessContainer.h" export * }
+    module "ProcessLevel.h" { header "Pythia8/ProcessLevel.h" export * }
+    module "PythiaComplex.h" { header "Pythia8/PythiaComplex.h" export * }
+    module "Pythia.h" { header "Pythia8/Pythia.h" export * }
+    module "PythiaStdlib.h" { header "Pythia8/PythiaStdlib.h" export * }
+    module "ResonanceDecays.h" { header "Pythia8/ResonanceDecays.h" export * }
+    module "ResonanceWidthsDM.h" { header "Pythia8/ResonanceWidthsDM.h" export * }
+    module "ResonanceWidths.h" { header "Pythia8/ResonanceWidths.h" export * }
+    module "RHadrons.h" { header "Pythia8/RHadrons.h" export * }
+    module "Settings.h" { header "Pythia8/Settings.h" export * }
+    module "SigmaCompositeness.h" { header "Pythia8/SigmaCompositeness.h" export * }
+    module "SigmaDM.h" { header "Pythia8/SigmaDM.h" export * }
+    module "SigmaEW.h" { header "Pythia8/SigmaEW.h" export * }
+    module "SigmaExtraDim.h" { header "Pythia8/SigmaExtraDim.h" export * }
+    module "SigmaGeneric.h" { header "Pythia8/SigmaGeneric.h" export * }
+    module "SigmaHiggs.h" { header "Pythia8/SigmaHiggs.h" export * }
+    module "SigmaLeftRightSym.h" { header "Pythia8/SigmaLeftRightSym.h" export * }
+    module "SigmaLeptoquark.h" { header "Pythia8/SigmaLeptoquark.h" export * }
+    module "SigmaNewGaugeBosons.h" { header "Pythia8/SigmaNewGaugeBosons.h" export * }
+    module "SigmaOnia.h" { header "Pythia8/SigmaOnia.h" export * }
+    module "SigmaProcess.h" { header "Pythia8/SigmaProcess.h" export * }
+    module "SigmaQCD.h" { header "Pythia8/SigmaQCD.h" export * }
+    module "SigmaSUSY.h" { header "Pythia8/SigmaSUSY.h" export * }
+    module "SigmaTotal.h" { header "Pythia8/SigmaTotal.h" export * }
+    module "SLHAinterface.h" { header "Pythia8/SLHAinterface.h" export * }
+    module "SpaceShower.h" { header "Pythia8/SpaceShower.h" export * }
+    module "StandardModel.h" { header "Pythia8/StandardModel.h" export * }
+    module "Streams.h" { header "Pythia8/Streams.h" export * }
+    module "StringFragmentation.h" { header "Pythia8/StringFragmentation.h" export * }
+    module "StringLength.h" { header "Pythia8/StringLength.h" export * }
+    module "SusyCouplings.h" { header "Pythia8/SusyCouplings.h" export * }
+    module "SusyLesHouches.h" { header "Pythia8/SusyLesHouches.h" export * }
+    module "SusyResonanceWidths.h" { header "Pythia8/SusyResonanceWidths.h" export * }
+    module "SusyWidthFunctions.h" { header "Pythia8/SusyWidthFunctions.h" export * }
+    module "TauDecays.h" { header "Pythia8/TauDecays.h" export * }
+    module "TimeShower.h" { header "Pythia8/TimeShower.h" export * }
+    module "UserHooks.h" { header "Pythia8/UserHooks.h" export * }
+    module "WeakShowerMEs.h" { header "Pythia8/WeakShowerMEs.h" export * }
+}
+
+module Geant4 {
+    module CLHEP {
+        module Units_SystemOfUnits { header "Geant4/CLHEP/Units/SystemOfUnits.h" export * }
+        export *
+    }
+    export *
+}
+
+// The system CLHEP installation that is also needed...
+module CLHEPSys {
+    module Matrix { header "CLHEP/Matrix/Matrix.h" export * }
+    module Vector { header "CLHEP/Matrix/Vector.h" export * }
+    module SymMatrix { header "CLHEP/Matrix/SymMatrix.h" export * }
+    module Units_SystemOfUnits { header "CLHEP/Units/SystemOfUnits.h" export * }
+}
+
+module xercesc {
+    module DOMParser { header "xercesc/parsers/XercesDOMParser.hpp" export * }
+    module PlatformUtils { header "xercesc/util/PlatformUtils.hpp" export * }
+    module DOM { header "xercesc/dom/DOM.hpp" export * }
+    export *
+}
+
+module cppunit {
+    module helper_macros { header "cppunit/extensions/HelperMacros.h" export * }
+    module TestFactoryRegistry { header "cppunit/extensions/TestFactoryRegistry.h" export * }
+    module CompilerOutputter { header "cppunit/CompilerOutputter.h" export * }
+    module TestResult { header "cppunit/TestResult.h" export * }
+    module TestResultCollector { header "cppunit/TestResultCollector.h" export * }
+    module TestRunner { header "cppunit/TestRunner.h" export * }
+    module TextTestProgressListener { header "cppunit/TextTestProgressListener.h" export * }
+    export *
+}
+
+module linux {
+    module uuid { header "uuid/uuid.h" export * }
+    export *
+
+}
+
+module zlib { header "zlib.h" export * }
+
+module tiny_xml {
+    header "tinyxml.h"
+    export *
+}
+

@@ -1,0 +1,72 @@
+add_subdirectory(EcalAlCaRecoProducers)
+add_subdirectory(EcalCalibAlgos)
+add_subdirectory(EcalTBTools)
+add_subdirectory(HcalAlCaRecoProducers)
+add_subdirectory(Tools)
+add_subdirectory(HcalCalibAlgos)
+add_subdirectory(HcalConnectivity)
+add_subdirectory(IsolatedParticles)
+add_subdirectory(HcalIsolatedTrackReco)
+add_subdirectory(TkAlCaRecoProducers)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(Calibration_all)
+add_dependencies(Calibration_all
+  CalibrationEcalAlCaRecoProducers
+  CalibrationEcalCalibAlgos
+  CalibrationEcalTBTools
+  CalibrationHcalAlCaRecoProducers
+  CalibrationHcalAlCaRecoProducersPlugins
+  CalibrationTools
+  coeffCompareInvEE
+  coeffCompare
+  viewCoeffEB
+  viewCoeffEE
+  mergeXMLEB
+  mergeXMLEE
+  recalibEB
+  recalibEE
+  solveCalibSys
+  testEcalRingCalibrationTools
+  CalibrationToolsPlugins
+  CalibrationHcalCalibAlgos
+  CalibrationHcalCalibAlgosTest
+  CalibrationHcalCalibAlgosPlugins
+  CalibrationHcalConnectivity
+  CalibrationIsolatedParticles
+  CalibrationIsolatedTracksNxN
+  CalibrationIsolatedTracksCone
+  CalibrationIsolatedParticlesGeneratedJets
+  CalibrationIsolatedGenParticles
+  CalibrationIsolatedTracksHcalScale
+  CalibrationElectronStudy
+  CalibrationStudyHLT
+  CalibrationIsoTrig
+  CalibrationIsoTrackCalib
+  CalibrationIsoTrackCalibration
+  CalibrationHcalRaddamMuon
+  CalibrationHcalHBHEMuonSimAnalyzer
+  CalibrationHcalIsolatedTrackReco
+  CalibrationTkAlCaRecoProducers
+  CalibrationTkAlCaRecoProducersDQMRootFileReader
+  CalibrationTrackSelectorModule
+  AlcaBeamSpotProducer
+  AlcaBeamSpotHarvester
+  AlcaBeamSpotFromDB
+  PCLMetadataWriter
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(Calibration_libs)
+add_dependencies(Calibration_libs
+  CalibrationEcalAlCaRecoProducers
+  CalibrationEcalCalibAlgos
+  CalibrationEcalTBTools
+  CalibrationHcalAlCaRecoProducers
+  CalibrationTools
+  CalibrationHcalCalibAlgos
+  CalibrationHcalConnectivity
+  CalibrationIsolatedParticles
+  CalibrationHcalIsolatedTrackReco
+  CalibrationTkAlCaRecoProducers
+)

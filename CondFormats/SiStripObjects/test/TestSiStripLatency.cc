@@ -10,7 +10,7 @@ struct DetIdAndApvs
   std::vector<uint16_t> apvs;
 };
 
-void test( const std::vector<DetIdAndApvs> & detIdAndApvs,
+static void test( const std::vector<DetIdAndApvs> & detIdAndApvs,
            const std::vector<int> & latencyIndexes, std::vector<uint16_t> & latencies,
            const std::vector<int> & modeIndexes, std::vector<uint16_t> & modes,
            SiStripLatency & latency )

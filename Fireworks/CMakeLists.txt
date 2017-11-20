@@ -1,0 +1,69 @@
+add_subdirectory(Muons)
+add_subdirectory(Candidates)
+add_subdirectory(Electrons)
+add_subdirectory(Eve)
+add_subdirectory(ParticleFlow)
+add_subdirectory(Geometry)
+add_subdirectory(TableWidget)
+add_subdirectory(Calo)
+add_subdirectory(Core)
+add_subdirectory(Tracks)
+add_subdirectory(FWInterface)
+add_subdirectory(Vertices)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(Fireworks_all)
+add_dependencies(Fireworks_all
+  FireworksMuons
+  FireworksMuonsPlugins
+  FireworksCandidates
+  FireworksCandidatesPlugins
+  FireworksElectrons
+  FireworksElectronsPlugins
+  FireworksEve
+  FireworksEveEveServicePlugin
+  FireworksEveDummyEvelyserPlugin
+  FireworksParticleFlow
+  FireworksParticleFlowPlugins
+  FireworksGeometry
+  FireworksDisplayGeomPlugin
+  FireworksGeometryPlugins
+  FireworksGeometryDumpSimGeometryPlugin
+  FireworksGeometryMFProducerPlugin
+  FireworksGeometryDumpFWRecoGeometryPlugin
+  FireworksGeometryDumpFWTGeoRecoGeometryPlugin
+  FireworksGeometryValidateGeometryPlugin
+  FireworksGeometryTGeoMgrFromDddPlugin
+  FireworksGeometryFWRecoGeometryESProducerPlugin
+  FireworksGeometryFWTGeoRecoGeometryESProducerPlugin
+  FireworksTableWidget
+  FireworksCalo
+  FireworksCaloPlugins
+  FireworksCore
+  cmsShow.exe
+  cmsShowSendReport
+  TestFireworksCore
+  FireworksTracks
+  FireworksTracksPlugins
+  FireworksFWInterface
+  FireworksFWInterfacePlugin
+  FireworksVertices
+  FireworksVerticesPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(Fireworks_libs)
+add_dependencies(Fireworks_libs
+  FireworksMuons
+  FireworksCandidates
+  FireworksElectrons
+  FireworksEve
+  FireworksParticleFlow
+  FireworksGeometry
+  FireworksTableWidget
+  FireworksCalo
+  FireworksCore
+  FireworksTracks
+  FireworksFWInterface
+  FireworksVertices
+)

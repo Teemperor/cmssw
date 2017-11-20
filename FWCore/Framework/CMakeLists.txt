@@ -1,0 +1,141 @@
+add_subdirectory(bin)
+add_subdirectory(test)
+add_library(FWCoreFramework OBJECT 
+  src/Factory.cc
+  src/HCTypeTag.cc
+  src/WorkerMaker.cc
+  src/ExceptionActions.cc
+  src/defaultCmsRunServices.cc
+  src/ESProducerLooper.cc
+  src/TriggerResultInserter.cc
+  src/EDLooperBase.cc
+  src/ESHandleExceptionFactory.cc
+  src/SharedResourcesRegistry.cc
+  src/EventSetupRecord.cc
+  src/IEventProcessor.cc
+  src/ProductSelector.cc
+  src/ScheduleItems.cc
+  src/ProductResolvers.cc
+  src/ExceptionHelpers.cc
+  src/EarlyDeleteHelper.cc
+  src/ESHandle.cc
+  src/OutputModuleCommunicator.cc
+  src/StreamSchedule.cc
+  src/MessageReceiverForSource.cc
+  src/DependentRecordIntervalFinder.cc
+  src/EventProcessor.cc
+  src/DataKeyTags.cc
+  src/GenericHandle.cc
+  src/WorkerT.cc
+  src/Event.cc
+  src/SignallingProductRegistry.cc
+  src/ESProducts.cc
+  src/Schedule.cc
+  src/TriggerResultsBasedEventSelector.cc
+  src/NoDataException.cc
+  src/DelayedReader.cc
+  src/EventSetupsController.cc
+  src/TriggerNamesService.cc
+  src/IOVSyncValue.cc
+  src/OccurrenceForOutput.cc
+  src/ProductRegistryHelper.cc
+  src/EventSetupRecordIntervalFinder.cc
+  src/Path.cc
+  src/Run.cc
+  src/HistoryAppender.cc
+  src/UnscheduledAuxiliary.cc
+  src/EDConsumerBase.cc
+  src/ModuleFactory.cc
+  src/EventSetupRecordProvider.cc
+  src/LuminosityBlockPrincipal.cc
+  src/InputSourceFactory.cc
+  src/EventForOutput.cc
+  src/RunPrincipal.cc
+  src/EPStates.cc
+  src/EventSetupRecordProviderFactoryManager.cc
+  src/SystemTimeKeeper.cc
+  src/InputSource.cc
+  src/OutputModule.cc
+  src/SourceFactory.cc
+  src/DataKey.cc
+  src/ModuleChanger.cc
+  src/RunForOutput.cc
+  src/EDLooper.cc
+  src/ScheduleInfo.cc
+  src/IntersectingIOVRecordIntervalFinder.cc
+  src/LuminosityBlockForOutput.cc
+  src/WorkerRegistry.cc
+  src/PrincipalCache.cc
+  src/EventSetupRecordKey.cc
+  src/ProductSelectorRules.cc
+  src/WorkerInPath.cc
+  src/GlobalSchedule.cc
+  src/PrincipalGetAdapter.cc
+  src/Worker.cc
+  src/ESProducer.cc
+  src/ProducerBase.cc
+  src/DataProxy.cc
+  src/WorkerManager.cc
+  src/PathsAndConsumesOfModules.cc
+  src/ComponentMaker.cc
+  src/Breakpoints.cc
+  src/EventSetup.cc
+  src/ProductDeletedException.cc
+  src/edmodule_mightGet_config.cc
+  src/ModuleHolder.cc
+  src/throwIfImproperDependencies.cc
+  src/ModuleRegistry.cc
+  src/ProcessingController.cc
+  src/EventPrincipal.cc
+  src/ESProxyFactoryProducer.cc
+  src/OutputModuleCommunicatorT.cc
+  src/EventSetupProvider.cc
+  src/SubProcess.cc
+  src/EventSetupProviderMaker.cc
+  src/EventSelector.cc
+  src/LooperFactory.cc
+  src/EDFilter.cc
+  src/LuminosityBlock.cc
+  src/Principal.cc
+  src/ProductResolverBase.cc
+  src/EDProducer.cc
+  src/EDAnalyzer.cc
+  src/ValidityInterval.cc
+  src/NoRecordException.cc
+  src/EventSetupRecordProviderFactory.cc
+  src/getAllTriggerNames.cc
+  src/DataProxyProvider.cc
+  src/MakeDataException.cc
+  src/global/OutputModuleBase.cc
+  src/global/producerImplementors.cc
+  src/global/outputmoduleImplementors.cc
+  src/global/EDProducerBase.cc
+  src/global/filterImplementors.cc
+  src/global/EDFilterBase.cc
+  src/global/EDAnalyzerBase.cc
+  src/stream/ProducingModuleAdaptorBase.cc
+  src/stream/EDAnalyzerAdaptorBase.cc
+  src/stream/EDProducerAdaptorBase.cc
+  src/stream/EDProducerBase.cc
+  src/stream/EDFilterBase.cc
+  src/stream/EDFilterAdaptorBase.cc
+  src/stream/EDAnalyzerBase.cc
+  src/one/OutputModuleBase.cc
+  src/one/producerImplementors.cc
+  src/one/outputmoduleImplementors.cc
+  src/one/EDProducerBase.cc
+  src/one/filterImplementors.cc
+  src/one/EDFilterBase.cc
+  src/one/analyzerImplementors.cc
+  src/one/EDAnalyzerBase.cc
+)
+
+target_include_directories(FWCoreFramework PUBLIC /usr/include/boost/python/)
+target_include_directories(FWCoreFramework PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(FWCoreFramework PUBLIC /usr/include/python2.7/)
+target_include_directories(FWCoreFramework PUBLIC /usr/include/root/)
+target_include_directories(FWCoreFramework PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(FWCoreFramework PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(FWCoreFramework PUBLIC /usr/include/boost/)
+target_include_directories(FWCoreFramework PUBLIC /usr/include/boost/regex/)
+

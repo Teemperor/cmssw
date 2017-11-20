@@ -1,0 +1,111 @@
+add_subdirectory(IPTools)
+add_subdirectory(GsfTracking)
+add_subdirectory(GeomPropagators)
+add_subdirectory(PatternTools)
+add_subdirectory(MaterialEffects)
+add_subdirectory(TrajectoryParametrization)
+add_subdirectory(TrackFitters)
+add_subdirectory(TrajectoryCleaning)
+add_subdirectory(TrackRefitter)
+add_subdirectory(DetLayers)
+add_subdirectory(MeasurementDet)
+add_subdirectory(Records)
+add_subdirectory(RecoGeometry)
+add_subdirectory(AnalyticalJacobians)
+add_subdirectory(TransientTrackingRecHit)
+add_subdirectory(TrackAssociator)
+add_subdirectory(TrajectoryState)
+add_subdirectory(Producers)
+add_subdirectory(KalmanUpdators)
+add_subdirectory(GsfTools)
+add_subdirectory(TransientTrack)
+add_subdirectory(TrajectoryFiltering)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(TrackingTools_all)
+add_dependencies(TrackingTools_all
+  TrackingToolsIPTools
+  TrackingToolsGsfTracking
+  GsfMaterialEffectsUpdator_t
+  TrackingToolsGsfTrackingPlugins
+  TrackingToolsGeomPropagators
+  HelixPropagators_t
+  TrackingToolsPatternTools
+  ClosestApproachInRPhi_t
+  TrajSizes_t
+  bqueue_t
+  TrackingToolsPatternToolsPlugins
+  TrackingToolsMaterialEffects
+  TrackingToolsMaterialEffectsPlugins
+  TrackingToolsTrajectoryParametrization
+  TrackingToolsTrackFitters
+  TrackingToolsTrackFittersPlugins
+  TrackingToolsTrajectoryCleaning
+  TrackingToolsTrajectoryCleaningTest
+  TrackingToolsTrajectoryCleaningPlugins
+  TrackingToolsTrackRefitter
+  TrajectoryReader
+  TrackReader
+  TrackingToolsTrackRefitterPlugins
+  TrackingToolsDetLayers
+  testBinFinders
+  TrackingToolsMeasurementDet
+  TrackingToolsRecords
+  TrackingToolsRecoGeometry
+  TrackingToolsRecoGeometryPlugins
+  TrackingToolsAnalyticalJacobians
+  Jacobian_t
+  ErrorProp_t
+  ErrorPropOri_t
+  TrackingToolsTransientTrackingRecHit
+  TrackingToolsTrackAssociator
+  testTrackingToolsTrackAssociator
+  testCaloMatchingExample
+  TrackingToolsTrackAssociatorPlugins
+  TrackingToolsTrajectoryState
+  testTSOS
+  testProxy
+  testChurn
+  TrackingToolsProducers
+  TrackingToolsKalmanUpdators
+  KFUpdator_t
+  TrackingToolsKalmanUpdatorsPlugins
+  TrackingToolsGsfTools
+  KullbackLeiblerDistance_t
+  traceSymMult_t
+  Gauss_t
+  TrackingToolsGsfToolsPlugins
+  TrackingToolsTransientTrack
+  TransientTrackBuilderTest
+  TrackingToolsTransientTrackPlugins
+  TrackingToolsTrajectoryFiltering
+  TrackingToolsTrajectoryFilteringTest
+  TrackingToolsTrajectoryFilteringPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(TrackingTools_libs)
+add_dependencies(TrackingTools_libs
+  TrackingToolsIPTools
+  TrackingToolsGsfTracking
+  TrackingToolsGeomPropagators
+  TrackingToolsPatternTools
+  TrackingToolsMaterialEffects
+  TrackingToolsTrajectoryParametrization
+  TrackingToolsTrackFitters
+  TrackingToolsTrajectoryCleaning
+  TrackingToolsTrackRefitter
+  TrackingToolsDetLayers
+  TrackingToolsMeasurementDet
+  TrackingToolsRecords
+  TrackingToolsRecoGeometry
+  TrackingToolsAnalyticalJacobians
+  TrackingToolsTransientTrackingRecHit
+  TrackingToolsTrackAssociator
+  TrackingToolsTrajectoryState
+  TrackingToolsProducers
+  TrackingToolsKalmanUpdators
+  TrackingToolsGsfTools
+  TrackingToolsTransientTrack
+  TrackingToolsTrajectoryFiltering
+)

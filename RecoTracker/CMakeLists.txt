@@ -1,0 +1,95 @@
+add_subdirectory(SingleTrackPattern)
+add_subdirectory(SpecialSeedGenerators)
+add_subdirectory(TkSeedingLayers)
+add_subdirectory(TkHitPairs)
+add_subdirectory(DebugTools)
+add_subdirectory(TkMSParametrization)
+add_subdirectory(TkDetLayers)
+add_subdirectory(NuclearSeedGenerator)
+add_subdirectory(SiTrackerMRHTools)
+add_subdirectory(MeasurementDet)
+add_subdirectory(TrackProducer)
+add_subdirectory(FinalTrackSelectors)
+add_subdirectory(DeDx)
+add_subdirectory(TransientTrackingRecHit)
+add_subdirectory(TkTrackingRegions)
+add_subdirectory(Record)
+add_subdirectory(TkSeedGenerator)
+add_subdirectory(CkfPattern)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoTracker_all)
+add_dependencies(RecoTracker_all
+  RecoTrackerSingleTrackPattern
+  RecoTrackerSpecialSeedGenerators
+  RecoTrackerTkSeedingLayers
+  RecoTrackerTkSeedingLayersTests
+  RecoTrackerTkSeedingLayersPlugins
+  RecoTrackerTkHitPairs
+  testCompatKernel.cc
+  RecoTrackerTkHitPairsPlugins
+  RecoTrackerDebugTools
+  RecoTrackerDebugToolsPlugins
+  RecoTrackerTkMSParametrization
+  TestMS
+  RecoTrackerTkDetLayers
+  testRecoTrackerTkDetLayers
+  RecoTrackerNuclearSeedGenerator
+  RecoTrackerNuclearSeedGeneratorPlugins
+  RecoTrackerSiTrackerMRHTools
+  RecoTrackerMeasurementDet
+  RecoTrackerMeasurementDetTest
+  MeasurementDetSize
+  RecoTrackerMeasurementDetPlugins
+  RecoTrackerTrackProducer
+  TrackAnalyzer
+  TrackValidator
+  TrajectoryAnalyzer
+  MomentumConstraintProducer
+  VertexConstraintProducer
+  TwoBodyDecayConstraintProducer
+  TwoBodyDecayMomConstraintProducer
+  GsfVertexConstraintProducer
+  RecoTrackerTrackProducerPlugins
+  RecoTrackerFinalTrackSelectors
+  trackAlgoPriorityOrder_t
+  RecoTrackerFinalTrackSelectorsPlugins
+  RecoTrackerDeDx
+  RecoTrackerDeDxPlugins
+  RecoTrackerTransientTrackingRecHit
+  TTRHBuilderTest
+  TrackerHitSizes
+  RecoTrackerTransientTrackingRecHitPlugins
+  RecoTrackerTkTrackingRegions
+  RecoTrackerTkTrackingRegionsPlugins
+  RecoTrackerRecord
+  RecoTrackerTkSeedGenerator
+  FastCircle_t
+  FastCircleFit_t
+  RecoTrackerTkSeedGeneratorPlugins
+  RecoTrackerCkfPattern
+  RecoTrackerCkfPatternPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoTracker_libs)
+add_dependencies(RecoTracker_libs
+  RecoTrackerSingleTrackPattern
+  RecoTrackerSpecialSeedGenerators
+  RecoTrackerTkSeedingLayers
+  RecoTrackerTkHitPairs
+  RecoTrackerDebugTools
+  RecoTrackerTkMSParametrization
+  RecoTrackerTkDetLayers
+  RecoTrackerNuclearSeedGenerator
+  RecoTrackerSiTrackerMRHTools
+  RecoTrackerMeasurementDet
+  RecoTrackerTrackProducer
+  RecoTrackerFinalTrackSelectors
+  RecoTrackerDeDx
+  RecoTrackerTransientTrackingRecHit
+  RecoTrackerTkTrackingRegions
+  RecoTrackerRecord
+  RecoTrackerTkSeedGenerator
+  RecoTrackerCkfPattern
+)

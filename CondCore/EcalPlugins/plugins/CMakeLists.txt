@@ -1,0 +1,88 @@
+add_library(EcalPyUtils OBJECT 
+  EcalPyUtils.cc
+)
+
+target_include_directories(EcalPyUtils PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/python2.7/)
+target_include_directories(EcalPyUtils PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/boost/program_options/)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/boost/serialization/)
+target_include_directories(EcalPyUtils PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(EcalPyUtils PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(EcalPyUtils PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/boost/)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/boost/python/)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/root/)
+target_include_directories(EcalPyUtils PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(EcalPyUtils PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(EcalPyUtils PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(EcalPyUtils PUBLIC /usr/include/boost/regex/)
+
+add_library(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML OBJECT 
+  EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML.cc
+)
+
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/python2.7/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/boost/program_options/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/boost/serialization/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/boost/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/boost/python/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/root/)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML PUBLIC /usr/include/boost/regex/)
+
+add_library(EcalPedestals_PayloadInspector OBJECT 
+  EcalPedestals_PayloadInspector.cc
+)
+
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/python2.7/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/boost/program_options/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/boost/serialization/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/boost/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/boost/python/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/root/)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(EcalPedestals_PayloadInspector PUBLIC /usr/include/boost/regex/)
+
+add_library(EcalChannelStatus_PayloadInspector OBJECT 
+  EcalChannelStatus_PayloadInspector.cc
+)
+
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/boost/iostreams/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/python2.7/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /home/teemperor/cms/ext/coral/CoralBase)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/sigc++-2.0/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/boost/program_options/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/boost/serialization/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/lib/sigc++-2.0/include/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /home/teemperor/cms/ext/coral/RelationalAccess)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/boost/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/boost/python/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/root/)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /home/teemperor/cms/ext/coral/CoralKernel)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /home/teemperor/cms/ext/coral/CoralCommon)
+target_include_directories(EcalChannelStatus_PayloadInspector PUBLIC /usr/include/boost/regex/)
+

@@ -1,0 +1,54 @@
+add_subdirectory(ElectronIdentification)
+add_subdirectory(Examples)
+add_subdirectory(EgammaIsolationAlgos)
+add_subdirectory(EgammaPhotonAlgos)
+add_subdirectory(PhotonIdentification)
+add_subdirectory(EgammaPhotonProducers)
+add_subdirectory(EgammaElectronAlgos)
+add_subdirectory(EgammaMCTools)
+add_subdirectory(EgammaTools)
+add_subdirectory(EgammaHLTProducers)
+add_subdirectory(EgammaHLTAlgos)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoEgamma_all)
+add_dependencies(RecoEgamma_all
+  RecoEgammaElectronIdentification
+  RecoEgammaElectronIdentificationVIDExample
+  RecoEgammaElectronIdentificationPlugins
+  RecoEgammaElectronIdentificationPlugins_cuts
+  RecoEgammaExamplesPlugins
+  RecoEgammaEgammaIsolationAlgos
+  EgammaTowerIso_t
+  TestEgammaTowerIso
+  RecoEgammaEgammaIsolationAlgosPlugins
+  RecoEgammaEgammaIsolationAlgosPlugins_isolation_cones
+  RecoEgammaEgammaPhotonAlgos
+  RecoEgammaPhotonIdentification
+  RecoEgammaPhotonIdentificationPlugins
+  RecoEgammaPhotonIdentificationPlugins_cuts
+  RecoEgammaEgammaPhotonProducers
+  RecoEgammaEgammaElectronAlgos
+  RecoEgammaEgammaMCTools
+  PFClusterMatchedToPhotonsSelector_plugins
+  RecoEgammaEgammaTools
+  RecoEGammaGBRWrapperMaker
+  RecoEgammaEgammaToolsPlugins
+  RecoEgammaEgammaHLTProducers
+  RecoEgammaEgammaHLTAlgos
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoEgamma_libs)
+add_dependencies(RecoEgamma_libs
+  RecoEgammaElectronIdentification
+  RecoEgammaEgammaIsolationAlgos
+  RecoEgammaEgammaPhotonAlgos
+  RecoEgammaPhotonIdentification
+  RecoEgammaEgammaPhotonProducers
+  RecoEgammaEgammaElectronAlgos
+  RecoEgammaEgammaMCTools
+  RecoEgammaEgammaTools
+  RecoEgammaEgammaHLTProducers
+  RecoEgammaEgammaHLTAlgos
+)

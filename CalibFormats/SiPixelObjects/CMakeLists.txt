@@ -1,0 +1,44 @@
+add_library(CalibFormatsSiPixelObjects OBJECT 
+  src/PixelDACSettings.cc
+  src/PixelHdwAddress.cc
+  src/PixelModuleName.cc
+  src/PixelTrimBase.cc
+  src/PixelTBMChannel.cc
+  src/PixelROCMaskBits.cc
+  src/PixelFECConfig.cc
+  src/PixelTBMSettings.cc
+  src/PixelDelay25Calib.cc
+  src/PixelConfigurationVerifier.cc
+  src/PixelTKFECParameters.cc
+  src/PixelNameTranslation.cc
+  src/PixelLTCConfig.cc
+  src/PixelROCDACSettings.cc
+  src/PixelMaxVsf.cc
+  src/PixelFEDConfig.cc
+  src/PixelROCName.cc
+  src/PixelFEDParameters.cc
+  src/PixelFEDCard.cc
+  src/PixelGlobalDelay25.cc
+  src/PixelTTCciConfig.cc
+  src/PixelROCTrimBits.cc
+  src/PixelMaskAllPixels.cc
+  src/PixelMaskBase.cc
+  src/PixelPortcardMap.cc
+  src/PixelROCStatus.cc
+  src/PixelFEDTestDAC.cc
+  src/PixelTKFECConfig.cc
+  src/PixelFECParameters.cc
+  src/PixelConfigBase.cc
+  src/PixelCalibBase.cc
+  src/PixelPortCardConfig.cc
+  src/PixelTrimAllPixels.cc
+  src/PixelLowVoltageMap.cc
+  src/PixelTrimCommon.cc
+  src/PixelDetectorConfig.cc
+  src/PixelBase64.cc
+  src/PixelDACScanRange.cc
+  src/PixelChannel.cc
+  src/PixelCalibConfiguration.cc
+)
+
+

@@ -1,0 +1,131 @@
+add_subdirectory(JetMCAlgos)
+add_subdirectory(TagAndProbe)
+add_subdirectory(JetCharge)
+add_subdirectory(HeppyCore)
+add_subdirectory(FWLite)
+add_subdirectory(PatUtils)
+add_subdirectory(MVAComputer)
+add_subdirectory(Heppy)
+add_subdirectory(CondLiteIO)
+add_subdirectory(RecoAlgos)
+add_subdirectory(KinFitter)
+add_subdirectory(CandUtils)
+add_subdirectory(IsolationAlgos)
+add_subdirectory(MVATrainer)
+add_subdirectory(IsolationUtils)
+add_subdirectory(RooStatsCms)
+add_subdirectory(ParallelAnalysis)
+add_subdirectory(RecoUtils)
+add_subdirectory(Utilities)
+add_subdirectory(PatExamples)
+add_subdirectory(SelectorUtils)
+add_subdirectory(HepMCCandAlgos)
+add_subdirectory(JetMCUtils)
+add_subdirectory(PatAlgos)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(PhysicsTools_all)
+add_dependencies(PhysicsTools_all
+  PhysicsToolsJetMCAlgos
+  printEvent
+  jetMatch
+  matchOneToOne
+  matchGenHFHadrons
+  PhysicsToolsJetMCAlgosPlugins
+  PhysicsToolsTagAndProbe
+  PhysicsToolsTagAndProbe_plugins
+  PhysicsToolsJetCharge
+  JetChargeAnalyzer
+  PhysicsToolsJetChargePlugins
+  PhysicsToolsFWLite
+  PhysicsToolsPatUtils
+  PhysicsToolsPatUtils_plugins
+  PhysicsToolsMVAComputer
+  mvaConvertTMVAWeights
+  mvaExtractPDFs
+  testWriteMVAComputerCondDB
+  testReadMVAComputerCondDB
+  testReadMVAComputerEvaluate
+  testPhysicsToolsMVAComputer
+  PhysicsToolsMVAComputerPlugins
+  PhysicsToolsMVAComputerProcTMVA
+  PhysicsToolsHeppy
+  PhysicsToolsCondLiteIO
+  PhysicsToolsCondLiteIOPlugins
+  PhysicsToolsRecoAlgos
+  PhysicsToolsRecoAlgos_plugins
+  PhysicsToolsKinFitter
+  PhysicsToolsCandUtils
+  testPhysicsToolsCandUtils
+  PhysicsToolsIsolationAlgos
+  PhysicsToolsIsolationAlgos_tests
+  PhysicsToolsIsolationAlgos_plugins
+  PhysicsToolsMVATrainer
+  mvaTreeTrainer
+  mvaTreeComputer
+  mvaExtractor
+  testMVATrainer
+  testMVATrainerLooper
+  PhysicsToolsMVATrainerPlugins
+  PhysicsToolsMVATrainerProcMLP
+  PhysicsToolsMVATrainerProcTMVA
+  PhysicsToolsIsolationUtils
+  PhysicsToolsRooStatsCms
+  testFeldmanCousinsBinomial.exe
+  testCrabToyMC.exe
+  PhysicsToolsParallelAnalysis
+  PhysicsToolsRecoUtils
+  PhysicsToolsRecoUtilsPlugins
+  PhysicsToolsUtilities
+  testPhysicsToolsUtilities
+  testZMassFit
+  testZMassFitSimple
+  testZMassFitLikelihood
+  testZMassFitExtLikelihood
+  testExpressionFit
+  testRooFitFunction
+  testIntegralTiming
+  testSideBandSubtraction
+  test_Poisson
+  PhysicsToolsPatExamples
+  PhysicsToolsPatExamples_testplugin
+  PhysicsToolsPatExamples_plugins
+  PhysicsToolsSelectorUtils
+  PhysicsToolsSelectorUtils_plugins
+  PhysicsToolsHepMCCandAlgos
+  DummyHepMCAnalyzer
+  HZZ4muTestAnalyzer
+  PhysicsToolsHepMCCandAlgos_plugins
+  PhysicsToolsJetMCUtils
+  PhysicsToolsPatAlgos
+  PhysicsToolsPatAlgos_testAnalyzers
+  PhysicsToolsPatAlgos_plugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(PhysicsTools_libs)
+add_dependencies(PhysicsTools_libs
+  PhysicsToolsJetMCAlgos
+  PhysicsToolsTagAndProbe
+  PhysicsToolsJetCharge
+  PhysicsToolsFWLite
+  PhysicsToolsPatUtils
+  PhysicsToolsMVAComputer
+  PhysicsToolsHeppy
+  PhysicsToolsCondLiteIO
+  PhysicsToolsRecoAlgos
+  PhysicsToolsKinFitter
+  PhysicsToolsCandUtils
+  PhysicsToolsIsolationAlgos
+  PhysicsToolsMVATrainer
+  PhysicsToolsIsolationUtils
+  PhysicsToolsRooStatsCms
+  PhysicsToolsParallelAnalysis
+  PhysicsToolsRecoUtils
+  PhysicsToolsUtilities
+  PhysicsToolsPatExamples
+  PhysicsToolsSelectorUtils
+  PhysicsToolsHepMCCandAlgos
+  PhysicsToolsJetMCUtils
+  PhysicsToolsPatAlgos
+)

@@ -1,0 +1,48 @@
+add_subdirectory(PFTracking)
+add_subdirectory(Benchmark)
+add_subdirectory(PFClusterTools)
+add_subdirectory(PFClusterProducer)
+add_subdirectory(PFProducer)
+add_subdirectory(PFClusterShapeProducer)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoParticleFlow_all)
+add_dependencies(RecoParticleFlow_all
+  RecoParticleFlowPFTracking
+  PreIdAnalyzer
+  RecoParticleFlowPFTrackingPlugins
+  RecoParticleFlowBenchmark
+  RecoParticleFlowPFClusterTools
+  RecoParticleFlowPFClusterToolsTest
+  RecoParticleFlowPFClusterToolsPlugins
+  RecoParticleFlowPFClusterProducer
+  PFClusterAnalyzer
+  PFClusterComparator
+  RecoParticleFlowPFClusterProducerPlugins
+  RecoParticleFlowPFClusterProducerPlugins_simmappers
+  RecoParticleFlowPFProducer
+  RecoParticleFlowPFBlockComparator
+  RecoParticleFlowEgGEDPhotonAnalyzer
+  RecoParticleFlowGsfGEDElectronAnalyzer
+  RecoParticleFlowPFSuperClusterReader
+  RecoParticleFlowPFEGammaCandidateChecker
+  RecoParticleFlowPFIsoReader
+  RecoParticleFlowComparePFCandidateEGTreeMaker
+  RecoParticleFlowPFProducerPlugins_kdtrees
+  RecoParticleFlowPFProducerPlugins_importers
+  RecoParticleFlowPFProducerPlugins_linkers
+  RecoParticleFlowPFProducerPlugins
+  RecoParticleFlowPFClusterShapeProducer
+  RecoParticleFlowPFClusterShapeProducerPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoParticleFlow_libs)
+add_dependencies(RecoParticleFlow_libs
+  RecoParticleFlowPFTracking
+  RecoParticleFlowBenchmark
+  RecoParticleFlowPFClusterTools
+  RecoParticleFlowPFClusterProducer
+  RecoParticleFlowPFProducer
+  RecoParticleFlowPFClusterShapeProducer
+)

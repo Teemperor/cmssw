@@ -1,0 +1,83 @@
+add_subdirectory(Hcal)
+add_subdirectory(HLT)
+add_subdirectory(RPC)
+add_subdirectory(DQM)
+add_subdirectory(DT)
+add_subdirectory(CTPPS)
+add_subdirectory(L1Trigger)
+add_subdirectory(RunInfo)
+add_subdirectory(BTau)
+add_subdirectory(L1TriggerExt)
+add_subdirectory(SiPixel)
+add_subdirectory(Ecal)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(CondTools_all)
+add_dependencies(CondTools_all
+  CondToolsHcal
+  HcalRawIdToReadable
+  CondToolsHcalScaleGains
+  CondToolsHcalCorrGains
+  CondToolsHcalCorrResps
+  CondToolsHcalModGains
+  PMTParams
+  write_HFPhase1PMTParams
+  PMTParamsVis
+  makeHFPhase1PMTParamsPlots
+  write_HBHENegativeEFilter
+  CondToolsHcalPlugin
+  CondToolsHLT
+  CondToolsRPC
+  CondToolsRPCP
+  CondToolsDQM
+  CondToolsDQMSummaryPopConAnalyzer
+  CondToolsDQMSummaryEventSetupAnalyzer
+  CondToolsDQMReferenceHistogramRootFilePopConAnalyzer
+  CondToolsDQMReferenceHistogramRootFileEventSetupAnalyzer
+  CondToolsDQMXMLFilePopConAnalyzer
+  CondToolsDQMXMLFileEventSetupAnalyzer
+  CondToolsDT
+  CondToolsDTTest
+  CondToolsDTValidate
+  CondToolsDTP
+  CondToolsCTPPS
+  CondToolsL1Trigger
+  CondToolsL1TriggerPlugins
+  CondToolsRunInfo
+  conddb_import_runInfo
+  CondToolsRunInfoESAnalyzer
+  CondToolsRunInfoPopConAnalyzer
+  CondToolsRunSummaryPopConAnalyzer
+  CondToolsRunSummaryESAnalyzer
+  CondToolsL1TriggerScalerPopConAnalyzer
+  CondToolsFillInfoESAnalyzer
+  CondToolsFillInfoPopConAnalyzer
+  CondToolsBTau
+  testBTagCalibrationReader
+  CondToolsBTauplugins
+  CondToolsL1TriggerExt
+  CondToolsL1TriggerExtPlugins
+  CondToolsSiPixel
+  testCondToolsSiPixel
+  CondToolsSiPixelPlugins
+  CondToolsEcal
+  array2xmlEB
+  CondToolsEcalPlugin
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(CondTools_libs)
+add_dependencies(CondTools_libs
+  CondToolsHcal
+  CondToolsHLT
+  CondToolsRPC
+  CondToolsDQM
+  CondToolsDT
+  CondToolsCTPPS
+  CondToolsL1Trigger
+  CondToolsRunInfo
+  CondToolsBTau
+  CondToolsL1TriggerExt
+  CondToolsSiPixel
+  CondToolsEcal
+)

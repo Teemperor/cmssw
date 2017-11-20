@@ -1,0 +1,46 @@
+add_subdirectory(TopHitFit)
+add_subdirectory(TopKinFitter)
+add_subdirectory(Examples)
+add_subdirectory(TopPairBSM)
+add_subdirectory(TopEventProducers)
+add_subdirectory(TopTools)
+add_subdirectory(TopEventSelection)
+add_subdirectory(TopSkimming)
+add_subdirectory(TopObjectResolutions)
+add_subdirectory(TopJetCombination)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(TopQuarkAnalysis_all)
+add_dependencies(TopQuarkAnalysis_all
+  TopQuarkAnalysisTopHitFit
+  TopQuarkAnalysisTopHitFitPlugins
+  TopQuarkAnalysisTopKinFitter
+  TopQuarkAnalysisTopKinFitterPlugins
+  TopQuarkAnalysisExamplesPlugins
+  TopQuarkAnalysisTopPairBSM
+  TopQuarkAnalysisTopEventProducers
+  TopQuarkAnalysisTopTools
+  TestGenTtbarCategories
+  TopQuarkAnalysisTopToolsPlugins
+  TopQuarkAnalysisTopEventSelection
+  TopQuarkAnalysisTopEventSelectionPlugins
+  TopQuarkAnalysisTopSkimming
+  TopQuarkAnalysisTopSkimmingPlugins
+  TopQuarkAnalysisTopObjectResolutions
+  TopQuarkAnalysisTopJetCombination
+  TopQuarkAnalysisTopJetCombinationPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(TopQuarkAnalysis_libs)
+add_dependencies(TopQuarkAnalysis_libs
+  TopQuarkAnalysisTopHitFit
+  TopQuarkAnalysisTopKinFitter
+  TopQuarkAnalysisTopPairBSM
+  TopQuarkAnalysisTopEventProducers
+  TopQuarkAnalysisTopTools
+  TopQuarkAnalysisTopEventSelection
+  TopQuarkAnalysisTopSkimming
+  TopQuarkAnalysisTopObjectResolutions
+  TopQuarkAnalysisTopJetCombination
+)

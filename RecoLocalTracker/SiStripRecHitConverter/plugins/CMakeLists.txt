@@ -1,0 +1,17 @@
+add_library(RecoLocalTrackerSiStripRecHitConverterPlugins OBJECT 
+  StripCPEESProducer.cc
+  SiStripRecHitConverter.cc
+  SealModules.cc
+  SiStripRecHitMatcherESProducer.cc
+)
+
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /usr/include/boost/python/)
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /usr/include/boost/filesystem/)
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /usr/include/python2.7/)
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /usr/include/root/)
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /home/teemperor/CERN/root-build/include)
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /home/teemperor/cms/md5/)
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /usr/include/boost/serialization/)
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /usr/include/boost/)
+target_include_directories(RecoLocalTrackerSiStripRecHitConverterPlugins PUBLIC /usr/include/boost/regex/)
+

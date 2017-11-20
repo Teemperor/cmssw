@@ -1,0 +1,95 @@
+add_subdirectory(CustomPhysics)
+add_subdirectory(Physics)
+add_subdirectory(SensitiveDetector)
+add_subdirectory(PhysicsLists)
+add_subdirectory(Notification)
+add_subdirectory(KillSecondaries)
+add_subdirectory(PrintTrackNumber)
+add_subdirectory(CountProcesses)
+add_subdirectory(Geometry)
+add_subdirectory(Watcher)
+add_subdirectory(TrackingVerbose)
+add_subdirectory(MagneticField)
+add_subdirectory(Application)
+add_subdirectory(Generators)
+add_subdirectory(SaveSimTrackAction)
+add_subdirectory(GFlash)
+add_subdirectory(PrintGeomInfo)
+add_subdirectory(GeometryProducer)
+add_subdirectory(CheckSecondary)
+add_subdirectory(HelpfulWatchers)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(SimG4Core_all)
+add_dependencies(SimG4Core_all
+  SimG4CoreCustomPhysics
+  SimG4CoreCustomPhysicsPlugins
+  SimG4CorePhysics
+  SimG4CoreSensitiveDetector
+  SimG4CorePhysicsLists
+  SimG4CorePhysicsListsPlugins
+  SimG4CoreNotification
+  testSimG4CoreNotifications
+  SimG4CoreKillSecondaries
+  SimG4CorePrintTrackNumber
+  SimG4CoreCountProcesses
+  SimG4CoreGeometry
+  testVolumes
+  Box_
+  Tubs_
+  CutTubs_
+  Cons_
+  Ellipsoid_
+  EllipticalTube_
+  ExtrudedPolygon_
+  Para_
+  Trap_
+  Sphere_
+  Orb_
+  Parallelepiped_
+  Torus_
+  Polycone_
+  Polyhedra_
+  PseudoTrap_
+  TruncTubs_
+  SimG4CoreWatcher
+  SimG4CoreWatcherTest
+  SimG4CoreTrackingVerbose
+  SimG4CoreMagneticField
+  testSimG4CoreFieldStepWatcher
+  SimG4CoreApplication
+  SimG4CoreApplicationPlugins
+  SimG4CoreGenerators
+  SimG4CoreSaveSimTrackAction
+  SimG4CoreGFlash
+  SimG4CoreGFlashPlugins
+  SimG4CorePrintGeomInfo
+  SimG4CoreGeometryProducer
+  SimG4CoreCheckSecondary
+  SimG4CoreHelpfulWatchers
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(SimG4Core_libs)
+add_dependencies(SimG4Core_libs
+  SimG4CoreCustomPhysics
+  SimG4CorePhysics
+  SimG4CoreSensitiveDetector
+  SimG4CorePhysicsLists
+  SimG4CoreNotification
+  SimG4CoreKillSecondaries
+  SimG4CorePrintTrackNumber
+  SimG4CoreCountProcesses
+  SimG4CoreGeometry
+  SimG4CoreWatcher
+  SimG4CoreTrackingVerbose
+  SimG4CoreMagneticField
+  SimG4CoreApplication
+  SimG4CoreGenerators
+  SimG4CoreSaveSimTrackAction
+  SimG4CoreGFlash
+  SimG4CorePrintGeomInfo
+  SimG4CoreGeometryProducer
+  SimG4CoreCheckSecondary
+  SimG4CoreHelpfulWatchers
+)

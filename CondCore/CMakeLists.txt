@@ -1,0 +1,155 @@
+add_subdirectory(DBOutputService)
+add_subdirectory(HLTPlugins)
+add_subdirectory(DTPlugins)
+add_subdirectory(ESSources)
+add_subdirectory(PhysicsToolsPlugins)
+add_subdirectory(HIPlugins)
+add_subdirectory(LuminosityPlugins)
+add_subdirectory(CTPPSPlugins)
+add_subdirectory(OptAlignPlugins)
+add_subdirectory(PCLConfigPlugins)
+add_subdirectory(RPCPlugins)
+add_subdirectory(CastorPlugins)
+add_subdirectory(CondDB)
+add_subdirectory(AlignmentPlugins)
+add_subdirectory(CalibPlugins)
+add_subdirectory(HcalPlugins)
+add_subdirectory(SiPixelPlugins)
+add_subdirectory(RunInfoPlugins)
+add_subdirectory(JetMETPlugins)
+add_subdirectory(DQMPlugins)
+add_subdirectory(BTauPlugins)
+add_subdirectory(EgammaPlugins)
+add_subdirectory(Utilities)
+add_subdirectory(PopCon)
+add_subdirectory(CSCPlugins)
+add_subdirectory(SiStripPlugins)
+add_subdirectory(L1TPlugins)
+add_subdirectory(RecoMuonPlugins)
+add_subdirectory(PluginSystem)
+add_subdirectory(BeamSpotPlugins)
+add_subdirectory(EcalPlugins)
+add_subdirectory(ESPlugins)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(CondCore_all)
+add_dependencies(CondCore_all
+  CondCoreDBOutputService
+  IOVPayloadAnalyze
+  writeMultipleRecords
+  writeBlob
+  writeBlobComplex
+  IOVPayloadEndOfJob
+  MyDataAnalyzer
+  Timestamp
+  writeKeyed
+  writeInt
+  CondCoreDBOutputServicePlugins
+  CondCoreHLTPlugins
+  CondCoreDTPlugins
+  CondCoreESSources
+  PedestalsAnalyzer
+  PedestalsByLabelAnalyzer
+  NoisesAnalyzer
+  ExEfficiencyByLabelAnalyzer
+  CondCoreESSourcesPlugins
+  CondCorePhysicsToolsPlugins
+  CondCoreHIPlugins
+  CondCoreLuminosityPlugins
+  CondCoreCTPPSPlugins
+  CondCoreOptAlignPlugins
+  CondCorePCLConfigPlugins
+  CondCoreRPCPlugins
+  CondCoreCastorPlugins
+  CondCoreCondDB
+  testReadWritePayloads
+  testConditionDatabase_0
+  testConditionDatabase_1
+  testConditionDatabase_2
+  testRootStreaming
+  testPayloadProxy
+  testFrontier
+  testConnectionPool
+  testRunInfo
+  CondDBV2PyInterface
+  CondCoreCondDBXMLAuthenticationService
+  CondCoreCondDBRelationalAuthenticationService
+  CondCoreAlignmentPlugins
+  CondCoreCalibPlugins
+  CondCoreHcalPlugins
+  CondCoreSiPixelPlugins
+  CondCoreRunInfoPlugins
+  CondCoreJetMETPlugins
+  CondCoreDQMPlugins
+  CondCoreBTauPlugins
+  CondCoreEgammaPlugins
+  CondCoreUtilities
+  cmscond_key_mgr
+  cmscond_to_lumiid
+  cmscond_from_lumiid
+  cmscond_authentication_manager
+  conddb_test_gt_load
+  conddb_test_gt_perf
+  conddb_import
+  conddb_copy_iov
+  conddb_test
+  conddb_edit_tag
+  testBasicPayload
+  testHistograms
+  CondEmptyIOVSource
+  BasicPayload_PayloadInspector
+  Module_PayloadInspector
+  CondCorePopCon
+  ExPopConAnalyzer
+  ExPopConEfficiency
+  CondCoreCSCPlugins
+  CondCoreSiStripPlugins
+  SiStripObjects_toXML
+  SiStrip_PayloadInspector
+  CondCoreL1TPlugins
+  CondCoreRecoMuonPlugins
+  CondCoreBeamSpotPlugins
+  BeamSpot_PayloadInspector
+  CondCoreEcalPlugins
+  EcalPyUtils
+  EcalCondObjectContainer_EcalTPGCrystalStatusCode_toXML
+  EcalPedestals_PayloadInspector
+  EcalChannelStatus_PayloadInspector
+  CondCoreESPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(CondCore_libs)
+add_dependencies(CondCore_libs
+  CondCoreDBOutputService
+  CondCoreHLTPlugins
+  CondCoreDTPlugins
+  CondCoreESSources
+  CondCorePhysicsToolsPlugins
+  CondCoreHIPlugins
+  CondCoreLuminosityPlugins
+  CondCoreCTPPSPlugins
+  CondCoreOptAlignPlugins
+  CondCorePCLConfigPlugins
+  CondCoreRPCPlugins
+  CondCoreCastorPlugins
+  CondCoreCondDB
+  CondCoreAlignmentPlugins
+  CondCoreCalibPlugins
+  CondCoreHcalPlugins
+  CondCoreSiPixelPlugins
+  CondCoreRunInfoPlugins
+  CondCoreJetMETPlugins
+  CondCoreDQMPlugins
+  CondCoreBTauPlugins
+  CondCoreEgammaPlugins
+  CondCoreUtilities
+  CondCorePopCon
+  CondCoreCSCPlugins
+  CondCoreSiStripPlugins
+  CondCoreL1TPlugins
+  CondCoreRecoMuonPlugins
+  CondCoreBeamSpotPlugins
+  CondCoreEcalPlugins
+  CondCoreESPlugins
+)

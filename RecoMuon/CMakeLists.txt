@@ -1,0 +1,104 @@
+add_subdirectory(Navigation)
+add_subdirectory(MuonIsolationProducers)
+add_subdirectory(L2MuonProducer)
+add_subdirectory(MuonIsolation)
+add_subdirectory(StandAloneTrackFinder)
+add_subdirectory(L3MuonIsolationProducer)
+add_subdirectory(CosmicMuonProducer)
+add_subdirectory(MuonIdentification)
+add_subdirectory(MuonSeedGenerator)
+add_subdirectory(L3MuonProducer)
+add_subdirectory(L3TrackFinder)
+add_subdirectory(StandAloneMuonProducer)
+add_subdirectory(L2MuonSeedGenerator)
+add_subdirectory(DetLayers)
+add_subdirectory(MeasurementDet)
+add_subdirectory(L2MuonIsolationProducer)
+add_subdirectory(Records)
+add_subdirectory(TransientTrackingRecHit)
+add_subdirectory(TrackingTools)
+add_subdirectory(GlobalTrackFinder)
+add_subdirectory(GlobalMuonProducer)
+add_subdirectory(GlobalTrackingTools)
+add_subdirectory(TrackerSeedGenerator)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(RecoMuon_all)
+add_dependencies(RecoMuon_all
+  RecoMuonNavigation
+  testRecoMuonNavigation
+  IsolationExample
+  MuIsoDepositAnalyzer
+  RecoMuonMuonIsolationProducersPlugins
+  RecoMuonL2MuonProducer
+  RecoMuonMuonIsolation
+  RecoMuonMuonIsolationPlugins
+  RecoMuonStandAloneTrackFinder
+  RecoMuonL3MuonIsolationProducer
+  L3MuonIsolationAnalyzer
+  RecoMuonCosmicMuonProducer
+  CosmicMuonValidator
+  RealCosmicDataAnalyzer
+  RecoMuonMuonIdentification
+  TestMuonMuonIdentificationPlugins
+  RecoMuonMuonIdentificationPlugins
+  RecoMuonMuonIdentificationPlugins_cuts
+  RecoMuonMuonSeedGenerator
+  MCMuonSeedGenerator2
+  MuonSeedParametrization
+  MuonSeedValidator
+  RecoMuonMuonSeedGeneratorPlugins
+  RecoMuonL3MuonProducer
+  RecoMuonL3TrackFinder
+  RecoMuonL3TrackFinderPlugins
+  RecoMuonStandAloneMuonProducer
+  STAMuonAnalyzer
+  RecoMuonL2MuonSeedGenerator
+  RecoMuonDetLayers
+  testMuonRecoGeometry
+  RecoMuonDetLayersPlugins
+  RecoMuonMeasurementDet
+  RecoMuonL2MuonIsolationProducer
+  L2MuonIsolationAnalyzer
+  RecoMuonRecords
+  RecoMuonTransientTrackingRecHit
+  RecoMuonTransientTrackingRecHitPlugins
+  RecoMuonTrackingTools
+  RecoMuonTrackingToolsTest
+  RecoMuonTrackingToolsPlugins
+  RecoMuonGlobalTrackFinder
+  RecoMuonGlobalMuonProducer
+  GLBMuonAnalyzer
+  RecoMuonGlobalTrackingTools
+  DYTTuner
+  RecoMuonGlobalTrackingToolsPlugins
+  RecoMuonTrackerSeedGenerator
+  RecoMuonTrackerSeedGeneratorPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(RecoMuon_libs)
+add_dependencies(RecoMuon_libs
+  RecoMuonNavigation
+  RecoMuonL2MuonProducer
+  RecoMuonMuonIsolation
+  RecoMuonStandAloneTrackFinder
+  RecoMuonL3MuonIsolationProducer
+  RecoMuonCosmicMuonProducer
+  RecoMuonMuonIdentification
+  RecoMuonMuonSeedGenerator
+  RecoMuonL3MuonProducer
+  RecoMuonL3TrackFinder
+  RecoMuonStandAloneMuonProducer
+  RecoMuonL2MuonSeedGenerator
+  RecoMuonDetLayers
+  RecoMuonMeasurementDet
+  RecoMuonL2MuonIsolationProducer
+  RecoMuonRecords
+  RecoMuonTransientTrackingRecHit
+  RecoMuonTrackingTools
+  RecoMuonGlobalTrackFinder
+  RecoMuonGlobalMuonProducer
+  RecoMuonGlobalTrackingTools
+  RecoMuonTrackerSeedGenerator
+)

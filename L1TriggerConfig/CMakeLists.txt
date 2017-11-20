@@ -1,0 +1,60 @@
+add_subdirectory(DTTPGConfigProducers)
+add_subdirectory(L1CSCTPConfigProducers)
+add_subdirectory(GMTConfigProducers)
+add_subdirectory(L1TConfigProducers)
+add_subdirectory(L1GeometryProducers)
+add_subdirectory(L1GtConfigProducers)
+add_subdirectory(L1ScalesProducers)
+add_subdirectory(CSCTFConfigProducers)
+add_subdirectory(RPCTriggerConfig)
+add_subdirectory(DTTPGConfig)
+add_subdirectory(Utilities)
+add_subdirectory(RCTConfigProducers)
+add_subdirectory(GctConfigProducers)
+add_subdirectory(DTTrackFinder)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(L1TriggerConfig_all)
+add_dependencies(L1TriggerConfig_all
+  L1TriggerConfigDTTPGConfigProducers
+  L1TriggerConfigDTTPGConfigProducersPlugin
+  L1TriggerConfigL1CSCTPConfigProducers
+  L1TriggerConfigGMTConfigProducers
+  L1TriggerConfigL1TConfigProducers
+  L1TriggerConfigL1GeometryProducers
+  L1TriggerConfigL1GtConfigProducers
+  L1TriggerConfigL1ScalesProducers
+  L1TriggerConfigCSCTFConfigProducers
+  L1TriggerConfigRPCTriggerConfig
+  RPCConeConnectionsAna
+  TestHWConfig
+  WriteVHDL
+  DumpConeDefinition
+  DumpL1RPCConfig
+  DumpL1RPCHsbConfig
+  DumpL1RPCBxOrConfig
+  L1TriggerConfigDTTPGConfig
+  L1TriggerConfigUtilities
+  L1TriggerConfigRCTConfigProducers
+  L1TriggerConfigGctConfigProducers
+  L1TriggerConfigDTTrackFinder
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(L1TriggerConfig_libs)
+add_dependencies(L1TriggerConfig_libs
+  L1TriggerConfigDTTPGConfigProducers
+  L1TriggerConfigL1CSCTPConfigProducers
+  L1TriggerConfigGMTConfigProducers
+  L1TriggerConfigL1TConfigProducers
+  L1TriggerConfigL1GeometryProducers
+  L1TriggerConfigL1GtConfigProducers
+  L1TriggerConfigL1ScalesProducers
+  L1TriggerConfigCSCTFConfigProducers
+  L1TriggerConfigRPCTriggerConfig
+  L1TriggerConfigDTTPGConfig
+  L1TriggerConfigUtilities
+  L1TriggerConfigRCTConfigProducers
+  L1TriggerConfigGctConfigProducers
+  L1TriggerConfigDTTrackFinder
+)

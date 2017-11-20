@@ -1,0 +1,82 @@
+add_subdirectory(EcalZeroSuppressionAlgos)
+add_subdirectory(EcalSelectiveReadoutAlgos)
+add_subdirectory(EcalTrigPrimProducers)
+add_subdirectory(HcalSimProducers)
+add_subdirectory(CastorSim)
+add_subdirectory(EcalSimAlgos)
+add_subdirectory(EcalElectronicsEmulation)
+add_subdirectory(EcalTrigPrimAlgos)
+add_subdirectory(EcalEBTrigPrimAlgos)
+add_subdirectory(HcalTrigPrimAlgos)
+add_subdirectory(HcalZeroSuppressionProducers)
+add_subdirectory(HcalTrigPrimProducers)
+add_subdirectory(EcalSelectiveReadoutProducers)
+add_subdirectory(EcalTestBeam)
+add_subdirectory(EcalTestBeamAlgos)
+add_subdirectory(CaloSimAlgos)
+add_subdirectory(HcalTestBeam)
+add_subdirectory(CastorTechTrigProducer)
+add_subdirectory(EcalZeroSuppressionProducers)
+add_subdirectory(HcalSimAlgos)
+add_subdirectory(HGCalSimProducers)
+add_subdirectory(EcalEBTrigPrimProducers)
+add_subdirectory(EcalSimProducers)
+
+
+# Meta-target that builds everything in this subsystem
+add_custom_target(SimCalorimetry_all)
+add_dependencies(SimCalorimetry_all
+  SimCalorimetryEcalSelectiveReadoutAlgos
+  SimCalorimetryEcalTrigPrimProducersPlugins
+  SimCalorimetryHcalSimProducers
+  SimCalorimetryHcalSimProducersPlugins
+  SimCalorimetryCastorSim
+  SimCalorimetryCastorSimPlugins
+  SimCalorimetryEcalSimAlgos
+  SimCalorimetryEcalElectronicsEmulation
+  GenABIO
+  recycleTccEmu
+  SimCalorimetryEcalTrigPrimAlgos
+  SimCalorimetryEcalEBTrigPrimAlgos
+  SimCalorimetryHcalTrigPrimAlgos
+  SimCalorimetryHcalZeroSuppressionProducers
+  SimCalorimetryHcalTrigPrimProducers
+  SimCalorimetryEcalSelectiveReadoutProducers
+  EcalSelectiveReadoutProducersPlugin
+  SimCalorimetryEcalTestBeam
+  SimCalorimetryEcalTestBeamAlgos
+  SimCalorimetryCaloSimAlgos
+  SimCalorimetryHcalTestBeam
+  SimCalorimetryCastorTechTrigProducer
+  SimCalorimetryEcalZeroSuppressionProducers
+  SimCalorimetryHcalSimAlgos
+  SimCalorimetryHGCalSimProducers
+  SimCalorimetryEcalEBTrigPrimProducersPlugins
+  SimCalorimetryEcalSimProducers
+  testESReferenceDistrib
+  SimCalorimetryEcalSimProducersPlugins
+)
+# Meta-target that builds all libs in this subsystem
+add_custom_target(SimCalorimetry_libs)
+add_dependencies(SimCalorimetry_libs
+  SimCalorimetryEcalSelectiveReadoutAlgos
+  SimCalorimetryHcalSimProducers
+  SimCalorimetryCastorSim
+  SimCalorimetryEcalSimAlgos
+  SimCalorimetryEcalElectronicsEmulation
+  SimCalorimetryEcalTrigPrimAlgos
+  SimCalorimetryEcalEBTrigPrimAlgos
+  SimCalorimetryHcalTrigPrimAlgos
+  SimCalorimetryHcalZeroSuppressionProducers
+  SimCalorimetryHcalTrigPrimProducers
+  SimCalorimetryEcalSelectiveReadoutProducers
+  SimCalorimetryEcalTestBeam
+  SimCalorimetryEcalTestBeamAlgos
+  SimCalorimetryCaloSimAlgos
+  SimCalorimetryHcalTestBeam
+  SimCalorimetryCastorTechTrigProducer
+  SimCalorimetryEcalZeroSuppressionProducers
+  SimCalorimetryHcalSimAlgos
+  SimCalorimetryHGCalSimProducers
+  SimCalorimetryEcalSimProducers
+)
