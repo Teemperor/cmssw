@@ -1,3 +1,7 @@
+#ifndef SIMPLE_STAT_H
+#define SIMPLE_STAT_H
+
+#include <algorithm>
 #include <numeric>
 #include <cmath>
 
@@ -32,3 +36,5 @@ double stat_RMS( const CONT & cont) {
   }
   else return 0.;
 }
+
+#endif // SIMPLE_STAT_H
