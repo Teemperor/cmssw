@@ -1,3 +1,6 @@
+#ifndef DetIdAssociator_h
+#define DetIdAssociator_h
+
 //
 // Original Author:  Dmytro Kovalskyi
 // Modified for HCAL by Michal Szleper
@@ -93,3 +96,5 @@ class HDetIdAssociator{
    const double etaBinSize_;
    Propagator *ivProp_;
 };
+
+#endif // DetIdAssociator_h
