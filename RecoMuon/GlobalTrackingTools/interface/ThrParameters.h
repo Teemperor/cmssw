@@ -1,3 +1,6 @@
+#ifndef ThrParameters_h
+#define ThrParameters_h
+
 #include "FWCore/Framework/interface/EventSetup.h"
 #include "CondFormats/RecoMuonObjects/interface/DYTThrObject.h"
 #include "CondFormats/DataRecord/interface/DYTThrObjectRcd.h"
@@ -34,3 +37,5 @@ class ThrParameters {
   std::map<DTChamberId, GlobalError> dtApeMap;
   std::map<CSCDetId, GlobalError> cscApeMap;
 };
+
+#endif // ThrParameters_h
