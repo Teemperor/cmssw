@@ -3,6 +3,8 @@
 
 #include <cstdint>
 
+#include "boost/array.hpp"
+
 #include "FWCore/Utilities/interface/Exception.h"
 
 #include "CondFormats/HcalObjects/interface/HcalItemArrayColl.h"
