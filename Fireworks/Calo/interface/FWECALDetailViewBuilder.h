@@ -1,3 +1,6 @@
+#ifndef FWECALDetailViewBuilder_h
+#define FWECALDetailViewBuilder_h
+
 #include "Rtypes.h"
 #include <map>
 #include <vector>
@@ -91,3 +94,5 @@ private:
    float sizeRad() const;
 
 };
+
+#endif // FWECALDetailViewBuilder_h
